@@ -1,0 +1,24 @@
+********************************************
+*  SURELOG SystemVerilog  Compiler/Linter  *
+********************************************
+
+Copyright (c) 2017-2023 Alain Dargelas,
+http://www.apache.org/licenses/LICENSE-2.0
+
+VERSION: 1.84
+BUILT  : Apr 25 2025
+DATE   : 2025-06-03.14:40:30
+COMMAND: ./src/Activation.sv ./src/Perceptron.h.sv ./src/Perceptron.sv -DYOSYS=1 -DSYNTHESIS=1
+
+[INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/test/slpp_all/surelog.log".
+[SNT:PA0207] /Users/alexbackues/Documents/RISCV-CPU/test/src/Perceptron.sv:31:21: Syntax error: mismatched input ',' expecting ')',
+            .sum(sum),
+                     ^--.
+[SNT:PA0207] /Users/alexbackues/Documents/RISCV-CPU/test/src/Perceptron.sv:33:8: Syntax error: extraneous input ')' expecting ';',
+        );
+        ^--.
+[  FATAL] : 0
+[ SYNTAX] : 2
+[  ERROR] : 0
+[WARNING] : 0
+[   NOTE] : 0
