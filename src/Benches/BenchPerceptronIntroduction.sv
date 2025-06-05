@@ -1,25 +1,21 @@
 import Common::*;
+import FloatingPoint::*;
 
 module BenchPerceptronIntroduction ();
 
+    sfp ONE;
     bit clk;
     parameter int size = 2;
     parameter int num = 4;
-    real values[size-1:0];
-    act_func activation = Heaviside_Step;
-    real prediction;
+    sfp values[size-1:0];
+    act_func activation;
+    sfp prediction;
     bit training = 1;
-    int epochs = 10;
-    real learning_rate = 1;
-    real train_values[num-1:0][size-1:0] = '{'{0.0, 0.0}, '{0.0, 1.0}, '{1.0, 0.0}, '{1.0, 1.0}};
-    //AND
-    real expected[num-1:0] = '{0.0, 0.0, 0.0, 1.0};
-    //OR
-    //real expected[num-1:0] = '{0.0, 1.0, 1.0, 1.0};
-    //NAND
-    //real expected[num-1:0] = '{1.0, 1.0, 1.0, 0.0};
-    //XOR (should fail)
-    //real expected[num-1:0] = '{0.0, 1.0, 1.0, 0.0};
+    bit done_training;
+    int epochs = 5;
+    sfp learning_rate;
+    sfp train_values[num-1:0][size-1:0];
+    sfp expected[num-1:0];
 
 
     PerceptronIntroduction #(
@@ -34,12 +30,27 @@ module BenchPerceptronIntroduction ();
         .epochs(epochs),
         .learning_rate(learning_rate),
         .train_values(train_values),
-        .expected(expected)
+        .expected(expected),
+        .done_training(done_training)
     );
 
     initial begin
         $dumpfile("sim.vcd");
         $dumpvars;
+
+        ONE = int_to_sfp(1);
+        activation = Heaviside_Step;
+        learning_rate = ONE;
+        train_values = '{'{0, 0}, '{0, ONE}, '{ONE, 0}, '{ONE, ONE}};
+        //AND
+        expected = '{0, 0, 0, ONE};
+        //OR
+        //expected = '{0, ONE, ONE, ONE};
+        //NAND
+        //expected = '{ONE, ONE, ONE, 0};
+        //XOR (should fail)
+        //expected = '{0, ONE, ONE, 0};
+
         clk = 0;
         forever begin
             #1 clk = ~clk;
@@ -47,16 +58,16 @@ module BenchPerceptronIntroduction ();
     end
 
     initial begin
-        wait (training == 0);
+        wait (done_training == 1);
         #10;
-        values[0] = 0.0;
-        values[1] = 0.0;
-        #5 values[0] = 1.0;
-        values[1] = 0.0;
-        #5 values[0] = 0.0;
-        values[1] = 1.0;
-        #5 values[0] = 1.0;
-        values[1] = 1.0;
+        values[0] = 0;
+        values[1] = 0;
+        #5 values[0] = ONE;
+        values[1] = 0;
+        #5 values[0] = 0;
+        values[1] = ONE;
+        #5 values[0] = ONE;
+        values[1] = ONE;
         #5 $finish;
     end
 

@@ -44,7 +44,7 @@ VPerceptron__Syms::VPerceptron__Syms(VerilatedContext* contextp, const char* nam
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(88);
+        Verilated::stackCheck(2870);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

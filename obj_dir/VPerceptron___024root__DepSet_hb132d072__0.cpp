@@ -15,6 +15,7 @@ void VPerceptron___024root___eval_initial(VPerceptron___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     VPerceptron___024root___eval_initial__TOP(vlSelf);
+    vlSelfRef.__Vm_traceActivity[1U] = 1U;
     VPerceptron___024root___eval_initial__TOP__Vtiming__0(vlSelf);
     VPerceptron___024root___eval_initial__TOP__Vtiming__1(vlSelf);
 }
@@ -24,40 +25,45 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    while (vlSelfRef.BenchPerceptronIntroduction__DOT__training) {
-        co_await vlSelfRef.__VtrigSched_hfa9fd802__0.trigger(1U, 
+    while ((1U & (~ (IData)(vlSelfRef.BenchPerceptronIntroduction__DOT__done_training)))) {
+        co_await vlSelfRef.__VtrigSched_h2100f152__0.trigger(1U, 
                                                              nullptr, 
-                                                             "@( (~ BenchPerceptronIntroduction.training))", 
+                                                             "@( BenchPerceptronIntroduction.done_training)", 
                                                              "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                             50);
+                                                             61);
     }
     co_await vlSelfRef.__VdlySched.delay(0xaULL, nullptr, 
                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                         51);
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0.0;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0.0;
+                                         62);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     co_await vlSelfRef.__VdlySched.delay(5ULL, nullptr, 
                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                         54);
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 1.0;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0.0;
+                                         65);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     co_await vlSelfRef.__VdlySched.delay(5ULL, nullptr, 
                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                         56);
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0.0;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 1.0;
+                                         67);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     co_await vlSelfRef.__VdlySched.delay(5ULL, nullptr, 
                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                         58);
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 1.0;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 1.0;
+                                         69);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     co_await vlSelfRef.__VdlySched.delay(5ULL, nullptr, 
                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                         60);
-    VL_FINISH_MT("src/Benches/BenchPerceptronIntroduction.sv", 60, "");
+                                         71);
+    VL_FINISH_MT("src/Benches/BenchPerceptronIntroduction.sv", 71, "");
 }
 
 void VPerceptron___024root___act_comb__TOP__0(VPerceptron___024root* vlSelf);
+void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024root* vlSelf);
 
 void VPerceptron___024root___eval_act(VPerceptron___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPerceptron___024root___eval_act\n"); );
@@ -67,25 +73,187 @@ void VPerceptron___024root___eval_act(VPerceptron___024root* vlSelf) {
     if ((6ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_comb__TOP__0(vlSelf);
     }
+    if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
+        VPerceptron___024root___act_sequent__TOP__0(vlSelf);
+    }
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_comb__TOP__0(VPerceptron___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPerceptron___024root___act_comb__TOP__0\n"); );
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    QData/*63:0*/ __Vfunc_sfp_add__1__Vfuncout;
+    __Vfunc_sfp_add__1__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__1__a;
+    __Vfunc_sfp_add__1__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__1__b;
+    __Vfunc_sfp_add__1__b = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__2__Vfuncout;
+    __Vfunc_sfp_mul__2__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__2__a;
+    __Vfunc_sfp_mul__2__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__2__b;
+    __Vfunc_sfp_mul__2__b = 0;
+    VlWide<4>/*127:0*/ __Vfunc_sfp_mul__2__tmp;
+    VL_ZERO_W(128, __Vfunc_sfp_mul__2__tmp);
+    VlWide<4>/*127:0*/ __Vtemp_1;
+    VlWide<4>/*127:0*/ __Vtemp_2;
+    VlWide<4>/*127:0*/ __Vtemp_3;
+    VlWide<4>/*127:0*/ __Vtemp_4;
+    VlWide<4>/*127:0*/ __Vtemp_5;
+    VlWide<4>/*127:0*/ __Vtemp_6;
     // Body
     vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias;
+    __Vfunc_sfp_mul__2__b = vlSelfRef.BenchPerceptronIntroduction__DOT__values
+        [0U];
+    __Vfunc_sfp_mul__2__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+        [0U];
+    VL_EXTENDS_WQ(128,64, __Vtemp_1, __Vfunc_sfp_mul__2__a);
+    VL_EXTENDS_WQ(128,64, __Vtemp_2, __Vfunc_sfp_mul__2__b);
+    VL_MULS_WWW(128, __Vtemp_3, __Vtemp_1, __Vtemp_2);
+    VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__2__tmp, __Vtemp_3, 0x20U);
+    __Vfunc_sfp_mul__2__Vfuncout = (((QData)((IData)(
+                                                     __Vfunc_sfp_mul__2__tmp[1U])) 
+                                     << 0x20U) | (QData)((IData)(
+                                                                 __Vfunc_sfp_mul__2__tmp[0U])));
+    __Vfunc_sfp_add__1__b = __Vfunc_sfp_mul__2__Vfuncout;
+    __Vfunc_sfp_add__1__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum;
+    __Vfunc_sfp_add__1__Vfuncout = (__Vfunc_sfp_add__1__a 
+                                    + __Vfunc_sfp_add__1__b);
     vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum 
-        = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum 
-           + (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-              [0U] * vlSelfRef.BenchPerceptronIntroduction__DOT__values
-              [0U]));
+        = __Vfunc_sfp_add__1__Vfuncout;
+    __Vfunc_sfp_mul__2__b = vlSelfRef.BenchPerceptronIntroduction__DOT__values
+        [1U];
+    __Vfunc_sfp_mul__2__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+        [1U];
+    VL_EXTENDS_WQ(128,64, __Vtemp_4, __Vfunc_sfp_mul__2__a);
+    VL_EXTENDS_WQ(128,64, __Vtemp_5, __Vfunc_sfp_mul__2__b);
+    VL_MULS_WWW(128, __Vtemp_6, __Vtemp_4, __Vtemp_5);
+    VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__2__tmp, __Vtemp_6, 0x20U);
+    __Vfunc_sfp_mul__2__Vfuncout = (((QData)((IData)(
+                                                     __Vfunc_sfp_mul__2__tmp[1U])) 
+                                     << 0x20U) | (QData)((IData)(
+                                                                 __Vfunc_sfp_mul__2__tmp[0U])));
+    __Vfunc_sfp_add__1__b = __Vfunc_sfp_mul__2__Vfuncout;
+    __Vfunc_sfp_add__1__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum;
+    __Vfunc_sfp_add__1__Vfuncout = (__Vfunc_sfp_add__1__a 
+                                    + __Vfunc_sfp_add__1__b);
     vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum 
-        = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum 
-           + (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-              [1U] * vlSelfRef.BenchPerceptronIntroduction__DOT__values
-              [1U]));
+        = __Vfunc_sfp_add__1__Vfuncout;
+    if ((0U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+            = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum;
+    } else if ((1U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.__Vfunc_int_to_sfp__11__n = VL_LTS_IQQ(64, 0ULL, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum);
+        vlSelfRef.__Vfunc_int_to_sfp__11__Vfuncout 
+            = VL_SHIFTL_QQI(64,64,32, VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__11__n), 0x20U);
+        vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+            = vlSelfRef.__Vfunc_int_to_sfp__11__Vfuncout;
+    } else if ((2U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.__Vfunc_int_to_sfp__12__n = (IData)(
+                                                      (VL_LTS_IQQ(64, 0ULL, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum)
+                                                        ? vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum
+                                                        : 0ULL));
+        vlSelfRef.__Vfunc_int_to_sfp__12__Vfuncout 
+            = VL_SHIFTL_QQI(64,64,32, VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__12__n), 0x20U);
+        vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+            = vlSelfRef.__Vfunc_int_to_sfp__12__Vfuncout;
+    } else {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+            = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sum;
+    }
+}
+
+VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VPerceptron___024root___act_sequent__TOP__0\n"); );
+    VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    QData/*63:0*/ __Vfunc_sfp_add__3__Vfuncout;
+    __Vfunc_sfp_add__3__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__3__a;
+    __Vfunc_sfp_add__3__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__3__b;
+    __Vfunc_sfp_add__3__b = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__4__Vfuncout;
+    __Vfunc_sfp_mul__4__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__4__a;
+    __Vfunc_sfp_mul__4__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__4__b;
+    __Vfunc_sfp_mul__4__b = 0;
+    VlWide<4>/*127:0*/ __Vfunc_sfp_mul__4__tmp;
+    VL_ZERO_W(128, __Vfunc_sfp_mul__4__tmp);
+    VlWide<4>/*127:0*/ __Vtemp_1;
+    VlWide<4>/*127:0*/ __Vtemp_2;
+    VlWide<4>/*127:0*/ __Vtemp_3;
+    VlWide<4>/*127:0*/ __Vtemp_4;
+    VlWide<4>/*127:0*/ __Vtemp_5;
+    VlWide<4>/*127:0*/ __Vtemp_6;
+    // Body
+    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias;
+    __Vfunc_sfp_mul__4__b = vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
+        [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
+        [0U];
+    __Vfunc_sfp_mul__4__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+        [0U];
+    VL_EXTENDS_WQ(128,64, __Vtemp_1, __Vfunc_sfp_mul__4__a);
+    VL_EXTENDS_WQ(128,64, __Vtemp_2, __Vfunc_sfp_mul__4__b);
+    VL_MULS_WWW(128, __Vtemp_3, __Vtemp_1, __Vtemp_2);
+    VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__4__tmp, __Vtemp_3, 0x20U);
+    __Vfunc_sfp_mul__4__Vfuncout = (((QData)((IData)(
+                                                     __Vfunc_sfp_mul__4__tmp[1U])) 
+                                     << 0x20U) | (QData)((IData)(
+                                                                 __Vfunc_sfp_mul__4__tmp[0U])));
+    __Vfunc_sfp_add__3__b = __Vfunc_sfp_mul__4__Vfuncout;
+    __Vfunc_sfp_add__3__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum;
+    __Vfunc_sfp_add__3__Vfuncout = (__Vfunc_sfp_add__3__a 
+                                    + __Vfunc_sfp_add__3__b);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
+        = __Vfunc_sfp_add__3__Vfuncout;
+    __Vfunc_sfp_mul__4__b = vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
+        [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
+        [1U];
+    __Vfunc_sfp_mul__4__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+        [1U];
+    VL_EXTENDS_WQ(128,64, __Vtemp_4, __Vfunc_sfp_mul__4__a);
+    VL_EXTENDS_WQ(128,64, __Vtemp_5, __Vfunc_sfp_mul__4__b);
+    VL_MULS_WWW(128, __Vtemp_6, __Vtemp_4, __Vtemp_5);
+    VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__4__tmp, __Vtemp_6, 0x20U);
+    __Vfunc_sfp_mul__4__Vfuncout = (((QData)((IData)(
+                                                     __Vfunc_sfp_mul__4__tmp[1U])) 
+                                     << 0x20U) | (QData)((IData)(
+                                                                 __Vfunc_sfp_mul__4__tmp[0U])));
+    __Vfunc_sfp_add__3__b = __Vfunc_sfp_mul__4__Vfuncout;
+    __Vfunc_sfp_add__3__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum;
+    __Vfunc_sfp_add__3__Vfuncout = (__Vfunc_sfp_add__3__a 
+                                    + __Vfunc_sfp_add__3__b);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
+        = __Vfunc_sfp_add__3__Vfuncout;
+    if ((0U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_prediction 
+            = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum;
+    } else if ((1U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.__Vfunc_int_to_sfp__13__n = VL_LTS_IQQ(64, 0ULL, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum);
+        vlSelfRef.__Vfunc_int_to_sfp__13__Vfuncout 
+            = VL_SHIFTL_QQI(64,64,32, VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__13__n), 0x20U);
+        vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_prediction 
+            = vlSelfRef.__Vfunc_int_to_sfp__13__Vfuncout;
+    } else if ((2U == vlSelfRef.BenchPerceptronIntroduction__DOT__activation)) {
+        vlSelfRef.__Vfunc_int_to_sfp__14__n = (IData)(
+                                                      (VL_LTS_IQQ(64, 0ULL, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum)
+                                                        ? vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum
+                                                        : 0ULL));
+        vlSelfRef.__Vfunc_int_to_sfp__14__Vfuncout 
+            = VL_SHIFTL_QQI(64,64,32, VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__14__n), 0x20U);
+        vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_prediction 
+            = vlSelfRef.__Vfunc_int_to_sfp__14__Vfuncout;
+    } else {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_prediction 
+            = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum;
+    }
 }
 
 void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024root* vlSelf);
@@ -97,10 +265,13 @@ void VPerceptron___024root___eval_nba(VPerceptron___024root* vlSelf) {
     // Body
     if ((1ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[1U] = 1U;
+        vlSelfRef.__Vm_traceActivity[3U] = 1U;
     }
     if ((7ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___act_comb__TOP__0(vlSelf);
+    }
+    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+        VPerceptron___024root___act_sequent__TOP__0(vlSelf);
     }
 }
 
@@ -109,20 +280,77 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
+    QData/*63:0*/ __Vfunc_sfp_sub__5__Vfuncout;
+    __Vfunc_sfp_sub__5__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_sub__5__a;
+    __Vfunc_sfp_sub__5__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_sub__5__b;
+    __Vfunc_sfp_sub__5__b = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__6__Vfuncout;
+    __Vfunc_sfp_add__6__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__6__a;
+    __Vfunc_sfp_add__6__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__6__b;
+    __Vfunc_sfp_add__6__b = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__7__Vfuncout;
+    __Vfunc_sfp_mul__7__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__7__a;
+    __Vfunc_sfp_mul__7__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__7__b;
+    __Vfunc_sfp_mul__7__b = 0;
+    VlWide<4>/*127:0*/ __Vfunc_sfp_mul__7__tmp;
+    VL_ZERO_W(128, __Vfunc_sfp_mul__7__tmp);
+    QData/*63:0*/ __Vfunc_sfp_mul__8__Vfuncout;
+    __Vfunc_sfp_mul__8__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__8__a;
+    __Vfunc_sfp_mul__8__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__8__b;
+    __Vfunc_sfp_mul__8__b = 0;
+    VlWide<4>/*127:0*/ __Vfunc_sfp_mul__8__tmp;
+    VL_ZERO_W(128, __Vfunc_sfp_mul__8__tmp);
+    QData/*63:0*/ __Vfunc_sfp_add__9__Vfuncout;
+    __Vfunc_sfp_add__9__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__9__a;
+    __Vfunc_sfp_add__9__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_add__9__b;
+    __Vfunc_sfp_add__9__b = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__10__Vfuncout;
+    __Vfunc_sfp_mul__10__Vfuncout = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__10__a;
+    __Vfunc_sfp_mul__10__a = 0;
+    QData/*63:0*/ __Vfunc_sfp_mul__10__b;
+    __Vfunc_sfp_mul__10__b = 0;
+    VlWide<4>/*127:0*/ __Vfunc_sfp_mul__10__tmp;
+    VL_ZERO_W(128, __Vfunc_sfp_mul__10__tmp);
     IData/*31:0*/ __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx;
     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx = 0;
     IData/*31:0*/ __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state;
     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 0;
-    double __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error;
+    QData/*63:0*/ __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error;
     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error = 0;
-    double __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0;
+    QData/*63:0*/ __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0;
     __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 = 0;
     CData/*0:0*/ __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0;
     __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 = 0;
-    double __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1;
+    QData/*63:0*/ __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1;
     __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1 = 0;
     CData/*0:0*/ __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1;
     __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1 = 0;
+    VlWide<4>/*127:0*/ __Vtemp_1;
+    VlWide<4>/*127:0*/ __Vtemp_2;
+    VlWide<4>/*127:0*/ __Vtemp_3;
+    VlWide<4>/*127:0*/ __Vtemp_4;
+    VlWide<4>/*127:0*/ __Vtemp_5;
+    VlWide<4>/*127:0*/ __Vtemp_6;
+    VlWide<4>/*127:0*/ __Vtemp_7;
+    VlWide<4>/*127:0*/ __Vtemp_8;
+    VlWide<4>/*127:0*/ __Vtemp_9;
+    VlWide<4>/*127:0*/ __Vtemp_10;
+    VlWide<4>/*127:0*/ __Vtemp_11;
+    VlWide<4>/*127:0*/ __Vtemp_12;
+    VlWide<4>/*127:0*/ __Vtemp_13;
+    VlWide<4>/*127:0*/ __Vtemp_14;
+    VlWide<4>/*127:0*/ __Vtemp_15;
     // Body
     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state;
@@ -132,52 +360,122 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
         = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx;
     __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 = 0U;
     __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1 = 0U;
-    if (vlSelfRef.BenchPerceptronIntroduction__DOT__training) {
+    if (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__training_active) {
         if ((0U == vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state)) {
             __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx = 0U;
             __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 1U;
         } else if ((1U == vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state)) {
-            __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error 
-                = (vlSelfRef.BenchPerceptronIntroduction__DOT__expected
-                   [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)] 
-                   - VL_ITOR_D_I(1, (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-                                     > 0.0)));
+            __Vfunc_sfp_sub__5__b = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_prediction;
+            __Vfunc_sfp_sub__5__a = vlSelfRef.BenchPerceptronIntroduction__DOT__expected
+                [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)];
+            __Vfunc_sfp_sub__5__Vfuncout = (__Vfunc_sfp_sub__5__a 
+                                            - __Vfunc_sfp_sub__5__b);
             __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 2U;
+            __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error 
+                = __Vfunc_sfp_sub__5__Vfuncout;
         } else if ((2U == vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state)) {
-            __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 
-                = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-                   [0U] + (1.0 * (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error 
-                                  * vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
-                                  [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
-                                  [0U])));
-            __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 = 1U;
+            __Vfunc_sfp_mul__8__b = vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
+                [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
+                [0U];
             vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__unnamedblk4__DOT__i = 2U;
+            __Vfunc_sfp_mul__8__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error;
+            VL_EXTENDS_WQ(128,64, __Vtemp_1, __Vfunc_sfp_mul__8__a);
+            VL_EXTENDS_WQ(128,64, __Vtemp_2, __Vfunc_sfp_mul__8__b);
+            VL_MULS_WWW(128, __Vtemp_3, __Vtemp_1, __Vtemp_2);
+            VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__8__tmp, __Vtemp_3, 0x20U);
+            __Vfunc_sfp_mul__8__Vfuncout = (((QData)((IData)(
+                                                             __Vfunc_sfp_mul__8__tmp[1U])) 
+                                             << 0x20U) 
+                                            | (QData)((IData)(
+                                                              __Vfunc_sfp_mul__8__tmp[0U])));
+            __Vfunc_sfp_mul__7__b = __Vfunc_sfp_mul__8__Vfuncout;
+            __Vfunc_sfp_mul__7__a = vlSelfRef.BenchPerceptronIntroduction__DOT__learning_rate;
+            VL_EXTENDS_WQ(128,64, __Vtemp_4, __Vfunc_sfp_mul__7__a);
+            VL_EXTENDS_WQ(128,64, __Vtemp_5, __Vfunc_sfp_mul__7__b);
+            VL_MULS_WWW(128, __Vtemp_6, __Vtemp_4, __Vtemp_5);
+            VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__7__tmp, __Vtemp_6, 0x20U);
+            __Vfunc_sfp_mul__7__Vfuncout = (((QData)((IData)(
+                                                             __Vfunc_sfp_mul__7__tmp[1U])) 
+                                             << 0x20U) 
+                                            | (QData)((IData)(
+                                                              __Vfunc_sfp_mul__7__tmp[0U])));
+            __Vfunc_sfp_add__6__b = __Vfunc_sfp_mul__7__Vfuncout;
+            __Vfunc_sfp_add__6__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+                [0U];
+            __Vfunc_sfp_add__6__Vfuncout = (__Vfunc_sfp_add__6__a 
+                                            + __Vfunc_sfp_add__6__b);
+            __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 
+                = __Vfunc_sfp_add__6__Vfuncout;
+            __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v0 = 1U;
+            __Vfunc_sfp_mul__8__b = vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
+                [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
+                [1U];
+            __Vfunc_sfp_mul__8__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error;
+            VL_EXTENDS_WQ(128,64, __Vtemp_7, __Vfunc_sfp_mul__8__a);
+            VL_EXTENDS_WQ(128,64, __Vtemp_8, __Vfunc_sfp_mul__8__b);
+            VL_MULS_WWW(128, __Vtemp_9, __Vtemp_7, __Vtemp_8);
+            VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__8__tmp, __Vtemp_9, 0x20U);
+            __Vfunc_sfp_mul__8__Vfuncout = (((QData)((IData)(
+                                                             __Vfunc_sfp_mul__8__tmp[1U])) 
+                                             << 0x20U) 
+                                            | (QData)((IData)(
+                                                              __Vfunc_sfp_mul__8__tmp[0U])));
+            __Vfunc_sfp_mul__7__b = __Vfunc_sfp_mul__8__Vfuncout;
+            __Vfunc_sfp_mul__7__a = vlSelfRef.BenchPerceptronIntroduction__DOT__learning_rate;
+            VL_EXTENDS_WQ(128,64, __Vtemp_10, __Vfunc_sfp_mul__7__a);
+            VL_EXTENDS_WQ(128,64, __Vtemp_11, __Vfunc_sfp_mul__7__b);
+            VL_MULS_WWW(128, __Vtemp_12, __Vtemp_10, __Vtemp_11);
+            VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__7__tmp, __Vtemp_12, 0x20U);
+            __Vfunc_sfp_mul__7__Vfuncout = (((QData)((IData)(
+                                                             __Vfunc_sfp_mul__7__tmp[1U])) 
+                                             << 0x20U) 
+                                            | (QData)((IData)(
+                                                              __Vfunc_sfp_mul__7__tmp[0U])));
+            __Vfunc_sfp_add__6__b = __Vfunc_sfp_mul__7__Vfuncout;
+            __Vfunc_sfp_add__6__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
+                [1U];
+            __Vfunc_sfp_add__6__Vfuncout = (__Vfunc_sfp_add__6__a 
+                                            + __Vfunc_sfp_add__6__b);
             __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1 
-                = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-                   [1U] + (1.0 * (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error 
-                                  * vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
-                                  [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
-                                  [1U])));
+                = __Vfunc_sfp_add__6__Vfuncout;
             __VdlySet__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1 = 1U;
+            __Vfunc_sfp_mul__10__b = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error;
+            __Vfunc_sfp_mul__10__a = vlSelfRef.BenchPerceptronIntroduction__DOT__learning_rate;
+            VL_EXTENDS_WQ(128,64, __Vtemp_13, __Vfunc_sfp_mul__10__a);
+            VL_EXTENDS_WQ(128,64, __Vtemp_14, __Vfunc_sfp_mul__10__b);
+            VL_MULS_WWW(128, __Vtemp_15, __Vtemp_13, __Vtemp_14);
+            VL_SHIFTRS_WWI(128,128,32, __Vfunc_sfp_mul__10__tmp, __Vtemp_15, 0x20U);
+            __Vfunc_sfp_mul__10__Vfuncout = (((QData)((IData)(
+                                                              __Vfunc_sfp_mul__10__tmp[1U])) 
+                                              << 0x20U) 
+                                             | (QData)((IData)(
+                                                               __Vfunc_sfp_mul__10__tmp[0U])));
+            __Vfunc_sfp_add__9__b = __Vfunc_sfp_mul__10__Vfuncout;
+            __Vfunc_sfp_add__9__a = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias;
+            __Vfunc_sfp_add__9__Vfuncout = (__Vfunc_sfp_add__9__a 
+                                            + __Vfunc_sfp_add__9__b);
             vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias 
-                = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias 
-                   + (1.0 * vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__error));
+                = __Vfunc_sfp_add__9__Vfuncout;
             if (VL_GTS_III(32, 3U, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)) {
                 __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx 
                     = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx);
                 __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 1U;
             } else {
                 __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx = 0U;
-                if (VL_GTS_III(32, 9U, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__epoch_count)) {
+                if (VL_GTS_III(32, 4U, vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__epoch_count)) {
                     vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__epoch_count 
                         = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__epoch_count);
                     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 1U;
                 } else {
-                    vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
+                    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__training_active = 0U;
+                    vlSelfRef.BenchPerceptronIntroduction__DOT__done_training = 1U;
                     __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state = 0U;
                 }
             }
         }
+    } else {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__training_active = 1U;
+        vlSelfRef.BenchPerceptronIntroduction__DOT__done_training = 0U;
     }
     vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state 
         = __Vdly__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__state;
@@ -193,20 +491,6 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
         vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights[1U] 
             = __VdlyVal__BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights__v1;
     }
-    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__bias;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-        = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-           + (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-              [0U] * vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
-              [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
-              [0U]));
-    vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-        = (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__train_sum 
-           + (vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__weights
-              [1U] * vlSelfRef.BenchPerceptronIntroduction__DOT__train_values
-              [(3U & vlSelfRef.BenchPerceptronIntroduction__DOT__perceptron_i__DOT__sample_idx)]
-              [1U]));
 }
 
 void VPerceptron___024root___timing_commit(VPerceptron___024root* vlSelf) {
@@ -215,8 +499,8 @@ void VPerceptron___024root___timing_commit(VPerceptron___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((! (4ULL & vlSelfRef.__VactTriggered.word(0U)))) {
-        vlSelfRef.__VtrigSched_hfa9fd802__0.commit(
-                                                   "@( (~ BenchPerceptronIntroduction.training))");
+        vlSelfRef.__VtrigSched_h2100f152__0.commit(
+                                                   "@( BenchPerceptronIntroduction.done_training)");
     }
 }
 
@@ -226,8 +510,8 @@ void VPerceptron___024root___timing_resume(VPerceptron___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
-        vlSelfRef.__VtrigSched_hfa9fd802__0.resume(
-                                                   "@( (~ BenchPerceptronIntroduction.training))");
+        vlSelfRef.__VtrigSched_h2100f152__0.resume(
+                                                   "@( BenchPerceptronIntroduction.done_training)");
     }
     if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
         vlSelfRef.__VdlySched.resume();
@@ -293,7 +577,7 @@ void VPerceptron___024root___eval(VPerceptron___024root* vlSelf) {
 #ifdef VL_DEBUG
             VPerceptron___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("src/Benches/BenchPerceptronIntroduction.sv", 3, "", "NBA region did not converge.");
+            VL_FATAL_MT("src/Benches/BenchPerceptronIntroduction.sv", 4, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -304,7 +588,7 @@ void VPerceptron___024root___eval(VPerceptron___024root* vlSelf) {
 #ifdef VL_DEBUG
                 VPerceptron___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("src/Benches/BenchPerceptronIntroduction.sv", 3, "", "Active region did not converge.");
+                VL_FATAL_MT("src/Benches/BenchPerceptronIntroduction.sv", 4, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);

@@ -1,9 +1,10 @@
 import Common::*;
+import FloatingPoint::*;
 
 module Predict (
     input act_func activation,
-    input real sum,
-    output real prediction
+    input sfp sum,
+    output sfp prediction
 );
 
     always_comb begin
@@ -12,10 +13,13 @@ module Predict (
                 prediction = sum;
             end
             Heaviside_Step: begin
-                prediction = (sum > 0);
+                prediction = int_to_sfp(32'(sum > 0));
             end
             ReLU: begin
-                prediction = (sum > 0) ? sum : 0;
+                prediction = int_to_sfp(32'((sum > 0) ? sum : 0));
+            end
+            default: begin
+                prediction = sum;
             end
         endcase
     end
