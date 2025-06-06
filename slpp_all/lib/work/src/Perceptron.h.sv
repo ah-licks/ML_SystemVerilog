@@ -1,4 +1,5 @@
-package FloatingPoint;
+// Fixed-Point Package
+package FixedPoint;
     typedef logic signed [63:0] sfp;
     parameter int frac_bits = 32;
 
@@ -8,6 +9,14 @@ package FloatingPoint;
 
     function automatic int sfp_to_int(input sfp n);
         return 32'(n >>> frac_bits);
+    endfunction
+
+    function automatic sfp real_to_sfp(input real r);
+        return sfp'(r * (2.0 ** frac_bits));
+    endfunction
+
+    function automatic real sfp_to_real(input sfp n);
+        return real'(n) / (2.0 ** frac_bits);
     endfunction
 
     function automatic sfp sfp_add(input sfp a, b);
@@ -23,12 +32,25 @@ package FloatingPoint;
         tmp = (a * b) >>> frac_bits;
         return tmp[63:0];
     endfunction
+
+    function automatic sfp sfp_div(input sfp a, b);
+        logic signed [127:0] tmp;
+        tmp = (a << frac_bits) / b;
+        return tmp[63:0];
+    endfunction
+
+    // Fixed-point constants
+    parameter sfp SFP_ONE = 64'h100000000;  // 1.0
+    parameter sfp SFP_HALF = 64'h80000000;  // 0.5
+    parameter sfp SFP_EPSILON = 64'h1000;  // ~0.00000001
+    parameter sfp SFP_NEG_HALF = 64'hffffffff80000000;  // -0.5
 endpackage
 
 package Common;
     typedef enum {
-        Identity,
-        Heaviside_Step,
+        Step,
+        Sigmoid,
+        Tanh,
         ReLU
     } act_func;
     typedef enum {

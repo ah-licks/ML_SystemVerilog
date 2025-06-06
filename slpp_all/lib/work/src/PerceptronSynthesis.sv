@@ -1,5 +1,5 @@
 import Common::*;
-import FloatingPoint::*;
+import FixedPoint::*;
 
 module PerceptronSynthesis (
     input  logic clk,
@@ -9,22 +9,22 @@ module PerceptronSynthesis (
     output logic training_led
 );
 
-    sfp ONE;
-    parameter int size = 2;
-    parameter int num = 4;
-    sfp values[size-1:0];
+    int ONE;
+    parameter int input_units = 2;
+    parameter int training_inputs = 4;
+    int values[input_units-1:0];
     act_func activation;
-    sfp prediction;
+    int prediction;
     bit training = 1;
     logic done_training;
     int epochs = 5;
-    sfp learning_rate;
-    sfp train_values[num-1:0][size-1:0];
-    sfp expected[num-1:0];
+    int learning_rate;
+    int train_values[training_inputs-1:0][input_units-1:0];
+    int expected[training_inputs-1:0];
 
     PerceptronIntroduction #(
-        .size(size),
-        .num (num)
+        .input_units(input_units),
+        .training_inputs(training_inputs)
     ) perceptron_i (
         .clk(clk),
         .values(values),
@@ -39,7 +39,7 @@ module PerceptronSynthesis (
     );
 
     initial begin
-        ONE = int_to_sfp(1);
+        ONE = 1;
         activation = Heaviside_Step;
         learning_rate = ONE;
         train_values = '{'{0, 0}, '{0, ONE}, '{ONE, 0}, '{ONE, ONE}};
@@ -53,9 +53,9 @@ module PerceptronSynthesis (
         //expected = '{0, ONE, ONE, 0};
 
         assign training_led = done_training;
-        assign values[0] = int_to_sfp(32'(first_input));
-        assign values[1] = int_to_sfp(32'(second_input));
-        assign output_led = prediction > 0;
+        assign values[0] = first_input;
+        assign values[1] = second_input;
+        //assign output_led = prediction > 0;
     end
 
 endmodule

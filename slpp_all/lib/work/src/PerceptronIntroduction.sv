@@ -1,44 +1,46 @@
 import Common::*;
-import FloatingPoint::*;
+import FixedPoint::*;
 
 module PerceptronIntroduction #(
-    parameter int size = 2,
-    parameter int num  = 4
+    parameter int input_units = 2,
+    parameter int training_inputs = 4
 ) (
     input logic clk,
-    input sfp values[size-1:0],
+    input int values[input_units-1:0],
     input act_func activation,
-    output sfp prediction,
+    output int prediction,
     input logic training,
     input int epochs,
-    input sfp learning_rate,
-    input sfp train_values[num-1:0][size-1:0],
-    input sfp expected[num-1:0],
+    input int learning_rate,
+    input int train_values[training_inputs-1:0][input_units-1:0],
+    input int expected[training_inputs-1:0],
     output logic done_training
 );
-    sfp weights[size-1:0];
-    sfp bias;
-    sfp sum;
+    int weights[input_units-1:0];
+    int bias;
+    int sum;
     train_state state;
-    sfp train_prediction;
-    sfp train_sum;
+    int train_prediction;
+    int train_sum;
     int epoch_count = 0;
     int sample_idx = 0;
-    sfp error;
+    int error;
     logic training_active;
 
     initial begin
-        for (int i = 0; i < size; i++) begin
+        for (int i = 0; i < input_units; i++) begin
             weights[i] = 0;
         end
         bias  = 0;
         state = Idle;
     end
 
+    //predicting
+
     always_comb begin
         sum = bias;
-        for (int i = 0; i < size; i++) begin
-            sum = sfp_add(sum, sfp_mul(weights[i], values[i]));
+        for (int i = 0; i < input_units; i++) begin
+            sum = sum + weights[i] * values[i];
         end
     end
 
@@ -48,10 +50,12 @@ module PerceptronIntroduction #(
         .prediction(prediction)
     );
 
+    //training
+
     always_comb begin
         train_sum = bias;
-        for (int i = 0; i < size; i++) begin
-            train_sum = sfp_add(train_sum, sfp_mul(weights[i], train_values[sample_idx][i]));
+        for (int i = 0; i < input_units; i++) begin
+            train_sum = train_sum + weights[i] * train_values[sample_idx][i];
         end
     end
 
@@ -62,7 +66,9 @@ module PerceptronIntroduction #(
     );
 
     always_ff @(posedge clk) begin
-        if (!training_active && training) begin
+        if (done_training) begin
+
+        end else if (!training_active && training) begin
             training_active <= 1;
             done_training   <= 0;
         end else begin
@@ -71,23 +77,17 @@ module PerceptronIntroduction #(
                     sample_idx <= 0;
                     state <= Compute;
                 end
-
                 Compute: begin
-                    error <= sfp_sub(expected[sample_idx], train_prediction);
+                    error <= expected[sample_idx] - train_prediction;
                     state <= Update;
                 end
-
                 Update: begin
-                    for (int i = 0; i < size; i++) begin
-                        weights[i] <= sfp_add(
-                            weights[i],
-                            sfp_mul(
-                                learning_rate, sfp_mul(error, train_values[sample_idx][i]))
-                        );
+                    for (int i = 0; i < input_units; i++) begin
+                        weights[i] <= weights[i] + learning_rate * error * train_values[sample_idx][i];
                     end
-                    bias <= sfp_add(bias, sfp_mul(learning_rate, error));
+                    bias <= bias + learning_rate * error;
 
-                    if (sample_idx < num - 1) begin
+                    if (sample_idx < training_inputs - 1) begin
                         sample_idx <= sample_idx + 1;
                         state <= Compute;
                     end else begin

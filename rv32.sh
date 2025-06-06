@@ -12,7 +12,7 @@ export XRAY_DIR="${PWD}/../nextpnr-xilinx/xilinx/external/prjxray/"
 mkdir -p "${BUILD}"
 
 ../synlig/build/release/synlig/synlig \
-    -p "read_systemverilog ${FILES}; synth_xilinx -family xc7 -flatten -nowidelut -abc9 -arch xc7 -top PerceptronSynthesis; write_json ${BUILD}/test.json" \
+    -p "read_systemverilog ${FILES}; synth_xilinx -family xc7 -flatten -nowidelut -abc9 -arch xc7 -top BenchPerceptron; write_json ${BUILD}/test.json" \
 
 # yosys \
 #     -p "synth_xilinx -flatten -nowidelut -abc9 -arch xc7 -top top; write_json -noscopeinfo ${BUILD}/test.json" \
@@ -25,7 +25,9 @@ echo "yosys done"
     --xdc "${CONSTRAINTS}" \
     --json "${BUILD}/test.json" \
     --write "${BUILD}/test_routed.json" \
-    --fasm "${BUILD}/test.fasm"
+    --fasm "${BUILD}/test.fasm" \
+    --verbose \
+    --debug
 
 source "${XRAY_DIR}/utils/environment.sh"
 export XRAY_DATABASE_DIR="${XRAY_DIR}/../prjxray-db/"

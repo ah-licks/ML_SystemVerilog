@@ -1,4 +1,4 @@
-package FloatingPoint;
+package FixedPoint;
     typedef logic signed [63:0] sfp;
     parameter int frac_bits = 32;
 
@@ -26,9 +26,13 @@ package FloatingPoint;
 endpackage
 
 package Common;
+
+    real e = 2.718281828;
+
     typedef enum {
-        Identity,
-        Heaviside_Step,
+        Step,
+        Sigmoid,
+        Tanh,
         ReLU
     } act_func;
     typedef enum {

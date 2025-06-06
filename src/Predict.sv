@@ -1,22 +1,25 @@
 import Common::*;
-import FloatingPoint::*;
+import FixedPoint::*;
 
 module Predict (
     input act_func activation,
-    input sfp sum,
-    output sfp prediction
+    input real sum,
+    output real prediction
 );
 
     always_comb begin
         case (activation)
-            Identity: begin
-                prediction = sum;
+            Step: begin
+                prediction = sum > 0;
             end
-            Heaviside_Step: begin
-                prediction = int_to_sfp(32'(sum > 0));
+            Sigmoid: begin
+                prediction = 1 / (1 + e ** (-sum));
+            end
+            Tanh: begin
+                prediction = 2 / (1 + e ** (-2 * sum)) - 1;
             end
             ReLU: begin
-                prediction = int_to_sfp(32'((sum > 0) ? sum : 0));
+                prediction = (sum > 0) ? sum : 0;
             end
             default: begin
                 prediction = sum;
