@@ -75,6 +75,34 @@ module BenchPerceptron ();
         for (int epoch = 0; epoch < 100; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
+            training = 1;
+
+            @(posedge clk);
+            values[0] = 0.0;
+            values[1] = 0.0;
+            expected  = 0.0;
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0] = 0.0;
+            values[1] = 1.0;
+            expected  = 0.0;
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0] = 1.0;
+            values[1] = 0.0;
+            expected  = 0.0;
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0] = 1.0;
+            values[1] = 1.0;
+            expected  = 1.0;
+            @(posedge clk);
+
+            training = 0;
+
             @(posedge clk);
             values[0] = 0.0;
             values[1] = 0.0;

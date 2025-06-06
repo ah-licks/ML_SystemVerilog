@@ -70,15 +70,41 @@ module BenchMLP ();
         for (int epoch = 0; epoch < 100; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
-            // Training pattern 1: [0,0] -> 0
+            training = 1;
+
             @(posedge clk);
             values[0]   = 0.0;
             values[1]   = 0.0;
             expected[0] = 0.0;
-            @(posedge clk);  // Wait for prediction to settle
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0]   = 0.0;
+            values[1]   = 1.0;
+            expected[0] = 1.0;
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0]   = 1.0;
+            values[1]   = 0.0;
+            expected[0] = 1.0;
+            @(posedge clk);
+
+            @(posedge clk);
+            values[0]   = 1.0;
+            values[1]   = 1.0;
+            expected[0] = 0.0;
+            @(posedge clk);
+
+            training = 0;
+
+            @(posedge clk);
+            values[0]   = 0.0;
+            values[1]   = 0.0;
+            expected[0] = 0.0;
+            @(posedge clk);
             $display("%0t\t[0,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected[0], prediction[0], cost);
 
-            // Training pattern 2: [0,1] -> 1
             @(posedge clk);
             values[0]   = 0.0;
             values[1]   = 1.0;
@@ -86,7 +112,6 @@ module BenchMLP ();
             @(posedge clk);
             $display("%0t\t[0,1]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected[0], prediction[0], cost);
 
-            // Training pattern 3: [1,0] -> 1
             @(posedge clk);
             values[0]   = 1.0;
             values[1]   = 0.0;
@@ -94,7 +119,6 @@ module BenchMLP ();
             @(posedge clk);
             $display("%0t\t[1,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected[0], prediction[0], cost);
 
-            // Training pattern 4: [1,1] -> 0
             @(posedge clk);
             values[0]   = 1.0;
             values[1]   = 1.0;
@@ -103,7 +127,6 @@ module BenchMLP ();
             $display("%0t\t[1,1]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected[0], prediction[0], cost);
         end
 
-        // Final testing phase
         $display("\n=== Final Testing Phase ===");
         training = 0;
 
@@ -135,7 +158,6 @@ module BenchMLP ();
         @(posedge clk);
         $display("Test [1,1] -> %0.6f (expected 0.000)", prediction[0]);
 
-        // Classification accuracy
         threshold = 0.5;
         correct   = 0;
 
