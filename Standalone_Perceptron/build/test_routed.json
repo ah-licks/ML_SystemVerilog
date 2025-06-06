@@ -1,0 +1,351 @@
+{
+  "creator": "Next Generation Place and Route (Version 8f178fc6)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "router2/perfProfile": "0 ",
+        "router2/estimateWeight": "1.250000",
+        "router2/currCongWeightMult": "2.000000",
+        "router2/histCongWeight": "1.000000",
+        "router2/initCurrCongWeight": "0.500000",
+        "router2/biasCostFactor": "0.250000",
+        "router2/ipinCostAdder": "0.000000",
+        "router2/bbMargin/y": "3",
+        "router2/bbMargin/x": "3",
+        "router2/glbBwdMaxIter": "200",
+        "router2/bwdMaxIter": "20",
+        "placer1/startTemp": "1.000000",
+        "placer1/budgetBased": "0 ",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "01010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "xilinx",
+        "router": "router2",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "12000000.000000"
+      },
+      "attributes": {
+        "step": "place",
+        "top": "00000000000000000000000000000001",
+        "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:3.1-77.10"
+      },
+      "ports": {
+        "second_input": {
+          "direction": "input",
+          "bits": [ 47254 ]
+        },
+        "output_led": {
+          "direction": "output",
+          "bits": [ 47253 ]
+        },
+        "first_input": {
+          "direction": "input",
+          "bits": [ 47252 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 47251 ]
+        }
+      },
+      "cells": {
+        "$iopadmap$PerceptronSynthesis.clk$intcell$IBUF": {
+          "hide_name": 1,
+          "type": "IOB33_INBUF_EN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y26/IOB33/INBUF_EN",
+            "X_ORIG_PORT_OUT": "O",
+            "X_ORIG_TYPE": "IBUF",
+            "X_ORIG_PORT_PAD": "I"
+          },
+          "port_directions": {
+            "PAD": "input",
+            "OUT": "output"
+          },
+          "connections": {
+            "PAD": [ 47251 ],
+            "OUT": [ 47258 ]
+          }
+        },
+        "$iopadmap$PerceptronSynthesis.first_input$intcell$IBUF": {
+          "hide_name": 1,
+          "type": "IOB33_INBUF_EN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y39/IOB33/INBUF_EN",
+            "X_ORIG_PORT_OUT": "O",
+            "X_ORIG_TYPE": "IBUF",
+            "X_ORIG_PORT_PAD": "I"
+          },
+          "port_directions": {
+            "PAD": "input",
+            "OUT": "output"
+          },
+          "connections": {
+            "PAD": [ 47252 ],
+            "OUT": [ 47261 ]
+          }
+        },
+        "$iopadmap$PerceptronSynthesis.output_led$intcell$OBUF": {
+          "hide_name": 1,
+          "type": "IOB33_OUTBUF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y76/IOB33/OUTBUF",
+            "X_ORIG_PORT_OUT": "O",
+            "X_ORIG_TYPE": "OBUF",
+            "X_ORIG_PORT_IN": "I"
+          },
+          "port_directions": {
+            "IN": "input",
+            "OUT": "output"
+          },
+          "connections": {
+            "IN": [ 47502 ],
+            "OUT": [ 47253 ]
+          }
+        },
+        "$iopadmap$PerceptronSynthesis.second_input$intcell$IBUF": {
+          "hide_name": 1,
+          "type": "IOB33_INBUF_EN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y44/IOB33/INBUF_EN",
+            "X_ORIG_PORT_OUT": "O",
+            "X_ORIG_TYPE": "IBUF",
+            "X_ORIG_PORT_PAD": "I"
+          },
+          "port_directions": {
+            "PAD": "input",
+            "OUT": "output"
+          },
+          "connections": {
+            "PAD": [ 47254 ],
+            "OUT": [ 47266 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "PSEUDO_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "LIOB33_X0Y29/PSEUDO_GND_BEL"
+          },
+          "port_directions": {
+            "Y": "output"
+          },
+          "connections": {
+            "Y": [ 47502 ]
+          }
+        },
+        "second_input": {
+          "hide_name": 0,
+          "type": "PAD",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y44/IOB33/PAD",
+            "X_ORIG_TYPE": "PAD",
+            "X_ORIG_PORT_PAD": "PAD",
+            "X_IO_DIR": "IN",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:6.18-6.30",
+            "LOC": "T1",
+            "IOSTANDARD": "LVCMOS18"
+          },
+          "port_directions": {
+            "PAD": "inout"
+          },
+          "connections": {
+            "PAD": [ 47254 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "PSEUDO_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "NULL_X0Y0/PSEUDO_VCC_BEL"
+          },
+          "port_directions": {
+            "Y": "output"
+          },
+          "connections": {
+            "Y": [ 47504 ]
+          }
+        },
+        "output_led": {
+          "hide_name": 0,
+          "type": "PAD",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y76/IOB33/PAD",
+            "X_ORIG_TYPE": "PAD",
+            "X_ORIG_PORT_PAD": "PAD",
+            "X_IO_DIR": "OUT",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:7.18-7.28",
+            "LOC": "N3",
+            "IOSTANDARD": "LVCMOS18"
+          },
+          "port_directions": {
+            "PAD": "inout"
+          },
+          "connections": {
+            "PAD": [ 47253 ]
+          }
+        },
+        "first_input": {
+          "hide_name": 0,
+          "type": "PAD",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y39/IOB33/PAD",
+            "X_ORIG_TYPE": "PAD",
+            "X_ORIG_PORT_PAD": "PAD",
+            "X_IO_DIR": "IN",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:5.18-5.29",
+            "LOC": "W2",
+            "IOSTANDARD": "LVCMOS18"
+          },
+          "port_directions": {
+            "PAD": "inout"
+          },
+          "connections": {
+            "PAD": [ 47252 ]
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "type": "PAD",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000110",
+            "NEXTPNR_BEL": "IOB_X1Y26/IOB33/PAD",
+            "X_ORIG_TYPE": "PAD",
+            "X_ORIG_PORT_PAD": "PAD",
+            "X_IO_DIR": "IN",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:4.18-4.21",
+            "LOC": "W5",
+            "IOSTANDARD": "LVCMOS18"
+          },
+          "port_directions": {
+            "PAD": "inout"
+          },
+          "connections": {
+            "PAD": [ 47251 ]
+          }
+        }
+      },
+      "netnames": {
+        "$PACKER_GND_NET": {
+          "hide_name": 1,
+          "bits": [ 47502 ] ,
+          "attributes": {
+            "ROUTING": "INT_L_X0Y76/GND_WIRE;NULL_X0Y80/3.1;1;INT_R_X43Y76/GFAN0;INT_R_X43Y76/138.136;1;INT_R_X43Y76/IMUX34;INT_R_X43Y76/136.167;1;RIOI3_X43Y75/IOI_OLOGIC0_D1;RIOI3_X43Y75/261.484;1;RIOI3_X43Y75/RIOI_OLOGIC0_OQ;RIOI3_X43Y75/484.720;1;RIOB33_X43Y75/IOB_O0;RIOI3_X43Y75/720.706;1;SITEWIRE/IOB_X1Y76/O;RIOB33_X43Y75/14.330;1;SITEWIRE/IOB_X1Y76/OUSED_OUT;SITEPIP/IOB_X1Y76/OUSED/O;1;NULL_X0Y156/PSEUDO_GND_WIRE_GLBL;;1"
+          }
+        },
+        "$iopadmap$second_input": {
+          "hide_name": 1,
+          "bits": [ 47266 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "second_input": {
+          "hide_name": 0,
+          "bits": [ 47254 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:6.18-6.30"
+          }
+        },
+        "output_led": {
+          "hide_name": 0,
+          "bits": [ 47253 ] ,
+          "attributes": {
+            "ROUTING": "SITEWIRE/IOB_X1Y76/OUTBUF_OUT;;1",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:7.18-7.28"
+          }
+        },
+        "$PACKER_VCC_NET": {
+          "hide_name": 1,
+          "bits": [ 47504 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "$iopadmap$first_input": {
+          "hide_name": 1,
+          "bits": [ 47261 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "first_input": {
+          "hide_name": 0,
+          "bits": [ 47252 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:5.18-5.29"
+          }
+        },
+        "perceptron_i.clk": {
+          "hide_name": 0,
+          "bits": [ 47258 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronIntroduction.sv:6.17-6.20",
+            "hdlname": "perceptron_i clk"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 47251 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:4.18-4.21"
+          }
+        }
+      }
+    }
+  }
+}

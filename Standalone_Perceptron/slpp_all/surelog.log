@@ -1,0 +1,33 @@
+********************************************
+*  SURELOG SystemVerilog  Compiler/Linter  *
+********************************************
+
+Copyright (c) 2017-2023 Alain Dargelas,
+http://www.apache.org/licenses/LICENSE-2.0
+
+VERSION: 1.84
+BUILT  : Apr 25 2025
+DATE   : 2025-06-06.14:50:30
+COMMAND: ./src/Perceptron.h.sv ./src/PerceptronIntroduction.sv ./src/PerceptronSynthesis.sv -DYOSYS=1 -DSYNTHESIS=1
+
+[INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/slpp_all/surelog.log".
+[INF:CP0300] Compilation...
+[INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/Perceptron.h.sv:1:1: Compile package "FixedPoint".
+[INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronIntroduction.sv:3:1: Compile module "work@PerceptronIntroduction".
+[INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:3:1: Compile module "work@PerceptronSynthesis".
+[INF:CP0302] Compile class "work@mailbox".
+[INF:CP0302] Compile class "work@process".
+[INF:CP0302] Compile class "work@semaphore".
+[INF:EL0526] Design Elaboration...
+[NTE:EL0503] /Users/alexbackues/Documents/RISCV-CPU/Standalone_Perceptron/src/PerceptronSynthesis.sv:3:1: Top level module "work@PerceptronSynthesis".
+[NTE:EL0508] Nb Top level modules: 1.
+[NTE:EL0509] Max instance depth: 2.
+[NTE:EL0510] Nb instances: 2.
+[NTE:EL0511] Nb leaf instances: 0.
+[INF:UH0706] Creating UHDM Model...
+[INF:UH0707] Elaborating UHDM...
+[  FATAL] : 0
+[ SYNTAX] : 0
+[  ERROR] : 0
+[WARNING] : 0
+[   NOTE] : 5
