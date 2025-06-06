@@ -1,5 +1,5 @@
 import Common::*;
-import FixedPoint::*;
+//import FixedPoint::*;
 
 module Predict (
     input act_func activation,

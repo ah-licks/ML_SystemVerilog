@@ -2,6 +2,9 @@ package FixedPoint;
     typedef logic signed [63:0] sfp;
     parameter int frac_bits = 32;
 
+    sfp e = 'h2b7e15160;
+    sfp epsilon = 'h2a;
+
     function automatic sfp int_to_sfp(input int n);
         return (64'(signed'(n)) << frac_bits);
     endfunction
@@ -28,6 +31,7 @@ endpackage
 package Common;
 
     real e = 2.718281828;
+    real epsilon = 0.00000001;
 
     typedef enum {
         Step,

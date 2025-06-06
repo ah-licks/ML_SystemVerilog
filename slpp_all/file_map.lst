@@ -1,7 +1,3 @@
-/Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/MLP.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/MLP.sv
 /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/Perceptron.h.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/Perceptron.h.sv
 /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/PerceptronFull.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/PerceptronFull.sv
-/Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/PerceptronSynthesis.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/PerceptronSynthesis.sv
 /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/Predict.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/Predict.sv
-/Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/SigmoidApprox.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/SigmoidApprox.sv
-/Users/alexbackues/Documents/RISCV-CPU/Full_MLP/slpp_all/lib/work/src/TanhApprox.sv /Users/alexbackues/Documents/RISCV-CPU/Full_MLP/src/TanhApprox.sv

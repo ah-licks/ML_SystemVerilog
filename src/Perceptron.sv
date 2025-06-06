@@ -1,6 +1,7 @@
 import Common::*;
+//import FixedPoint::*;
 
-module PerceptronFull #(
+module Perceptron #(
     parameter int input_units  = 2,
     parameter int output_units = 2
 ) (
@@ -30,8 +31,6 @@ module PerceptronFull #(
             current_weights[i] = weights[i];
         end
     end
-
-    //predicting
 
     always_comb begin
         sum = bias;
