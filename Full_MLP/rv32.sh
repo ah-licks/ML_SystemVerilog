@@ -7,7 +7,7 @@ CONSTRAINTS="${SRC}/constraints.xdc"
 FILES=$(fd '\.sv' ${SRC} --print0 -E Benches | xargs -0)
 echo "compiling $FILES"
 
-export XRAY_DIR="${PWD}/../nextpnr-xilinx/xilinx/external/prjxray/"
+export XRAY_DIR="${PWD}/../../nextpnr-xilinx/xilinx/external/prjxray/"
 
 mkdir -p "${BUILD}"
 
@@ -20,8 +20,8 @@ mkdir -p "${BUILD}"
 
 echo "yosys done"
 
-../nextpnr-xilinx/nextpnr-xilinx \
-    --chipdb ../nextpnr-xilinx/xilinx/xc7a35t.bin \
+../../nextpnr-xilinx/nextpnr-xilinx \
+    --chipdb ../../nextpnr-xilinx/xilinx/xc7a35t.bin \
     --xdc "${CONSTRAINTS}" \
     --json "${BUILD}/test.json" \
     --write "${BUILD}/test_routed.json" \

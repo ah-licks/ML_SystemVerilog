@@ -7,11 +7,11 @@ CONSTRAINTS="${SRC}/constraints.xdc"
 FILES=$(fd '\.sv' ${SRC} --print0 -E Benches | xargs -0)
 echo "compiling $FILES"
 
-export XRAY_DIR="${PWD}/../nextpnr-xilinx/xilinx/external/prjxray/"
+export XRAY_DIR="${PWD}/../../nextpnr-xilinx/xilinx/external/prjxray/"
 
 mkdir -p "${BUILD}"
 
-../synlig/build/release/synlig/synlig \
+../../synlig/build/release/synlig/synlig \
     -p "read_systemverilog ${FILES}; synth_xilinx -family xc7 -flatten -nowidelut -abc9 -arch xc7 -top PerceptronSynthesis; write_json ${BUILD}/test.json" \
 
 # yosys \
@@ -20,8 +20,8 @@ mkdir -p "${BUILD}"
 
 echo "yosys done"
 
-../nextpnr-xilinx/nextpnr-xilinx \
-    --chipdb ../nextpnr-xilinx/xilinx/xc7a35t.bin \
+../../nextpnr-xilinx/nextpnr-xilinx \
+    --chipdb ../../nextpnr-xilinx/xilinx/xc7a35t.bin \
     --xdc "${CONSTRAINTS}" \
     --json "${BUILD}/test.json" \
     --write "${BUILD}/test_routed.json" \

@@ -166,14 +166,14 @@ module BenchMLP ();
         @(posedge clk);
         values[0]   = 0.0;
         values[1]   = 1.0;
-        expected[0] = 0.0;
+        expected[0] = 1.0;
         @(posedge clk);
         if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
 
         @(posedge clk);
         values[0]   = 1.0;
         values[1]   = 0.0;
-        expected[0] = 0.0;
+        expected[0] = 1.0;
         @(posedge clk);
         if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
 
