@@ -11,7 +11,7 @@ export XRAY_DIR="${PWD}/../../nextpnr-xilinx/xilinx/external/prjxray/"
 
 mkdir -p "${BUILD}"
 
-../synlig/build/release/synlig/synlig \
+../../synlig/build/release/synlig/synlig \
     -p "read_systemverilog ${FILES}; synth_xilinx -family xc7 -flatten -nowidelut -abc9 -arch xc7 -top PerceptronFull; write_json ${BUILD}/test.json" \
 
 # yosys \
