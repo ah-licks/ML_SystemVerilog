@@ -72,59 +72,51 @@ module BenchPerceptron ();
         $display("Time\tInputs\tExpected\tPrediction\tCost");
         $display("----\t------\t--------\t----------\t----");
 
-        for (int epoch = 0; epoch < 100; epoch++) begin
+        for (int epoch = 0; epoch < 10; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
-            training = 1;
+            training  = 1;
 
-            @(posedge clk);
             values[0] = 0.0;
             values[1] = 0.0;
             expected  = 0.0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = 0.0;
             values[1] = 1.0;
             expected  = 0.0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = 1.0;
             values[1] = 0.0;
             expected  = 0.0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = 1.0;
             values[1] = 1.0;
             expected  = 1.0;
             @(posedge clk);
 
-            training = 0;
+            training  = 0;
 
-            @(posedge clk);
             values[0] = 0.0;
             values[1] = 0.0;
             expected  = 0.0;
             @(posedge clk);
             $display("%0t\t[0,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
 
-            @(posedge clk);
             values[0] = 0.0;
             values[1] = 1.0;
             expected  = 0.0;
             @(posedge clk);
             $display("%0t\t[0,1]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
 
-            @(posedge clk);
             values[0] = 1.0;
             values[1] = 0.0;
             expected  = 0.0;
             @(posedge clk);
             $display("%0t\t[1,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
 
-            @(posedge clk);
             values[0] = 1.0;
             values[1] = 1.0;
             expected  = 1.0;
@@ -133,67 +125,37 @@ module BenchPerceptron ();
         end
 
         $display("\n=== Final Testing Phase ===");
-        training = 0;
-
-        @(posedge clk);
-        values[0] = 0.0;
-        values[1] = 0.0;
-        expected  = 0.0;
-        @(posedge clk);
-        $display("Test [0,0] -> %0.6f (expected 0.000)", prediction);
-
-        @(posedge clk);
-        values[0] = 0.0;
-        values[1] = 1.0;
-        expected  = 0.0;
-        @(posedge clk);
-        $display("Test [0,1] -> %0.6f (expected 0.000)", prediction);
-
-        @(posedge clk);
-        values[0] = 1.0;
-        values[1] = 0.0;
-        expected  = 0.0;
-        @(posedge clk);
-        $display("Test [1,0] -> %0.6f (expected 0.000)", prediction);
-
-        @(posedge clk);
-        values[0] = 1.0;
-        values[1] = 1.0;
-        expected  = 1.0;
-        @(posedge clk);
-        $display("Test [1,1] -> %0.6f (expected 1.000)", prediction);
-
-
+        training  = 0;
         threshold = 0.5;
         correct   = 0;
 
-        @(posedge clk);
         values[0] = 0.0;
         values[1] = 0.0;
         expected  = 0.0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
+        $display("Test [0,0] -> %0.6f (expected 0.000)", prediction);
 
-        @(posedge clk);
         values[0] = 0.0;
         values[1] = 1.0;
         expected  = 0.0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
+        $display("Test [0,1] -> %0.6f (expected 0.000)", prediction);
 
-        @(posedge clk);
         values[0] = 1.0;
         values[1] = 0.0;
         expected  = 0.0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
+        $display("Test [1,0] -> %0.6f (expected 0.000)", prediction);
 
-        @(posedge clk);
         values[0] = 1.0;
         values[1] = 1.0;
         expected  = 1.0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
+        $display("Test [1,1] -> %0.6f (expected 1.000)", prediction);
 
         $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
 
