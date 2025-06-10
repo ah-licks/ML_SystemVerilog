@@ -53,56 +53,48 @@ module BenchPerceptronIntroduction ();
         for (int epoch = 0; epoch < 10; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
-            training = 1;
+            training  = 1;
 
-            @(posedge clk);
             values[0] = 0;
             values[1] = 0;
             expected  = 0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = 0;
             values[1] = ONE;
             expected  = 0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = ONE;
             values[1] = 0;
             expected  = 0;
             @(posedge clk);
 
-            @(posedge clk);
             values[0] = ONE;
             values[1] = ONE;
             expected  = ONE;
             @(posedge clk);
 
-            training = 0;
+            training  = 0;
 
-            @(posedge clk);
             values[0] = 0;
             values[1] = 0;
             expected  = 0;
             @(posedge clk);
             $display("%0t\t[0,0]\t%d\t\t%d", $time, expected, prediction);
 
-            @(posedge clk);
             values[0] = 0;
             values[1] = ONE;
             expected  = 0;
             @(posedge clk);
             $display("%0t\t[0,1]\t%d\t\t%d", $time, expected, prediction);
 
-            @(posedge clk);
             values[0] = ONE;
             values[1] = 0;
             expected  = 0;
             @(posedge clk);
             $display("%0t\t[1,0]\t%d\t\t%d", $time, expected, prediction);
 
-            @(posedge clk);
             values[0] = ONE;
             values[1] = ONE;
             expected  = ONE;
@@ -111,65 +103,36 @@ module BenchPerceptronIntroduction ();
         end
 
         $display("\n=== Final Testing Phase ===");
-        training = 0;
+        training  = 0;
+        correct   = 0;
 
-        @(posedge clk);
         values[0] = 0;
         values[1] = 0;
         expected  = 0;
         @(posedge clk);
+        if (prediction == expected) correct++;
         $display("Test [0,0] -> %d(expected 0)", prediction);
 
-        @(posedge clk);
         values[0] = 0;
         values[1] = ONE;
         expected  = 0;
         @(posedge clk);
+        if (prediction == expected) correct++;
         $display("Test [0,1] -> %d (expected 0)", prediction);
 
-        @(posedge clk);
         values[0] = ONE;
         values[1] = 0;
         expected  = 0;
         @(posedge clk);
+        if (prediction == expected) correct++;
         $display("Test [1,0] -> %d (expected 0)", prediction);
 
-        @(posedge clk);
         values[0] = ONE;
         values[1] = ONE;
         expected  = ONE;
         @(posedge clk);
+        if (prediction == expected) correct++;
         $display("Test [1,1] -> %d (expected 1 << (2^32))", prediction);
-
-        correct = 0;
-
-        @(posedge clk);
-        values[0] = 0;
-        values[1] = 0;
-        expected  = 0;
-        @(posedge clk);
-        if (prediction == expected) correct++;
-
-        @(posedge clk);
-        values[0] = 0;
-        values[1] = ONE;
-        expected  = 0;
-        @(posedge clk);
-        if (prediction == expected) correct++;
-
-        @(posedge clk);
-        values[0] = ONE;
-        values[1] = 0;
-        expected  = 0;
-        @(posedge clk);
-        if (prediction == expected) correct++;
-
-        @(posedge clk);
-        values[0] = ONE;
-        values[1] = ONE;
-        expected  = ONE;
-        @(posedge clk);
-        if (prediction == expected) correct++;
 
         $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
 

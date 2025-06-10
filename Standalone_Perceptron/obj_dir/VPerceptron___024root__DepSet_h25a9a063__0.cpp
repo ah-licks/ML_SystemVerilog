@@ -38,12 +38,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__rst = 0U;
     VL_WRITEF_NX("Starting AND gate training...\nTime\tInputs\tExpected\tPrediction\n----\t------\t--------\t----------\n\n=== Epoch 0 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -51,13 +45,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -67,13 +55,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -83,13 +65,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -101,15 +77,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -117,20 +87,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -138,34 +115,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -176,7 +128,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -184,12 +136,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 1U;
     VL_WRITEF_NX("\n=== Epoch 1 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -197,13 +143,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -213,13 +153,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -229,13 +163,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -247,15 +175,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -263,20 +185,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -284,34 +213,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -322,7 +226,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -330,12 +234,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 2U;
     VL_WRITEF_NX("\n=== Epoch 2 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -343,13 +241,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -359,13 +251,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -375,13 +261,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -393,15 +273,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -409,20 +283,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -430,34 +311,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -468,7 +324,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -476,12 +332,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 3U;
     VL_WRITEF_NX("\n=== Epoch 3 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -489,13 +339,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -505,13 +349,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -521,13 +359,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -539,15 +371,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -555,20 +381,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -576,34 +409,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -614,7 +422,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -622,12 +430,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 4U;
     VL_WRITEF_NX("\n=== Epoch 4 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -635,13 +437,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -651,13 +447,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -667,13 +457,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -685,15 +469,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -701,20 +479,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -722,34 +507,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -760,7 +520,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -768,12 +528,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 5U;
     VL_WRITEF_NX("\n=== Epoch 5 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -781,13 +535,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -797,13 +545,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -813,13 +555,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -831,15 +567,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -847,20 +577,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -868,34 +605,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -906,7 +618,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -914,12 +626,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 6U;
     VL_WRITEF_NX("\n=== Epoch 6 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -927,13 +633,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -943,13 +643,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -959,13 +653,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -977,15 +665,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -993,20 +675,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -1014,34 +703,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1052,7 +716,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -1060,12 +724,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 7U;
     VL_WRITEF_NX("\n=== Epoch 7 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1073,13 +731,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1089,13 +741,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1105,13 +751,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1123,15 +763,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1139,20 +773,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -1160,34 +801,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1198,7 +814,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -1206,12 +822,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 8U;
     VL_WRITEF_NX("\n=== Epoch 8 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1219,13 +829,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1235,13 +839,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1251,13 +849,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1269,15 +861,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1285,20 +871,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -1306,34 +899,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1344,7 +912,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -1352,12 +920,6 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 9U;
     VL_WRITEF_NX("\n=== Epoch 9 ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         58);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1365,13 +927,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         62);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         64);
+                                                         61);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1381,13 +937,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         68);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         70);
+                                                         66);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1397,13 +947,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         74);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         76);
+                                                         71);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1415,15 +959,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         80);
+                                                         76);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         84);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1431,20 +969,27 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         88);
+                                                         83);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[0,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         91);
+                                                         89);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
+    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
+                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
@@ -1452,34 +997,9 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
                                                          95);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("%0t\t[0,1]\t%20d\t\t%20d\n",0,64,
-                 VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         98);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         102);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,0]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1490,7 +1010,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         109);
+                                                         101);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("%0t\t[1,1]\t%20d\t\t%20d\n",0,64,
                  VL_TIME_UNITED_Q(1),-12,64,vlSelfRef.BenchPerceptronIntroduction__DOT__expected,
@@ -1498,12 +1018,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
     vlSelfRef.BenchPerceptronIntroduction__DOT__unnamedblk1__DOT__epoch = 0xaU;
     VL_WRITEF_NX("\n=== Final Testing Phase ===\n",0);
     vlSelfRef.BenchPerceptronIntroduction__DOT__training = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         116);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.BenchPerceptronIntroduction__DOT__correct = 0U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
@@ -1511,16 +1026,15 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         120);
+                                                         112);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
+            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
+    }
     VL_WRITEF_NX("Test [0,0] -> %20d(expected 0)\n",0,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         123);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
@@ -1529,16 +1043,15 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         127);
+                                                         119);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
+            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
+    }
     VL_WRITEF_NX("Test [0,1] -> %20d (expected 0)\n",0,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         130);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
@@ -1547,16 +1060,15 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         134);
+                                                         126);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
+         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
+        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
+            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
+    }
     VL_WRITEF_NX("Test [1,0] -> %20d (expected 0)\n",0,
                  64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         137);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
         = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
     vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
@@ -1567,97 +1079,15 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         141);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("Test [1,1] -> %20d (expected 1 << (2^32))\n",0,
-                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction);
-    vlSelfRef.BenchPerceptronIntroduction__DOT__correct = 0U;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         146);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         150);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
-         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
-        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
-            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
-    }
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         153);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         157);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
-         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
-        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
-            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
-    }
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         160);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] = 0ULL;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected = 0ULL;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         164);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
-         == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
-        vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
-            = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
-    }
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         167);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[0U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__values[1U] 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    vlSelfRef.BenchPerceptronIntroduction__DOT__expected 
-        = vlSelfRef.BenchPerceptronIntroduction__DOT__ONE;
-    co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(posedge BenchPerceptronIntroduction.clk)", 
-                                                         "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         171);
+                                                         133);
     if ((vlSelfRef.BenchPerceptronIntroduction__DOT__prediction 
          == vlSelfRef.BenchPerceptronIntroduction__DOT__expected)) {
         vlSelfRef.BenchPerceptronIntroduction__DOT__correct 
             = ((IData)(1U) + vlSelfRef.BenchPerceptronIntroduction__DOT__correct);
     }
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_WRITEF_NX("\nClassification Accuracy: %0d/4 (%0.1f%%)\n",0,
+    VL_WRITEF_NX("Test [1,1] -> %20d (expected 1 << (2^32))\n\nClassification Accuracy: %0d/4 (%0.1f%%)\n",0,
+                 64,vlSelfRef.BenchPerceptronIntroduction__DOT__prediction,
                  32,vlSelfRef.BenchPerceptronIntroduction__DOT__correct,
                  64,((100.0 * VL_ISTOR_D_I(32, vlSelfRef.BenchPerceptronIntroduction__DOT__correct)) 
                      / 4.0));
@@ -1665,33 +1095,33 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         176);
+                                                         139);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         176);
+                                                         139);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         176);
+                                                         139);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         176);
+                                                         139);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_await vlSelfRef.__VtrigSched_h7b9e73b7__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge BenchPerceptronIntroduction.clk)", 
                                                          "src/Benches/BenchPerceptronIntroduction.sv", 
-                                                         176);
+                                                         139);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    VL_FINISH_MT("src/Benches/BenchPerceptronIntroduction.sv", 177, "");
+    VL_FINISH_MT("src/Benches/BenchPerceptronIntroduction.sv", 140, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
 }
 
