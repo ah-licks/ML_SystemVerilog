@@ -7,7 +7,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 VERSION: 1.84
 BUILT  : Apr 25 2025
-DATE   : 2025-06-06.15:33:39
+DATE   : 2025-06-10.13:36:24
 COMMAND: ./src/Perceptron.h.sv ./src/PerceptronIntroduction.sv ./src/PerceptronSynthesis.sv -DYOSYS=1 -DSYNTHESIS=1
 
 [INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Standalone_Perceptron/slpp_all/surelog.log".

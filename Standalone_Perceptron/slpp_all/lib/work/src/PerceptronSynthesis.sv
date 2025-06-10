@@ -15,7 +15,7 @@ module PerceptronSynthesis (
     sfp prediction;
     sfp expected;
     sfp ONE;
-    int epoch = 10;
+    int epoch = 0;
 
     PerceptronIntroduction #(
         .input_units(input_units)
@@ -44,24 +44,24 @@ module PerceptronSynthesis (
         if (rst) begin
             output_led = 0;
             rst = 0;
-        end else if (training && epoch < 8 * 10) begin
-            case (epoch % 8)
+        end else if (training && epoch < 4 * 10) begin
+            case (epoch % 4)
                 0: begin
                     values[0] = 0;
                     values[1] = 0;
                     expected  = 0;
                 end
-                2: begin
+                1: begin
                     values[0] = 0;
                     values[1] = ONE;
                     expected  = 0;
                 end
-                4: begin
+                2: begin
                     values[0] = ONE;
                     values[1] = 0;
                     expected  = 0;
                 end
-                6: begin
+                3: begin
                     values[0] = ONE;
                     values[1] = ONE;
                     expected  = ONE;

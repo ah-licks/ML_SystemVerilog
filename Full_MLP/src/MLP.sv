@@ -17,8 +17,8 @@ module MLP #(
 );
 
     real hidden_predictions[hidden_layer_size-1:0];
-    real hidden_error_gradients[hidden_layer_size-1:0];
-    real hidden_weights[hidden_layer_size-1:0][inputs-1:0];
+    //real hidden_error_gradients[hidden_layer_size-1:0];
+    //real hidden_weights[hidden_layer_size-1:0][inputs-1:0];
 
     real output_error_gradients[outputs-1:0];
     real output_weights[outputs-1:0][hidden_layer_size-1:0];
