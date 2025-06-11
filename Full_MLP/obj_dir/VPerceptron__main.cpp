@@ -22,7 +22,7 @@ int main(int argc, char** argv, char**) {
         topp->eval();
         // Advance time
         if (!topp->eventsPending()) break;
-        contextp->timeInc(1);
+        contextp->time(topp->nextTimeSlot());
     }
 
     if (!contextp->gotFinish()) {

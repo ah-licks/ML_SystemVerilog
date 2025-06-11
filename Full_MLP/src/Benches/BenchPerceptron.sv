@@ -39,13 +39,17 @@ module BenchPerceptron ();
         .current_weights(current_weights)
     );
 
-    assign error_gradient_next_layer[0] = -(sfp_sub(
-        sfp_div(
-            expected, sfp_add(prediction, epsilon)
-        ),
-        sfp_div(
-            sfp_sub(ONE, expected), sfp_sub(ONE, sfp_add(prediction, epsilon)))
-    ));
+    always_comb begin
+        for (int i = 0; i < output_units; i++) begin
+            error_gradient_next_layer[i] = -(sfp_sub(
+                sfp_div(
+                    expected, sfp_add(prediction, epsilon)
+                ),
+                sfp_div(
+                    sfp_sub(ONE, expected), sfp_sub(ONE, sfp_add(prediction, epsilon)))
+            ));
+        end
+    end
 
     initial begin
         clk = 0;
@@ -109,19 +113,19 @@ module BenchPerceptron ();
             values[1] = ONE;
             expected  = 0;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
+            $display("%0t\t[0,1]\t%d\t\t%0d", $time, expected, prediction);
 
             values[0] = ONE;
             values[1] = 0;
             expected  = 0;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
+            $display("%0t\t[1,0]\t%d\t\t%0d", $time, expected, prediction);
 
             values[0] = ONE;
             values[1] = ONE;
             expected  = ONE;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
+            $display("%0t\t[1,1]\t%d\t\t%0d", $time, expected, prediction);
         end
 
         $display("\n=== Final Testing Phase ===");

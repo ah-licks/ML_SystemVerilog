@@ -10,6 +10,7 @@ void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* vlSelf);
 
 VPerceptron___024root::VPerceptron___024root(VPerceptron__Syms* symsp, const char* v__name)
     : VerilatedModule{v__name}
+    , __VdlySched{*symsp->_vm_contextp__}
     , vlSymsp{symsp}
  {
     // Reset structure values

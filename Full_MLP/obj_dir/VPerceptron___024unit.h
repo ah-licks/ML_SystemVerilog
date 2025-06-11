@@ -6,6 +6,7 @@
 #define VERILATED_VPERCEPTRON___024UNIT_H_  // guard
 
 #include "verilated.h"
+#include "verilated_timing.h"
 
 
 class VPerceptron__Syms;

@@ -44,7 +44,7 @@ module MLPSynthesis (
     initial begin
         hidden_activation = ReLU;
         output_activation = Sigmoid;
-        learning_rate = 'h0x1999999A;
+        learning_rate = 'h1999999A;
         training = 1;
         rst = 1;
     end

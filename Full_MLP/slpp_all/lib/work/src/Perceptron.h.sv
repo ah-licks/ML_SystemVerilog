@@ -101,7 +101,7 @@ package FixedPoint;
     endfunction
 
     function automatic sfp sfp_random();
-        return {32'h0, lcg_next()};
+        return {32'h0, lcg_next()} - HALF;
     endfunction
 
 endpackage

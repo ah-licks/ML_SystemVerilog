@@ -10,6 +10,31 @@
 // FUNCTIONS
 VPerceptron__Syms::~VPerceptron__Syms()
 {
+#ifdef VM_TRACE
+    if (__Vm_dumping) _traceDumpClose();
+#endif  // VM_TRACE
+}
+
+void VPerceptron__Syms::_traceDump() {
+    const VerilatedLockGuard lock(__Vm_dumperMutex);
+    __Vm_dumperp->dump(VL_TIME_Q());
+}
+
+void VPerceptron__Syms::_traceDumpOpen() {
+    const VerilatedLockGuard lock(__Vm_dumperMutex);
+    if (VL_UNLIKELY(!__Vm_dumperp)) {
+        __Vm_dumperp = new VerilatedVcdC();
+        __Vm_modelp->trace(__Vm_dumperp, 0, 0);
+        std::string dumpfile = _vm_contextp__->dumpfileCheck();
+        __Vm_dumperp->open(dumpfile.c_str());
+        __Vm_dumping = true;
+    }
+}
+
+void VPerceptron__Syms::_traceDumpClose() {
+    const VerilatedLockGuard lock(__Vm_dumperMutex);
+    __Vm_dumping = false;
+    VL_DO_CLEAR(delete __Vm_dumperp, __Vm_dumperp = nullptr);
 }
 
 VPerceptron__Syms::VPerceptron__Syms(VerilatedContext* contextp, const char* namep, VPerceptron* modelp)
@@ -21,7 +46,7 @@ VPerceptron__Syms::VPerceptron__Syms(VerilatedContext* contextp, const char* nam
     , TOP__FixedPoint{this, Verilated::catName(namep, "FixedPoint")}
 {
         // Check resources
-        Verilated::stackCheck(47);
+        Verilated::stackCheck(383338);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

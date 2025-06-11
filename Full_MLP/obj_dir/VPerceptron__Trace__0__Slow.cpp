@@ -16,8 +16,323 @@ VL_ATTR_COLD void VPerceptron___024root__trace_init_sub__TOP__0(VPerceptron___02
     tracep->pushPrefix("FixedPoint", VerilatedTracePrefixType::SCOPE_MODULE);
     VPerceptron___024root__trace_init_sub__TOP__FixedPoint__0(vlSelf, tracep);
     tracep->popPrefix();
-    tracep->pushPrefix("Testing", VerilatedTracePrefixType::SCOPE_MODULE);
-    tracep->declQuad(c+1,0,"random",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("BenchMLP", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+130,0,"inputs",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+130,0,"hidden_layer_size",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+131,0,"outputs",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+129,0,"clk",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::BIT, false,-1);
+    tracep->declBit(c+5,0,"rst",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::BIT, false,-1);
+    tracep->pushPrefix("values", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+6+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("expected", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+10+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declBus(c+12,0,"hidden_activation",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+13,0,"output_activation",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+14,0,"training",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::BIT, false,-1);
+    tracep->declQuad(c+15,0,"learning_rate",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("prediction", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+21+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+17,0,"threshold",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declBus(c+19,0,"correct",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->pushPrefix("mlp", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+130,0,"inputs",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+130,0,"hidden_layer_size",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+131,0,"outputs",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+129,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+5,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->pushPrefix("values", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+6+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("expected", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+10+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declBus(c+12,0,"hidden_activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+13,0,"output_activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+14,0,"training",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declQuad(c+15,0,"learning_rate",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("prediction", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+21+i*2,0,"",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("hidden_predictions", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+23+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("next_layer_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    tracep->pushPrefix("[0]", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    tracep->declQuad(c+80,0,"[0]",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("[1]", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    tracep->declQuad(c+82,0,"[0]",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("output_error_gradients", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+27+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("output_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    tracep->pushPrefix("[0]", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    tracep->declQuad(c+84,0,"[0]",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+86,0,"[1]",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("gen_hidden_layer[0]", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->pushPrefix("hidden_perceptron", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+130,0,"input_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+131,0,"output_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+129,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+5,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->pushPrefix("values", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+6+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+14,0,"training",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declQuad(c+15,0,"learning_rate",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("next_layer_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+88+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("error_gradient_next_layer", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+27+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+29,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+31,0,"error_gradient",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("current_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+90+i*2,0,"",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+94+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+98,0,"bias",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+33,0,"sum",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("weight_gradient", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+35+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+39,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+31,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declQuad(c+33,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+29,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+41,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk4", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+42,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk5", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+43,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk6", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+44,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk7", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+100,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk8", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+101,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+133,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("gen_hidden_layer[1]", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->pushPrefix("hidden_perceptron", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+130,0,"input_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+131,0,"output_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+129,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+5,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->pushPrefix("values", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+6+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+14,0,"training",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declQuad(c+15,0,"learning_rate",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("next_layer_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+102+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("error_gradient_next_layer", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+27+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+45,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+47,0,"error_gradient",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("current_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+104+i*2,0,"",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+108+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+112,0,"bias",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+49,0,"sum",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("weight_gradient", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+51+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+55,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+47,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declQuad(c+49,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+45,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+57,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk4", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+58,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk5", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+59,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk6", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+60,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk7", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+114,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk8", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+115,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+133,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("gen_output_layer[0]", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->pushPrefix("output_perceptron", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+130,0,"input_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBus(c+131,0,"output_units",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+129,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+5,0,"rst",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->pushPrefix("values", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+23+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declBus(c+13,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declBit(c+14,0,"training",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declQuad(c+15,0,"learning_rate",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("next_layer_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+1+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("error_gradient_next_layer", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 1; ++i) {
+        tracep->declQuad(c+61+i*2,0,"",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+63,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+65,0,"error_gradient",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("current_weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+116+i*2,0,"",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->pushPrefix("weights", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+120+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+124,0,"bias",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+67,0,"sum",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("weight_gradient", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 2; ++i) {
+        tracep->declQuad(c+69+i*2,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 63,0);
+    }
+    tracep->popPrefix();
+    tracep->declQuad(c+73,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+65,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+13,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declQuad(c+67,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declQuad(c+63,0,"prediction",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+132,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk3", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+75,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk4", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+76,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk5", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+77,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk6", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+78,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk7", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+126,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk8", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+127,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk2", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+79,0,"i",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
+    tracep->popPrefix();
+    tracep->pushPrefix("unnamedblk1", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBus(c+20,0,"epoch",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->popPrefix();
     tracep->popPrefix();
 }
 
@@ -28,11 +343,11 @@ VL_ATTR_COLD void VPerceptron___024root__trace_init_sub__TOP__FixedPoint__0(VPer
     // Init
     const int c = vlSymsp->__Vm_baseCode;
     // Body
-    tracep->declBus(c+6,0,"frac_bits",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
-    tracep->declQuad(c+7,0,"epsilon",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declBus(c+134,0,"frac_bits",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::PARAMETER, VerilatedTraceSigType::INT, false,-1, 31,0);
+    tracep->declQuad(c+135,0,"epsilon",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
     tracep->declQuad(c+3,0,"ONE",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
-    tracep->declQuad(c+9,0,"HALF",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
-    tracep->declBus(c+5,0,"lcg_next__Vstatic__current",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 31,0);
+    tracep->declQuad(c+137,0,"HALF",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
+    tracep->declBus(c+128,0,"lcg_next__Vstatic__current",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 31,0);
 }
 
 VL_ATTR_COLD void VPerceptron___024root__trace_init_top(VPerceptron___024root* vlSelf, VerilatedVcd* tracep) {
@@ -77,9 +392,13 @@ VL_ATTR_COLD void VPerceptron___024root__trace_const_0_sub_0(VPerceptron___024ro
     // Init
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
     // Body
-    bufp->fullIData(oldp+6,(0x20U),32);
-    bufp->fullQData(oldp+7,(0x2aULL),64);
-    bufp->fullQData(oldp+9,(0x80000000ULL),64);
+    bufp->fullIData(oldp+130,(2U),32);
+    bufp->fullIData(oldp+131,(1U),32);
+    bufp->fullIData(oldp+132,(2U),32);
+    bufp->fullIData(oldp+133,(1U),32);
+    bufp->fullIData(oldp+134,(0x20U),32);
+    bufp->fullQData(oldp+135,(0x2aULL),64);
+    bufp->fullQData(oldp+137,(0x80000000ULL),64);
 }
 
 VL_ATTR_COLD void VPerceptron___024root__trace_full_0_sub_0(VPerceptron___024root* vlSelf, VerilatedVcd::Buffer* bufp);
@@ -100,7 +419,86 @@ VL_ATTR_COLD void VPerceptron___024root__trace_full_0_sub_0(VPerceptron___024roo
     // Init
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
     // Body
-    bufp->fullQData(oldp+1,(vlSelfRef.Testing__DOT__random),64);
-    bufp->fullQData(oldp+3,(vlSymsp->TOP__FixedPoint.__PVT__ONE),64);
-    bufp->fullIData(oldp+5,(vlSymsp->TOP__FixedPoint.lcg_next__Vstatic__current),32);
+    bufp->fullQData(oldp+1,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__next_layer_weights[0]),64);
+    bufp->fullQData(oldp+3,(vlSymsp->TOP__FixedPoint.ONE),64);
+    bufp->fullBit(oldp+5,(vlSelfRef.BenchMLP__DOT__rst));
+    bufp->fullQData(oldp+6,(vlSelfRef.BenchMLP__DOT__values[0]),64);
+    bufp->fullQData(oldp+8,(vlSelfRef.BenchMLP__DOT__values[1]),64);
+    bufp->fullQData(oldp+10,(vlSelfRef.BenchMLP__DOT__expected[0]),64);
+    bufp->fullIData(oldp+12,(vlSelfRef.BenchMLP__DOT__hidden_activation),32);
+    bufp->fullIData(oldp+13,(vlSelfRef.BenchMLP__DOT__output_activation),32);
+    bufp->fullBit(oldp+14,(vlSelfRef.BenchMLP__DOT__training));
+    bufp->fullQData(oldp+15,(vlSelfRef.BenchMLP__DOT__learning_rate),64);
+    bufp->fullQData(oldp+17,(vlSelfRef.BenchMLP__DOT__threshold),64);
+    bufp->fullIData(oldp+19,(vlSelfRef.BenchMLP__DOT__correct),32);
+    bufp->fullIData(oldp+20,(vlSelfRef.BenchMLP__DOT__unnamedblk1__DOT__epoch),32);
+    bufp->fullQData(oldp+21,(vlSelfRef.BenchMLP__DOT__prediction[0]),64);
+    bufp->fullQData(oldp+23,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[0]),64);
+    bufp->fullQData(oldp+25,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[1]),64);
+    bufp->fullQData(oldp+27,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients[0]),64);
+    bufp->fullQData(oldp+29,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction),64);
+    bufp->fullQData(oldp+31,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+33,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum),64);
+    bufp->fullQData(oldp+35,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
+    bufp->fullQData(oldp+37,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
+    bufp->fullQData(oldp+39,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
+    bufp->fullIData(oldp+41,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
+    bufp->fullIData(oldp+42,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
+    bufp->fullIData(oldp+43,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
+    bufp->fullIData(oldp+44,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
+    bufp->fullQData(oldp+45,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction),64);
+    bufp->fullQData(oldp+47,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+49,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum),64);
+    bufp->fullQData(oldp+51,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
+    bufp->fullQData(oldp+53,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
+    bufp->fullQData(oldp+55,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
+    bufp->fullIData(oldp+57,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
+    bufp->fullIData(oldp+58,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
+    bufp->fullIData(oldp+59,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
+    bufp->fullIData(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
+    bufp->fullQData(oldp+61,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer[0]),64);
+    bufp->fullQData(oldp+63,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction),64);
+    bufp->fullQData(oldp+65,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+67,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum),64);
+    bufp->fullQData(oldp+69,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[0]),64);
+    bufp->fullQData(oldp+71,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[1]),64);
+    bufp->fullQData(oldp+73,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient),64);
+    bufp->fullIData(oldp+75,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i),32);
+    bufp->fullIData(oldp+76,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i),32);
+    bufp->fullIData(oldp+77,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i),32);
+    bufp->fullIData(oldp+78,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk6__DOT__i),32);
+    bufp->fullIData(oldp+79,(vlSelfRef.BenchMLP__DOT__mlp__DOT__unnamedblk2__DOT__i),32);
+    bufp->fullQData(oldp+80,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                             [0U][0U]),64);
+    bufp->fullQData(oldp+82,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                             [1U][0U]),64);
+    bufp->fullQData(oldp+84,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
+                             [0U][0U]),64);
+    bufp->fullQData(oldp+86,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
+                             [0U][1U]),64);
+    bufp->fullQData(oldp+88,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
+    bufp->fullQData(oldp+90,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights[0]),64);
+    bufp->fullQData(oldp+92,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights[1]),64);
+    bufp->fullQData(oldp+94,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
+    bufp->fullQData(oldp+96,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
+    bufp->fullQData(oldp+98,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias),64);
+    bufp->fullIData(oldp+100,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
+    bufp->fullIData(oldp+101,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
+    bufp->fullQData(oldp+102,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
+    bufp->fullQData(oldp+104,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights[0]),64);
+    bufp->fullQData(oldp+106,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights[1]),64);
+    bufp->fullQData(oldp+108,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
+    bufp->fullQData(oldp+110,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
+    bufp->fullQData(oldp+112,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias),64);
+    bufp->fullIData(oldp+114,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
+    bufp->fullIData(oldp+115,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
+    bufp->fullQData(oldp+116,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights[0]),64);
+    bufp->fullQData(oldp+118,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights[1]),64);
+    bufp->fullQData(oldp+120,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights[0]),64);
+    bufp->fullQData(oldp+122,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights[1]),64);
+    bufp->fullQData(oldp+124,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias),64);
+    bufp->fullIData(oldp+126,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk7__DOT__i),32);
+    bufp->fullIData(oldp+127,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk8__DOT__i),32);
+    bufp->fullIData(oldp+128,(vlSymsp->TOP__FixedPoint.lcg_next__Vstatic__current),32);
+    bufp->fullBit(oldp+129,(vlSelfRef.BenchMLP__DOT__clk));
 }

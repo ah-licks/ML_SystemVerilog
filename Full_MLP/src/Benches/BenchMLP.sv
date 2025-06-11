@@ -4,7 +4,7 @@ import FixedPoint::*;
 module BenchMLP ();
 
     parameter int inputs = 2;
-    parameter int hidden_layer_size = 4;
+    parameter int hidden_layer_size = 2;
     parameter int outputs = 1;
 
     bit clk;
@@ -49,7 +49,7 @@ module BenchMLP ();
 
         hidden_activation = ReLU;
         output_activation = Sigmoid;
-        learning_rate = 'h0x1999999A;
+        learning_rate = 'h1999999A;
         training = 1;
 
         rst = 1;
@@ -97,19 +97,19 @@ module BenchMLP ();
             values[1]   = ONE;
             expected[0] = ONE;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
+            $display("%0t\t[0,1]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
 
             values[0]   = ONE;
             values[1]   = 0;
             expected[0] = ONE;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
+            $display("%0t\t[1,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
 
             values[0]   = ONE;
             values[1]   = ONE;
             expected[0] = 0;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
+            $display("%0t\t[1,1]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
         end
 
         $display("\n=== Final Testing Phase ===");
