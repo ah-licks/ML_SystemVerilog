@@ -1,4 +1,5 @@
 import Common::*;
+import FixedPoint::*;
 
 module MLPSynthesis (
     input  logic clk,
