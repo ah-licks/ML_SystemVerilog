@@ -63,19 +63,14 @@ void VPerceptron::eval_step() {
     Verilated::endOfEval(vlSymsp->__Vm_evalMsgQp);
 }
 
-void VPerceptron::eval_end_step() {
-    VL_DEBUG_IF(VL_DBG_MSGF("+eval_end_step VPerceptron::eval_end_step\n"); );
-#ifdef VM_TRACE
-    // Tracing
-    if (VL_UNLIKELY(vlSymsp->__Vm_dumping)) vlSymsp->_traceDump();
-#endif  // VM_TRACE
-}
-
 //============================================================
 // Events and timing
-bool VPerceptron::eventsPending() { return !vlSymsp->TOP.__VdlySched.empty(); }
+bool VPerceptron::eventsPending() { return false; }
 
-uint64_t VPerceptron::nextTimeSlot() { return vlSymsp->TOP.__VdlySched.nextTimeSlot(); }
+uint64_t VPerceptron::nextTimeSlot() {
+    VL_FATAL_MT(__FILE__, __LINE__, "", "No delays in the design");
+    return 0;
+}
 
 //============================================================
 // Utilities

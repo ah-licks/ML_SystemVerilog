@@ -37,6 +37,7 @@ VM_PREFIX = VPerceptron
 VM_MODPREFIX = VPerceptron
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
+	-std=c++17 \
 	-DVL_TIME_CONTEXT \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)

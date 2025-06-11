@@ -7,20 +7,20 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 VERSION: 1.84
 BUILT  : Apr 25 2025
-DATE   : 2025-06-10.18:34:53
-COMMAND: ./src/MLP.sv ./src/Perceptron.h.sv ./src/Perceptron.sv ./src/Predict.sv -DYOSYS=1 -DSYNTHESIS=1
+DATE   : 2025-06-10.21:51:49
+COMMAND: ./src/MLP.sv ./src/Perceptron.h.sv ./src/Perceptron.sv ./src/PerceptronSynthesis.sv ./src/Predict.sv -DYOSYS=1 -DSYNTHESIS=1
 
 [INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/slpp_all/surelog.log".
 [INF:CP0300] Compilation...
 [INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:1:1: Compile package "FixedPoint".
-[INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:95:1: Compile package "Common".
+[INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:109:1: Compile package "Common".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:3:1: Compile module "work@MLP".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:4:1: Compile module "work@Perceptron".
+[INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:4:1: Compile module "work@PerceptronSynthesis".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Predict.sv:4:1: Compile module "work@Predict".
 [INF:CP0302] Compile class "work@mailbox".
 [INF:CP0302] Compile class "work@process".
 [INF:CP0302] Compile class "work@semaphore".
-[NTE:CP0309] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:16:17: Implicit port type (wire) for "prediction".
 [INF:EL0526] Design Elaboration...
 [INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:28:49: Compile generate block "work@MLP.gen_hidden_layer[0]".
 [INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:28:49: Compile generate block "work@MLP.gen_hidden_layer[1]".
@@ -28,32 +28,18 @@ COMMAND: ./src/MLP.sv ./src/Perceptron.h.sv ./src/Perceptron.sv ./src/Predict.sv
 [INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:28:49: Compile generate block "work@MLP.gen_hidden_layer[3]".
 [INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:59:39: Compile generate block "work@MLP.gen_output_layer[0]".
 [NTE:EL0503] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:3:1: Top level module "work@MLP".
-[NTE:EL0508] Nb Top level modules: 1.
+[NTE:EL0503] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:4:1: Top level module "work@PerceptronSynthesis".
+[NTE:EL0504] Multiple top level modules in design.
+[NTE:EL0508] Nb Top level modules: 2.
 [NTE:EL0509] Max instance depth: 4.
-[NTE:EL0510] Nb instances: 11.
+[NTE:EL0510] Nb instances: 14.
 [NTE:EL0511] Nb leaf instances: 0.
 [INF:UH0706] Creating UHDM Model...
 [INF:UH0707] Elaborating UHDM...
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:19:5: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:23:5: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:24:5: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:10:11: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:11:11: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:15:11: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:16:12: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:101:50: Non-synthesizable construct "$urandom_range".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:103:40: Non-synthesizable construct "$urandom_range".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:10:16: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:11:16: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:15:16: Non-synthesizable construct "learning_rate".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:16:17: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:19:10: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:23:10: Non-synthesizable construct "".
-[WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:24:10: Non-synthesizable construct "".
 [WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:29:13: Non-synthesizable construct "".
 [WRN:UH0720] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:29:18: Non-synthesizable construct "".
 [  FATAL] : 0
 [ SYNTAX] : 0
 [  ERROR] : 0
-[WARNING] : 18
-[   NOTE] : 6
+[WARNING] : 2
+[   NOTE] : 7
