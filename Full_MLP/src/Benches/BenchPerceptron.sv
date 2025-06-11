@@ -1,5 +1,5 @@
 import Common::*;
-//import FixedPoint::*;
+import FixedPoint::*;
 
 module BenchPerceptron ();
 
@@ -7,26 +7,20 @@ module BenchPerceptron ();
     parameter int output_units = 1;
     bit clk;
     bit rst;
-    real values[input_units-1:0];
+    sfp values[input_units-1:0];
     act_func activation;
     bit training;
-    real learning_rate;
-    real next_layer_weights[output_units-1:0];
-    real error_gradient_next_layer[output_units-1:0];
-    real prediction;
-    real error_gradient;
-    real current_weights[input_units-1:0];
+    sfp learning_rate;
+    sfp next_layer_weights[output_units-1:0];
+    sfp error_gradient_next_layer[output_units-1:0];
+    sfp prediction;
+    sfp error_gradient;
+    sfp current_weights[input_units-1:0];
 
-    real expected;
+    sfp expected;
 
-    real threshold;
+    sfp threshold;
     int correct;
-
-    real cost;
-    always_comb begin
-        cost = -1 *
-            (expected * $ln(prediction + epsilon) + (1 - expected) * $ln(1 - prediction + epsilon));
-    end
 
     Perceptron #(
         .input_units (input_units),
@@ -45,7 +39,13 @@ module BenchPerceptron ();
         .current_weights(current_weights)
     );
 
-    assign error_gradient_next_layer[0] = -((expected / (prediction + epsilon)) - (1 - expected) / (1 - prediction + epsilon));
+    assign error_gradient_next_layer[0] = -(sfp_sub(
+        sfp_div(
+            expected, sfp_add(prediction, epsilon)
+        ),
+        sfp_div(
+            sfp_sub(ONE, expected), sfp_sub(ONE, sfp_add(prediction, epsilon)))
+    ));
 
     initial begin
         clk = 0;
@@ -60,102 +60,102 @@ module BenchPerceptron ();
 
         activation = Sigmoid;
         training = 1;
-        learning_rate = 1;
+        learning_rate = ONE;
 
-        next_layer_weights = '{1};
+        next_layer_weights = '{ONE};
 
         rst = 1;
         repeat (3) @(posedge clk);
         rst = 0;
 
         $display("Starting AND gate training...");
-        $display("Time\tInputs\tExpected\tPrediction\tCost");
-        $display("----\t------\t--------\t----------\t----");
+        $display("Time\tInputs\tExpected\tPrediction");
+        $display("----\t------\t--------\t----------");
 
         for (int epoch = 0; epoch < 10; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
             training  = 1;
 
-            values[0] = 0.0;
-            values[1] = 0.0;
-            expected  = 0.0;
+            values[0] = 0;
+            values[1] = 0;
+            expected  = 0;
             @(posedge clk);
 
-            values[0] = 0.0;
-            values[1] = 1.0;
-            expected  = 0.0;
+            values[0] = 0;
+            values[1] = ONE;
+            expected  = 0;
             @(posedge clk);
 
-            values[0] = 1.0;
-            values[1] = 0.0;
-            expected  = 0.0;
+            values[0] = ONE;
+            values[1] = 0;
+            expected  = 0;
             @(posedge clk);
 
-            values[0] = 1.0;
-            values[1] = 1.0;
-            expected  = 1.0;
+            values[0] = ONE;
+            values[1] = ONE;
+            expected  = ONE;
             @(posedge clk);
 
             training  = 0;
 
-            values[0] = 0.0;
-            values[1] = 0.0;
-            expected  = 0.0;
+            values[0] = 0;
+            values[1] = 0;
+            expected  = 0;
             @(posedge clk);
-            $display("%0t\t[0,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
+            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
 
-            values[0] = 0.0;
-            values[1] = 1.0;
-            expected  = 0.0;
+            values[0] = 0;
+            values[1] = ONE;
+            expected  = 0;
             @(posedge clk);
-            $display("%0t\t[0,1]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
+            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
 
-            values[0] = 1.0;
-            values[1] = 0.0;
-            expected  = 0.0;
+            values[0] = ONE;
+            values[1] = 0;
+            expected  = 0;
             @(posedge clk);
-            $display("%0t\t[1,0]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
+            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
 
-            values[0] = 1.0;
-            values[1] = 1.0;
-            expected  = 1.0;
+            values[0] = ONE;
+            values[1] = ONE;
+            expected  = ONE;
             @(posedge clk);
-            $display("%0t\t[1,1]\t%0.3f\t\t%0.6f\t%0.6f", $time, expected, prediction, cost);
+            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
         end
 
         $display("\n=== Final Testing Phase ===");
         training  = 0;
-        threshold = 0.5;
+        threshold = HALF;
         correct   = 0;
 
-        values[0] = 0.0;
-        values[1] = 0.0;
-        expected  = 0.0;
+        values[0] = 0;
+        values[1] = 0;
+        expected  = 0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [0,0] -> %0.6f (expected 0.000)", prediction);
+        $display("Test [0,0] -> %d (expected 0)", prediction);
 
-        values[0] = 0.0;
-        values[1] = 1.0;
-        expected  = 0.0;
+        values[0] = 0;
+        values[1] = ONE;
+        expected  = 0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [0,1] -> %0.6f (expected 0.000)", prediction);
+        $display("Test [0,1] -> %d (expected 0)", prediction);
 
-        values[0] = 1.0;
-        values[1] = 0.0;
-        expected  = 0.0;
+        values[0] = ONE;
+        values[1] = 0;
+        expected  = 0;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [1,0] -> %0.6f (expected 0.000)", prediction);
+        $display("Test [1,0] -> %d (expected 0)", prediction);
 
-        values[0] = 1.0;
-        values[1] = 1.0;
-        expected  = 1.0;
+        values[0] = ONE;
+        values[1] = ONE;
+        expected  = ONE;
         @(posedge clk);
         if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [1,1] -> %0.6f (expected 1.000)", prediction);
+        $display("Test [1,1] -> %d (expected 2^32)", prediction);
 
         $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
 

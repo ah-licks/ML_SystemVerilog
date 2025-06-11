@@ -132,7 +132,7 @@ module BenchPerceptronIntroduction ();
         expected  = ONE;
         @(posedge clk);
         if (prediction == expected) correct++;
-        $display("Test [1,1] -> %d (expected 1 << (2^32))", prediction);
+        $display("Test [1,1] -> %d (expected 2^32)", prediction);
 
         $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
 

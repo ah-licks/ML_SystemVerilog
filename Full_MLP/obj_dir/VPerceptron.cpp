@@ -10,6 +10,7 @@
 VPerceptron::VPerceptron(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new VPerceptron__Syms(contextp(), _vcname__, this)}
+    , __PVT__FixedPoint{vlSymsp->TOP.__PVT__FixedPoint}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

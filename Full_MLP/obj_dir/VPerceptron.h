@@ -13,6 +13,8 @@
 class VPerceptron__Syms;
 class VPerceptron___024root;
 class VerilatedVcdC;
+class VPerceptron_FixedPoint;
+
 
 // This class is the main interface to the Verilated model
 class alignas(VL_CACHE_LINE_BYTES) VPerceptron VL_NOT_FINAL : public VerilatedModel {
@@ -33,6 +35,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron VL_NOT_FINAL : public VerilatedMo
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
+    VPerceptron_FixedPoint* const __PVT__FixedPoint;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

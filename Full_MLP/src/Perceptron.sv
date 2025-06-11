@@ -1,5 +1,5 @@
 import Common::*;
-//import FixedPoint::*;
+import FixedPoint::*;
 
 module Perceptron #(
     parameter int input_units  = 2,
@@ -7,22 +7,22 @@ module Perceptron #(
 ) (
     input logic clk,
     input logic rst,
-    input real values[input_units-1:0],
+    input sfp values[input_units-1:0],
     input act_func activation,
     input logic training,
-    input real learning_rate,
-    input real next_layer_weights[output_units-1:0],
-    input real error_gradient_next_layer[output_units-1:0],
-    output real prediction,
-    output real error_gradient,
-    output real current_weights[input_units-1:0]
+    input sfp learning_rate,
+    input sfp next_layer_weights[output_units-1:0],
+    input sfp error_gradient_next_layer[output_units-1:0],
+    output sfp prediction,
+    output sfp error_gradient,
+    output sfp current_weights[input_units-1:0]
 );
-    real weights[input_units-1:0];
-    real bias;
-    real sum;
-    real weight_gradient[input_units-1:0];
-    real bias_gradient;
-    real local_error_gradient;
+    sfp weights[input_units-1:0];
+    sfp bias;
+    sfp sum;
+    sfp weight_gradient[input_units-1:0];
+    sfp bias_gradient;
+    sfp local_error_gradient;
 
     assign error_gradient = local_error_gradient;
 
@@ -35,7 +35,7 @@ module Perceptron #(
     always_comb begin
         sum = bias;
         for (int i = 0; i < input_units; i++) begin
-            sum = sum + weights[i] * values[i];
+            sum = sfp_add(sum, sfp_mul(weights[i], values[i]));
         end
     end
 
@@ -50,17 +50,37 @@ module Perceptron #(
         case (activation)
             Sigmoid: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * prediction * (1 - prediction);
+                    local_error_gradient = sfp_add(
+                        local_error_gradient,
+                        sfp_mul(
+                            next_layer_weights[i],
+                            sfp_mul(
+                                error_gradient_next_layer[i],
+                                sfp_mul(
+                                    prediction, (ONE - prediction))))
+                    );
                 end
             end
             Tanh: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * (1 - prediction ** 2);
+                    local_error_gradient = sfp_add(
+                        local_error_gradient,
+                        sfp_mul(
+                            next_layer_weights[i],
+                            sfp_mul(
+                                error_gradient_next_layer[i],
+                                sfp_sub(
+                                    ONE, sfp_pow(sfp_tanh(prediction), 2))))
+                    );
                 end
             end
             ReLU: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * ((sum >= 0) ? error_gradient_next_layer[i] : 0);
+                    local_error_gradient = sfp_add(
+                        local_error_gradient,
+                        sfp_mul(
+                            next_layer_weights[i], ((sum >= 0) ? error_gradient_next_layer[i] : 0))
+                    );
                 end
             end
             default: begin
@@ -69,7 +89,7 @@ module Perceptron #(
         endcase
 
         for (int i = 0; i < input_units; i++) begin
-            weight_gradient[i] = local_error_gradient * values[i];
+            weight_gradient[i] = sfp_mul(local_error_gradient, values[i]);
         end
 
         bias_gradient = local_error_gradient;
@@ -78,15 +98,15 @@ module Perceptron #(
     always_ff @(posedge clk) begin
         if (rst) begin
             for (int i = 0; i < input_units; i++) begin
-                weights[i] <= $urandom_range(100, 1) / 100.0 - 0.5;
+                weights[i] <= sfp_sub(int_to_sfp($urandom_range(127, 0)) >>> 7, HALF);
             end
-            bias <= $urandom_range(100, 1) / 100.0 - 0.5;
+            bias <= sfp_sub(int_to_sfp($urandom_range(127, 0)) >>> 7, HALF);
         end else if (training) begin
             for (int i = 0; i < input_units; i++) begin
-                weights[i] <= weights[i] - learning_rate * weight_gradient[i];
+                weights[i] <= sfp_sub(weights[i], sfp_mul(learning_rate, weight_gradient[i]));
             end
 
-            bias <= bias - learning_rate * bias_gradient;
+            bias <= sfp_sub(bias, sfp_mul(learning_rate, bias_gradient));
         end
     end
 

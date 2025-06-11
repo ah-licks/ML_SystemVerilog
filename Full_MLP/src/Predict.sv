@@ -1,22 +1,22 @@
 import Common::*;
-//import FixedPoint::*;
+import FixedPoint::*;
 
 module Predict (
     input act_func activation,
-    input real sum,
-    output real prediction
+    input sfp sum,
+    output sfp prediction
 );
 
     always_comb begin
         case (activation)
             Step: begin
-                prediction = sum > 0;
+                prediction = (sum > 0) ? ONE : 0;
             end
             Sigmoid: begin
-                prediction = 1 / (1 + e ** (-sum));
+                prediction = sfp_sigmoid(sum);
             end
             Tanh: begin
-                prediction = 2 / (1 + e ** (-2 * sum)) - 1;
+                prediction = sfp_tanh(sum);
             end
             ReLU: begin
                 prediction = (sum > 0) ? sum : 0;

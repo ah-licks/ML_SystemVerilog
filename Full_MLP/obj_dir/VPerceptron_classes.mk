@@ -12,7 +12,7 @@ VM_TIMING = 1
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
-VM_PARALLEL_BUILDS = 0
+VM_PARALLEL_BUILDS = 1
 # Tracing output mode?  0/1 (from --trace-fst/--trace-saif/--trace-vcd)
 VM_TRACE = 1
 # Tracing output mode in FST format?  0/1 (from --trace-fst)
@@ -27,6 +27,7 @@ VM_TRACE_VCD = 1
 VM_CLASSES_FAST += \
 	VPerceptron \
 	VPerceptron___024root__DepSet_h25a9a063__0 \
+	VPerceptron___024root__DepSet_h25a9a063__1 \
 	VPerceptron___024root__DepSet_hb132d072__0 \
 	VPerceptron__main \
 
@@ -37,6 +38,8 @@ VM_CLASSES_SLOW += \
 	VPerceptron___024root__DepSet_hb132d072__0__Slow \
 	VPerceptron___024unit__Slow \
 	VPerceptron___024unit__DepSet_ha86c78a2__0__Slow \
+	VPerceptron_FixedPoint__Slow \
+	VPerceptron_FixedPoint__DepSet_h9c470a15__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
