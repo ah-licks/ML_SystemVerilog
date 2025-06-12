@@ -72,7 +72,7 @@ package FixedPoint;
     function automatic sfp sfp_exp(input sfp a);
         sfp result = ONE;
         sfp term = ONE;
-        parameter int max_terms = 50;
+        parameter int max_terms = 20;
 
         for (int i = 1; i < max_terms; i++) begin
             term   = sfp_div(sfp_mul(term, a), int_to_sfp(i));
@@ -83,14 +83,14 @@ package FixedPoint;
     endfunction
 
     function automatic sfp sfp_sigmoid(input sfp a);
-        if (a > int_to_sfp(15)) return ONE;
-        if (a < int_to_sfp(-15)) return 0;
+        if (a > int_to_sfp(6)) return ONE;
+        if (a < int_to_sfp(-6)) return 0;
         return sfp_div(ONE, sfp_add(ONE, sfp_exp(-a)));
     endfunction
 
     function automatic sfp sfp_tanh(input sfp a);
-        if (a > int_to_sfp(7)) return ONE;
-        if (a < int_to_sfp(-7)) return -ONE;
+        if (a > int_to_sfp(3)) return ONE;
+        if (a < int_to_sfp(-3)) return -ONE;
         return sfp_sub(sfp_div(int_to_sfp(2), sfp_add(ONE, sfp_exp(-a << 1))), ONE);
     endfunction
 

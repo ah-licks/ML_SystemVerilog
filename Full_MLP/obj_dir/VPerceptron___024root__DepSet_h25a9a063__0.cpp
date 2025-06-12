@@ -2760,7 +2760,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__43__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__44__n = 0xfU;
+                            vlSelfRef.__Vfunc_int_to_sfp__44__n = 6U;
                             vlSelfRef.__Vfunc_int_to_sfp__44__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__44__n), 0x20U);
@@ -2771,7 +2771,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__43__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__45__n = 0xfffffff1U;
+                            vlSelfRef.__Vfunc_int_to_sfp__45__n = 0xfffffffaU;
                             vlSelfRef.__Vfunc_int_to_sfp__45__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__45__n), 0x20U);
@@ -2786,7 +2786,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             vlSelfRef.__Vfunc_sfp_exp__48__result = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__48__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__48__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__48__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__48__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__50__n 
                     = vlSelfRef.__Vfunc_sfp_exp__48__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__50__Vfuncout 
@@ -5242,7 +5242,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__53__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__54__n = 7U;
+                            vlSelfRef.__Vfunc_int_to_sfp__54__n = 3U;
                             vlSelfRef.__Vfunc_int_to_sfp__54__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__54__n), 0x20U);
@@ -5253,7 +5253,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__53__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__55__n = 0xfffffff9U;
+                            vlSelfRef.__Vfunc_int_to_sfp__55__n = 0xfffffffdU;
                             vlSelfRef.__Vfunc_int_to_sfp__55__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__55__n), 0x20U);
@@ -5271,7 +5271,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             vlSelfRef.__Vfunc_sfp_exp__59__result = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__59__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__59__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__59__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__59__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__61__n 
                     = vlSelfRef.__Vfunc_sfp_exp__59__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__61__Vfuncout 
@@ -7745,7 +7745,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__101__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__102__n = 0xfU;
+                            vlSelfRef.__Vfunc_int_to_sfp__102__n = 6U;
                             vlSelfRef.__Vfunc_int_to_sfp__102__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__102__n), 0x20U);
@@ -7756,7 +7756,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__101__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__103__n = 0xfffffff1U;
+                            vlSelfRef.__Vfunc_int_to_sfp__103__n = 0xfffffffaU;
                             vlSelfRef.__Vfunc_int_to_sfp__103__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__103__n), 0x20U);
@@ -7772,7 +7772,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
                 = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__106__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__106__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__106__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__106__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__108__n 
                     = vlSelfRef.__Vfunc_sfp_exp__106__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__108__Vfuncout 
@@ -10228,7 +10228,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__111__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__112__n = 7U;
+                            vlSelfRef.__Vfunc_int_to_sfp__112__n = 3U;
                             vlSelfRef.__Vfunc_int_to_sfp__112__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__112__n), 0x20U);
@@ -10239,7 +10239,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__111__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__113__n = 0xfffffff9U;
+                            vlSelfRef.__Vfunc_int_to_sfp__113__n = 0xfffffffdU;
                             vlSelfRef.__Vfunc_int_to_sfp__113__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__113__n), 0x20U);
@@ -10258,7 +10258,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
                 = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__117__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__117__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__117__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__117__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__119__n 
                     = vlSelfRef.__Vfunc_sfp_exp__117__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__119__Vfuncout 
@@ -12774,7 +12774,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__159__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__160__n = 0xfU;
+                            vlSelfRef.__Vfunc_int_to_sfp__160__n = 6U;
                             vlSelfRef.__Vfunc_int_to_sfp__160__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__160__n), 0x20U);
@@ -12785,7 +12785,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_sigmoid__159__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__161__n = 0xfffffff1U;
+                            vlSelfRef.__Vfunc_int_to_sfp__161__n = 0xfffffffaU;
                             vlSelfRef.__Vfunc_int_to_sfp__161__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__161__n), 0x20U);
@@ -12801,7 +12801,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
                 = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__164__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__164__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__164__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__164__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__166__n 
                     = vlSelfRef.__Vfunc_sfp_exp__164__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__166__Vfuncout 
@@ -15257,7 +15257,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         {
             if (VL_GTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__169__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__170__n = 7U;
+                            vlSelfRef.__Vfunc_int_to_sfp__170__n = 3U;
                             vlSelfRef.__Vfunc_int_to_sfp__170__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__170__n), 0x20U);
@@ -15268,7 +15268,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
             }
             if (VL_LTS_IQQ(64, vlSelfRef.__Vfunc_sfp_tanh__169__a, 
                            ([&]() {
-                            vlSelfRef.__Vfunc_int_to_sfp__171__n = 0xfffffff9U;
+                            vlSelfRef.__Vfunc_int_to_sfp__171__n = 0xfffffffdU;
                             vlSelfRef.__Vfunc_int_to_sfp__171__Vfuncout 
                                 = VL_SHIFTL_QQI(64,64,32, 
                                                 VL_EXTENDS_QI(64,32, vlSelfRef.__Vfunc_int_to_sfp__171__n), 0x20U);
@@ -15287,7 +15287,7 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
                 = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__175__term = vlSymsp->TOP__FixedPoint.ONE;
             vlSelfRef.__Vfunc_sfp_exp__175__unnamedblk3__DOT__i = 1U;
-            while (VL_GTS_III(32, 0x32U, vlSelfRef.__Vfunc_sfp_exp__175__unnamedblk3__DOT__i)) {
+            while (VL_GTS_III(32, 0x14U, vlSelfRef.__Vfunc_sfp_exp__175__unnamedblk3__DOT__i)) {
                 vlSelfRef.__Vfunc_int_to_sfp__177__n 
                     = vlSelfRef.__Vfunc_sfp_exp__175__unnamedblk3__DOT__i;
                 vlSelfRef.__Vfunc_int_to_sfp__177__Vfuncout 

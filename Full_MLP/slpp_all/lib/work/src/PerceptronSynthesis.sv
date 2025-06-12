@@ -62,7 +62,7 @@ module PerceptronSynthesis (
         output_led = prediction > HALF;
     end
 
-    initial begin
+    always_ff @(posedge clk) begin
         if (rst) begin
             output_led = 0;
             rst = 0;
