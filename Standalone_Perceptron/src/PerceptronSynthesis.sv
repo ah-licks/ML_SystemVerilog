@@ -14,7 +14,6 @@ module PerceptronSynthesis (
     sfp learning_rate;
     sfp prediction;
     sfp expected;
-    sfp ONE;
     int epoch = 0;
 
     PerceptronIntroduction #(
@@ -30,7 +29,6 @@ module PerceptronSynthesis (
     );
 
     initial begin
-        ONE = int_to_sfp(1);
         training = 1;
         learning_rate = ONE;
         rst = 1;

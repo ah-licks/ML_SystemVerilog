@@ -22,7 +22,7 @@ module PerceptronIntroduction #(
             sum = sfp_add(sum, sfp_mul(weights[i], values[i]));
         end
 
-        prediction = int_to_sfp(32'(sum > 0));
+        prediction = (sum > 0) ? ONE : 0;
         error = sfp_sub(expected, prediction);
     end
 

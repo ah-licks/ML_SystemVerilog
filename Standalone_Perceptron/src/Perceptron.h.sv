@@ -2,6 +2,8 @@ package FixedPoint;
     typedef logic signed [63:0] sfp;
     parameter int frac_bits = 32;
 
+    sfp ONE = int_to_sfp(1);
+
     function automatic sfp int_to_sfp(input int n);
         return (64'(signed'(n)) << frac_bits);
     endfunction
