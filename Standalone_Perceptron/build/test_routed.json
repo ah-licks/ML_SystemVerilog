@@ -46,7 +46,7 @@
       "attributes": {
         "step": "place",
         "top": "00000000000000000000000000000001",
-        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Standalone_Perceptron/src/PerceptronSynthesis.sv:3.1-77.10"
+        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Standalone_Perceptron/src/PerceptronSynthesis.sv:3.1-73.10"
       },
       "ports": {
         "second_input": {

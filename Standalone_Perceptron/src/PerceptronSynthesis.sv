@@ -34,9 +34,7 @@ module PerceptronSynthesis (
         rst = 1;
     end
 
-    always_comb begin
-        output_led = prediction > 0;
-    end
+    assign output_led = prediction > 0;
 
     always_ff @(posedge clk) begin
         if (rst) begin

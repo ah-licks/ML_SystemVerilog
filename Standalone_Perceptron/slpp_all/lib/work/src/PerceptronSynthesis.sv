@@ -14,7 +14,6 @@ module PerceptronSynthesis (
     sfp learning_rate;
     sfp prediction;
     sfp expected;
-    sfp ONE;
     int epoch = 0;
 
     PerceptronIntroduction #(
@@ -30,15 +29,12 @@ module PerceptronSynthesis (
     );
 
     initial begin
-        ONE = int_to_sfp(1);
         training = 1;
         learning_rate = ONE;
         rst = 1;
     end
 
-    always_comb begin
-        output_led = prediction > 0;
-    end
+    assign output_led = prediction > 0;
 
     always_ff @(posedge clk) begin
         if (rst) begin
@@ -69,8 +65,8 @@ module PerceptronSynthesis (
             endcase
             epoch++;
         end else begin
-            values[0] = first_input;
-            values[1] = second_input;
+            values[0] = int_to_sfp(32'(first_input));
+            values[1] = int_to_sfp(32'(second_input));
         end
     end
 
