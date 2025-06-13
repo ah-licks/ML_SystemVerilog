@@ -22,9 +22,6 @@ module Perceptron #(
     real sum;
     real weight_gradient[input_units-1:0];
     real bias_gradient;
-    real local_error_gradient;
-
-    assign error_gradient = local_error_gradient;
 
     always_comb begin
         for (int i = 0; i < input_units; i++) begin
@@ -46,33 +43,33 @@ module Perceptron #(
     );
 
     always_comb begin
-        local_error_gradient = 0;
+        error_gradient = 0;
         case (activation)
             Sigmoid: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * prediction * (1 - prediction);
+                    error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * prediction * (1 - prediction);
                 end
             end
             Tanh: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * (1 - prediction ** 2);
+                    error_gradient += next_layer_weights[i] * error_gradient_next_layer[i] * (1 - prediction ** 2);
                 end
             end
             ReLU: begin
                 for (int i = 0; i < output_units; i++) begin
-                    local_error_gradient += next_layer_weights[i] * ((sum >= 0) ? error_gradient_next_layer[i] : 0);
+                    error_gradient += next_layer_weights[i] * ((sum >= 0) ? error_gradient_next_layer[i] : 0);
                 end
             end
             default: begin
-                local_error_gradient = 0;
+                error_gradient = 0;
             end
         endcase
 
         for (int i = 0; i < input_units; i++) begin
-            weight_gradient[i] = local_error_gradient * values[i];
+            weight_gradient[i] = error_gradient * values[i];
         end
 
-        bias_gradient = local_error_gradient;
+        bias_gradient = error_gradient;
     end
 
     always_ff @(posedge clk) begin

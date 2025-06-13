@@ -48,7 +48,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgDouble(oldp+24,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[3]));
         bufp->chgDouble(oldp+26,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients[0]));
         bufp->chgDouble(oldp+28,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction));
-        bufp->chgDouble(oldp+30,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient));
+        bufp->chgDouble(oldp+30,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient));
         bufp->chgDouble(oldp+32,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum));
         bufp->chgDouble(oldp+34,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]));
         bufp->chgDouble(oldp+36,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]));
@@ -57,7 +57,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgIData(oldp+41,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
         bufp->chgIData(oldp+42,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
         bufp->chgDouble(oldp+43,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction));
-        bufp->chgDouble(oldp+45,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient));
+        bufp->chgDouble(oldp+45,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient));
         bufp->chgDouble(oldp+47,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum));
         bufp->chgDouble(oldp+49,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]));
         bufp->chgDouble(oldp+51,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]));
@@ -66,7 +66,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgIData(oldp+56,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
         bufp->chgIData(oldp+57,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
         bufp->chgDouble(oldp+58,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction));
-        bufp->chgDouble(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient));
+        bufp->chgDouble(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__error_gradient));
         bufp->chgDouble(oldp+62,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__sum));
         bufp->chgDouble(oldp+64,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]));
         bufp->chgDouble(oldp+66,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]));
@@ -75,7 +75,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgIData(oldp+71,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
         bufp->chgIData(oldp+72,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
         bufp->chgDouble(oldp+73,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction));
-        bufp->chgDouble(oldp+75,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient));
+        bufp->chgDouble(oldp+75,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__error_gradient));
         bufp->chgDouble(oldp+77,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__sum));
         bufp->chgDouble(oldp+79,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]));
         bufp->chgDouble(oldp+81,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]));
@@ -85,7 +85,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgIData(oldp+87,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
         bufp->chgDouble(oldp+88,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer[0]));
         bufp->chgDouble(oldp+90,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction));
-        bufp->chgDouble(oldp+92,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient));
+        bufp->chgDouble(oldp+92,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__error_gradient));
         bufp->chgDouble(oldp+94,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum));
         bufp->chgDouble(oldp+96,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[0]));
         bufp->chgDouble(oldp+98,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[1]));

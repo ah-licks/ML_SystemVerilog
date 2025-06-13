@@ -3,13 +3,13 @@ $timescale 1ps $end
  $scope module $rootio $end
  $upscope $end
  $scope module FixedPoint $end
-  $var wire 32 K" frac_bits [31:0] $end
-  $var wire 64 L" e [63:0] $end
-  $var wire 64 N" epsilon [63:0] $end
+  $var wire 32 3" frac_bits [31:0] $end
+  $var wire 64 4" e [63:0] $end
+  $var wire 64 6" epsilon [63:0] $end
  $upscope $end
  $scope module Common $end
-  $var real 64 P" e $end
-  $var real 64 R" epsilon $end
+  $var real 64 8" e $end
+  $var real 64 :" epsilon $end
  $upscope $end
  $scope module BenchMLP $end
   $var wire 32 -" inputs [31:0] $end
@@ -46,18 +46,6 @@ $timescale 1ps $end
    $var real 64 7 hidden_predictions[1] $end
    $var real 64 9 hidden_predictions[2] $end
    $var real 64 ; hidden_predictions[3] $end
-   $var real 64 0" hidden_error_gradients[0] $end
-   $var real 64 2" hidden_error_gradients[1] $end
-   $var real 64 4" hidden_error_gradients[2] $end
-   $var real 64 6" hidden_error_gradients[3] $end
-   $var real 64 8" hidden_weights[0][0] $end
-   $var real 64 :" hidden_weights[0][1] $end
-   $var real 64 <" hidden_weights[1][0] $end
-   $var real 64 >" hidden_weights[1][1] $end
-   $var real 64 @" hidden_weights[2][0] $end
-   $var real 64 B" hidden_weights[2][1] $end
-   $var real 64 D" hidden_weights[3][0] $end
-   $var real 64 F" hidden_weights[3][1] $end
    $var real 64 = output_error_gradients[0] $end
    $var real 64 2! output_weights[0][0] $end
    $var real 64 4! output_weights[0][1] $end
@@ -88,17 +76,16 @@ $timescale 1ps $end
      $var real 64 E weight_gradient[0] $end
      $var real 64 G weight_gradient[1] $end
      $var real 64 I bias_gradient $end
-     $var real 64 A local_error_gradient $end
      $scope module predict $end
       $var wire 32 * activation [31:0] $end
       $var real 64 C sum $end
       $var real 64 ? prediction $end
      $upscope $end
      $scope module unnamedblk1 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk2 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk3 $end
       $var wire 32 K i [31:0] $end
@@ -110,7 +97,7 @@ $timescale 1ps $end
       $var wire 32 M i [31:0] $end
      $upscope $end
      $scope module unnamedblk6 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk7 $end
       $var wire 32 F! i [31:0] $end
@@ -120,7 +107,7 @@ $timescale 1ps $end
      $upscope $end
     $upscope $end
     $scope module unnamedblk1 $end
-     $var wire 32 I" i [31:0] $end
+     $var wire 32 1" i [31:0] $end
     $upscope $end
    $upscope $end
    $scope module gen_hidden_layer[1] $end
@@ -148,17 +135,16 @@ $timescale 1ps $end
      $var real 64 T weight_gradient[0] $end
      $var real 64 V weight_gradient[1] $end
      $var real 64 X bias_gradient $end
-     $var real 64 P local_error_gradient $end
      $scope module predict $end
       $var wire 32 * activation [31:0] $end
       $var real 64 R sum $end
       $var real 64 N prediction $end
      $upscope $end
      $scope module unnamedblk1 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk2 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk3 $end
       $var wire 32 Z i [31:0] $end
@@ -170,7 +156,7 @@ $timescale 1ps $end
       $var wire 32 \ i [31:0] $end
      $upscope $end
      $scope module unnamedblk6 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk7 $end
       $var wire 32 T! i [31:0] $end
@@ -180,7 +166,7 @@ $timescale 1ps $end
      $upscope $end
     $upscope $end
     $scope module unnamedblk1 $end
-     $var wire 32 I" i [31:0] $end
+     $var wire 32 1" i [31:0] $end
     $upscope $end
    $upscope $end
    $scope module gen_hidden_layer[2] $end
@@ -208,17 +194,16 @@ $timescale 1ps $end
      $var real 64 c weight_gradient[0] $end
      $var real 64 e weight_gradient[1] $end
      $var real 64 g bias_gradient $end
-     $var real 64 _ local_error_gradient $end
      $scope module predict $end
       $var wire 32 * activation [31:0] $end
       $var real 64 a sum $end
       $var real 64 ] prediction $end
      $upscope $end
      $scope module unnamedblk1 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk2 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk3 $end
       $var wire 32 i i [31:0] $end
@@ -230,7 +215,7 @@ $timescale 1ps $end
       $var wire 32 k i [31:0] $end
      $upscope $end
      $scope module unnamedblk6 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk7 $end
       $var wire 32 b! i [31:0] $end
@@ -240,7 +225,7 @@ $timescale 1ps $end
      $upscope $end
     $upscope $end
     $scope module unnamedblk1 $end
-     $var wire 32 I" i [31:0] $end
+     $var wire 32 1" i [31:0] $end
     $upscope $end
    $upscope $end
    $scope module gen_hidden_layer[3] $end
@@ -268,17 +253,16 @@ $timescale 1ps $end
      $var real 64 r weight_gradient[0] $end
      $var real 64 t weight_gradient[1] $end
      $var real 64 v bias_gradient $end
-     $var real 64 n local_error_gradient $end
      $scope module predict $end
       $var wire 32 * activation [31:0] $end
       $var real 64 p sum $end
       $var real 64 l prediction $end
      $upscope $end
      $scope module unnamedblk1 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk2 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk3 $end
       $var wire 32 x i [31:0] $end
@@ -290,7 +274,7 @@ $timescale 1ps $end
       $var wire 32 z i [31:0] $end
      $upscope $end
      $scope module unnamedblk6 $end
-      $var wire 32 H" i [31:0] $end
+      $var wire 32 0" i [31:0] $end
      $upscope $end
      $scope module unnamedblk7 $end
       $var wire 32 p! i [31:0] $end
@@ -300,7 +284,7 @@ $timescale 1ps $end
      $upscope $end
     $upscope $end
     $scope module unnamedblk1 $end
-     $var wire 32 I" i [31:0] $end
+     $var wire 32 1" i [31:0] $end
     $upscope $end
    $upscope $end
    $scope module gen_output_layer[0] $end
@@ -335,17 +319,16 @@ $timescale 1ps $end
      $var real 64 )! weight_gradient[2] $end
      $var real 64 +! weight_gradient[3] $end
      $var real 64 -! bias_gradient $end
-     $var real 64 !! local_error_gradient $end
      $scope module predict $end
       $var wire 32 + activation [31:0] $end
       $var real 64 #! sum $end
       $var real 64 } prediction $end
      $upscope $end
      $scope module unnamedblk1 $end
-      $var wire 32 J" i [31:0] $end
+      $var wire 32 2" i [31:0] $end
      $upscope $end
      $scope module unnamedblk2 $end
-      $var wire 32 J" i [31:0] $end
+      $var wire 32 2" i [31:0] $end
      $upscope $end
      $scope module unnamedblk3 $end
       $var wire 32 /! i [31:0] $end
@@ -357,7 +340,7 @@ $timescale 1ps $end
       $var wire 32 1! i [31:0] $end
      $upscope $end
      $scope module unnamedblk6 $end
-      $var wire 32 J" i [31:0] $end
+      $var wire 32 2" i [31:0] $end
      $upscope $end
      $scope module unnamedblk7 $end
       $var wire 32 &" i [31:0] $end
@@ -368,7 +351,7 @@ $timescale 1ps $end
     $upscope $end
    $upscope $end
    $scope module unnamedblk2 $end
-    $var wire 32 I" i [31:0] $end
+    $var wire 32 1" i [31:0] $end
    $upscope $end
   $upscope $end
   $scope module unnamedblk1 $end
@@ -497,26 +480,14 @@ r1 +"
 b00000000000000000000000000000010 -"
 b00000000000000000000000000000100 ."
 b00000000000000000000000000000001 /"
-r0 0"
-r0 2"
-r0 4"
-r0 6"
-r0 8"
-r0 :"
-r0 <"
-r0 >"
-r0 @"
-r0 B"
-r0 D"
-r0 F"
-b00000000000000000000000000000010 H"
-b00000000000000000000000000000001 I"
-b00000000000000000000000000000100 J"
-b00000000000000000000000000100000 K"
-b0000000000000000000000000000001010110111111000010101000101100000 L"
-b0000000000000000000000000000000000000000000000000000000000101010 N"
-r2.718281828 P"
-r1e-08 R"
+b00000000000000000000000000000010 0"
+b00000000000000000000000000000001 1"
+b00000000000000000000000000000100 2"
+b00000000000000000000000000100000 3"
+b0000000000000000000000000000001010110111111000010101000101100000 4"
+b0000000000000000000000000000000000000000000000000000000000101010 6"
+r2.718281828 8"
+r1e-08 :"
 #5
 r0.5719961329195292 3
 r0.35 9
