@@ -46,7 +46,7 @@
       "attributes": {
         "step": "place",
         "top": "00000000000000000000000000000001",
-        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:4.1-90.10"
+        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:4.1-99.10"
       },
       "ports": {
         "second_input": {
@@ -67,7 +67,7 @@
         }
       },
       "cells": {
-        "$iopadmap$MLPSynthesis.clk$intcell$IBUF": {
+        "$iopadmap$PerceptronSynthesis.clk$intcell$IBUF": {
           "hide_name": 1,
           "type": "IOB33_INBUF_EN",
           "parameters": {
@@ -85,10 +85,10 @@
           },
           "connections": {
             "PAD": [ 47251 ],
-            "OUT": [ 47259 ]
+            "OUT": [ 47258 ]
           }
         },
-        "$iopadmap$MLPSynthesis.first_input$intcell$IBUF": {
+        "$iopadmap$PerceptronSynthesis.first_input$intcell$IBUF": {
           "hide_name": 1,
           "type": "IOB33_INBUF_EN",
           "parameters": {
@@ -106,10 +106,10 @@
           },
           "connections": {
             "PAD": [ 47252 ],
-            "OUT": [ 47264 ]
+            "OUT": [ 47261 ]
           }
         },
-        "$iopadmap$MLPSynthesis.output_led$intcell$OBUF": {
+        "$iopadmap$PerceptronSynthesis.output_led$intcell$OBUF": {
           "hide_name": 1,
           "type": "IOB33_OUTBUF",
           "parameters": {
@@ -126,11 +126,11 @@
             "OUT": "output"
           },
           "connections": {
-            "IN": [ 47506 ],
+            "IN": [ 47503 ],
             "OUT": [ 47253 ]
           }
         },
-        "$iopadmap$MLPSynthesis.second_input$intcell$IBUF": {
+        "$iopadmap$PerceptronSynthesis.second_input$intcell$IBUF": {
           "hide_name": 1,
           "type": "IOB33_INBUF_EN",
           "parameters": {
@@ -148,7 +148,7 @@
           },
           "connections": {
             "PAD": [ 47254 ],
-            "OUT": [ 47269 ]
+            "OUT": [ 47266 ]
           }
         },
         "$PACKER_GND_DRV": {
@@ -164,7 +164,7 @@
             "Y": "output"
           },
           "connections": {
-            "Y": [ 47506 ]
+            "Y": [ 47503 ]
           }
         },
         "second_input": {
@@ -178,7 +178,7 @@
             "X_ORIG_TYPE": "PAD",
             "X_ORIG_PORT_PAD": "PAD",
             "X_IO_DIR": "IN",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:7.18-7.30",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:7.18-7.30",
             "LOC": "T1",
             "IOSTANDARD": "LVCMOS18"
           },
@@ -202,7 +202,7 @@
             "Y": "output"
           },
           "connections": {
-            "Y": [ 47508 ]
+            "Y": [ 47505 ]
           }
         },
         "output_led": {
@@ -216,7 +216,7 @@
             "X_ORIG_TYPE": "PAD",
             "X_ORIG_PORT_PAD": "PAD",
             "X_IO_DIR": "OUT",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:8.18-8.28",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:8.18-8.28",
             "LOC": "N3",
             "IOSTANDARD": "LVCMOS18"
           },
@@ -238,7 +238,7 @@
             "X_ORIG_TYPE": "PAD",
             "X_ORIG_PORT_PAD": "PAD",
             "X_IO_DIR": "IN",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:6.18-6.29",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:6.18-6.29",
             "LOC": "W2",
             "IOSTANDARD": "LVCMOS18"
           },
@@ -260,7 +260,7 @@
             "X_ORIG_TYPE": "PAD",
             "X_ORIG_PORT_PAD": "PAD",
             "X_IO_DIR": "IN",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:5.18-5.21",
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:5.18-5.21",
             "LOC": "W5",
             "IOSTANDARD": "LVCMOS18"
           },
@@ -275,14 +275,14 @@
       "netnames": {
         "$PACKER_GND_NET": {
           "hide_name": 1,
-          "bits": [ 47506 ] ,
+          "bits": [ 47503 ] ,
           "attributes": {
             "ROUTING": "INT_L_X0Y76/GND_WIRE;NULL_X0Y80/3.1;1;INT_R_X43Y76/GFAN0;INT_R_X43Y76/138.136;1;INT_R_X43Y76/IMUX34;INT_R_X43Y76/136.167;1;RIOI3_X43Y75/IOI_OLOGIC0_D1;RIOI3_X43Y75/261.484;1;RIOI3_X43Y75/RIOI_OLOGIC0_OQ;RIOI3_X43Y75/484.720;1;RIOB33_X43Y75/IOB_O0;RIOI3_X43Y75/720.706;1;SITEWIRE/IOB_X1Y76/O;RIOB33_X43Y75/14.330;1;SITEWIRE/IOB_X1Y76/OUSED_OUT;SITEPIP/IOB_X1Y76/OUSED/O;1;NULL_X0Y156/PSEUDO_GND_WIRE_GLBL;;1"
           }
         },
         "$iopadmap$second_input": {
           "hide_name": 1,
-          "bits": [ 47269 ] ,
+          "bits": [ 47266 ] ,
           "attributes": {
             "ROUTING": " ",
             "unused_bits": "0 "
@@ -293,7 +293,7 @@
           "bits": [ 47254 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:7.18-7.30"
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:7.18-7.30"
           }
         },
         "output_led": {
@@ -301,19 +301,19 @@
           "bits": [ 47253 ] ,
           "attributes": {
             "ROUTING": "SITEWIRE/IOB_X1Y76/OUTBUF_OUT;;1",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:8.18-8.28"
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:8.18-8.28"
           }
         },
         "$PACKER_VCC_NET": {
           "hide_name": 1,
-          "bits": [ 47508 ] ,
+          "bits": [ 47505 ] ,
           "attributes": {
             "ROUTING": " "
           }
         },
         "$iopadmap$first_input": {
           "hide_name": 1,
-          "bits": [ 47264 ] ,
+          "bits": [ 47261 ] ,
           "attributes": {
             "ROUTING": " ",
             "unused_bits": "0 "
@@ -324,18 +324,18 @@
           "bits": [ 47252 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:6.18-6.29"
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:6.18-6.29"
           }
         },
-        "mlp.clk": {
+        "perceptron.clk[0]": {
           "hide_name": 0,
-          "bits": [ 47259 ] ,
+          "bits": [ 47258 ] ,
           "attributes": {
             "ROUTING": " ",
             "wiretype": "\\sfp",
             "unused_bits": "0 ",
             "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:8.17-8.20",
-            "hdlname": "mlp gen_output_layer[0].output_perceptron clk"
+            "hdlname": "perceptron clk"
           }
         },
         "clk": {
@@ -343,7 +343,7 @@
           "bits": [ 47251 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:5.18-5.21"
+            "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:5.18-5.21"
           }
         }
       }

@@ -197,6 +197,7 @@ VL_ATTR_COLD void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* 
         vlSelf->BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__next_layer_weights[__Vi0] = VL_RAND_RESET_Q(64);
     }
     vlSelf->BenchMLP__DOT__mlp__DOT__unnamedblk2__DOT__i = 0;
+    vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient = VL_RAND_RESET_Q(64);
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights[__Vi0] = VL_RAND_RESET_Q(64);
     }
@@ -209,13 +210,13 @@ VL_ATTR_COLD void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* 
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[__Vi0] = VL_RAND_RESET_Q(64);
     }
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient = VL_RAND_RESET_Q(64);
-    vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient = VL_RAND_RESET_Q(64);
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i = 0;
+    vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient = VL_RAND_RESET_Q(64);
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights[__Vi0] = VL_RAND_RESET_Q(64);
     }
@@ -228,13 +229,13 @@ VL_ATTR_COLD void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* 
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[__Vi0] = VL_RAND_RESET_Q(64);
     }
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient = VL_RAND_RESET_Q(64);
-    vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient = VL_RAND_RESET_Q(64);
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i = 0;
+    vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__error_gradient = VL_RAND_RESET_Q(64);
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights[__Vi0] = VL_RAND_RESET_Q(64);
     }
@@ -244,7 +245,6 @@ VL_ATTR_COLD void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* 
         vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[__Vi0] = VL_RAND_RESET_Q(64);
     }
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient = VL_RAND_RESET_Q(64);
-    vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient = VL_RAND_RESET_Q(64);
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i = 0;
     vlSelf->BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i = 0;

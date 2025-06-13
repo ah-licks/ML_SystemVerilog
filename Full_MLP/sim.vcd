@@ -70,7 +70,6 @@ $timescale 1ps $end
      $var wire 64 E weight_gradient[0] [63:0] $end
      $var wire 64 G weight_gradient[1] [63:0] $end
      $var wire 64 I bias_gradient [63:0] $end
-     $var wire 64 A local_error_gradient [63:0] $end
      $scope module predict $end
       $var wire 32 . activation [31:0] $end
       $var wire 64 C sum [63:0] $end
@@ -129,7 +128,6 @@ $timescale 1ps $end
      $var wire 64 U weight_gradient[0] [63:0] $end
      $var wire 64 W weight_gradient[1] [63:0] $end
      $var wire 64 Y bias_gradient [63:0] $end
-     $var wire 64 Q local_error_gradient [63:0] $end
      $scope module predict $end
       $var wire 32 . activation [31:0] $end
       $var wire 64 S sum [63:0] $end
@@ -188,7 +186,6 @@ $timescale 1ps $end
      $var wire 64 g weight_gradient[0] [63:0] $end
      $var wire 64 i weight_gradient[1] [63:0] $end
      $var wire 64 k bias_gradient [63:0] $end
-     $var wire 64 c local_error_gradient [63:0] $end
      $scope module predict $end
       $var wire 32 / activation [31:0] $end
       $var wire 64 e sum [63:0] $end

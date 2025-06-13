@@ -136,7 +136,6 @@ VL_ATTR_COLD void VPerceptron___024root__trace_init_sub__TOP__0(VPerceptron___02
     }
     tracep->popPrefix();
     tracep->declQuad(c+39,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
-    tracep->declQuad(c+31,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
     tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
     tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->declQuad(c+33,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
@@ -215,7 +214,6 @@ VL_ATTR_COLD void VPerceptron___024root__trace_init_sub__TOP__0(VPerceptron___02
     }
     tracep->popPrefix();
     tracep->declQuad(c+55,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
-    tracep->declQuad(c+47,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
     tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
     tracep->declBus(c+12,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->declQuad(c+49,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
@@ -294,7 +292,6 @@ VL_ATTR_COLD void VPerceptron___024root__trace_init_sub__TOP__0(VPerceptron___02
     }
     tracep->popPrefix();
     tracep->declQuad(c+73,0,"bias_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
-    tracep->declQuad(c+65,0,"local_error_gradient",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
     tracep->pushPrefix("predict", VerilatedTracePrefixType::SCOPE_MODULE);
     tracep->declBus(c+13,0,"activation",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::INT, false,-1, 31,0);
     tracep->declQuad(c+67,0,"sum",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 63,0);
@@ -437,7 +434,7 @@ VL_ATTR_COLD void VPerceptron___024root__trace_full_0_sub_0(VPerceptron___024roo
     bufp->fullQData(oldp+25,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[1]),64);
     bufp->fullQData(oldp+27,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients[0]),64);
     bufp->fullQData(oldp+29,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction),64);
-    bufp->fullQData(oldp+31,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+31,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient),64);
     bufp->fullQData(oldp+33,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum),64);
     bufp->fullQData(oldp+35,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
     bufp->fullQData(oldp+37,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
@@ -447,7 +444,7 @@ VL_ATTR_COLD void VPerceptron___024root__trace_full_0_sub_0(VPerceptron___024roo
     bufp->fullIData(oldp+43,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
     bufp->fullIData(oldp+44,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
     bufp->fullQData(oldp+45,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction),64);
-    bufp->fullQData(oldp+47,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+47,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient),64);
     bufp->fullQData(oldp+49,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum),64);
     bufp->fullQData(oldp+51,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
     bufp->fullQData(oldp+53,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
@@ -458,7 +455,7 @@ VL_ATTR_COLD void VPerceptron___024root__trace_full_0_sub_0(VPerceptron___024roo
     bufp->fullIData(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
     bufp->fullQData(oldp+61,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer[0]),64);
     bufp->fullQData(oldp+63,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction),64);
-    bufp->fullQData(oldp+65,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient),64);
+    bufp->fullQData(oldp+65,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__error_gradient),64);
     bufp->fullQData(oldp+67,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum),64);
     bufp->fullQData(oldp+69,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[0]),64);
     bufp->fullQData(oldp+71,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[1]),64);
