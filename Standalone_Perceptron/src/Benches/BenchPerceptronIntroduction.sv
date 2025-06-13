@@ -13,8 +13,6 @@ module BenchPerceptronIntroduction ();
 
     int correct;
 
-    sfp ONE;
-
     PerceptronIntroduction #(
         .input_units(input_units)
     ) perceptron_i (
@@ -38,7 +36,6 @@ module BenchPerceptronIntroduction ();
         $dumpfile("sim.vcd");
         $dumpvars;
 
-        ONE = int_to_sfp(1);
         training = 1;
         learning_rate = ONE;
 
