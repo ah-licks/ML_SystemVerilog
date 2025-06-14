@@ -196,28 +196,31 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ BenchMLP__DOT__threshold;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum;
         QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient;
         QData/*63:0*/ __Vfunc_sfp_sub__0__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__0__a;
         QData/*63:0*/ __Vfunc_sfp_sub__0__b;
         QData/*63:0*/ __Vfunc_sfp_div__1__Vfuncout;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_div__1__a;
         QData/*63:0*/ __Vfunc_sfp_div__1__b;
         QData/*63:0*/ __Vfunc_sfp_div__1__result;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_div__1__abs_a;
         QData/*63:0*/ __Vfunc_sfp_div__1__abs_b;
         QData/*63:0*/ __Vfunc_sfp_sub__2__Vfuncout;
@@ -279,11 +282,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_div__23__result;
         QData/*63:0*/ __Vfunc_sfp_div__23__abs_a;
         QData/*63:0*/ __Vfunc_sfp_div__23__abs_b;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_add__24__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_add__24__a;
         QData/*63:0*/ __Vfunc_sfp_add__24__b;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_exp__25__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_exp__25__a;
         QData/*63:0*/ __Vfunc_sfp_exp__25__result;
@@ -345,11 +348,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_tanh__53__a;
         QData/*63:0*/ __Vfunc_int_to_sfp__54__Vfuncout;
         QData/*63:0*/ __Vfunc_int_to_sfp__55__Vfuncout;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_sub__56__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__56__a;
         QData/*63:0*/ __Vfunc_sfp_sub__56__b;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_div__57__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_div__57__a;
         QData/*63:0*/ __Vfunc_sfp_div__57__b;
@@ -411,11 +414,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_tanh__77__a;
         QData/*63:0*/ __Vfunc_int_to_sfp__78__Vfuncout;
         QData/*63:0*/ __Vfunc_int_to_sfp__79__Vfuncout;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_sub__80__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__80__a;
         QData/*63:0*/ __Vfunc_sfp_sub__80__b;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_div__81__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_div__81__a;
         QData/*63:0*/ __Vfunc_sfp_div__81__b;
@@ -477,11 +480,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_div__107__abs_b;
         QData/*63:0*/ __Vfunc_int_to_sfp__108__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_mul__109__Vfuncout;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_mul__109__a;
         QData/*63:0*/ __Vfunc_sfp_mul__109__b;
         QData/*63:0*/ __Vfunc_sfp_add__110__Vfuncout;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_add__110__a;
         QData/*63:0*/ __Vfunc_sfp_add__110__b;
         QData/*63:0*/ __Vfunc_sfp_tanh__111__Vfuncout;
@@ -543,11 +546,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_mul__132__a;
         QData/*63:0*/ __Vfunc_sfp_mul__132__b;
         QData/*63:0*/ __Vfunc_sfp_sub__133__Vfuncout;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_sub__133__a;
         QData/*63:0*/ __Vfunc_sfp_sub__133__b;
         QData/*63:0*/ __Vfunc_sfp_pow__134__Vfuncout;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_pow__134__a;
         QData/*63:0*/ __Vfunc_sfp_pow__134__result;
         QData/*63:0*/ __Vfunc_sfp_tanh__135__Vfuncout;
@@ -609,11 +612,11 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_exp__164__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_exp__164__a;
         QData/*63:0*/ __Vfunc_sfp_exp__164__result;
+    };
+    struct {
         QData/*63:0*/ __Vfunc_sfp_exp__164__term;
         QData/*63:0*/ __Vfunc_sfp_div__165__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_div__165__a;
-    };
-    struct {
         QData/*63:0*/ __Vfunc_sfp_div__165__b;
         QData/*63:0*/ __Vfunc_sfp_div__165__result;
         QData/*63:0*/ __Vfunc_sfp_div__165__abs_a;
@@ -666,6 +669,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         VlUnpacked<VlUnpacked<QData/*63:0*/, 1>, 2> BenchMLP__DOT__mlp__DOT__next_layer_weights;
         VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT__output_error_gradients;
         VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 1> BenchMLP__DOT__mlp__DOT__output_weights;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT__activation_gradients;
         VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights;
         VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights;
@@ -674,12 +678,12 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient;
+    };
+    struct {
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights;
-    };
-    struct {
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient;
         VlUnpacked<CData/*0:0*/, 5> __Vm_traceActivity;
     };
