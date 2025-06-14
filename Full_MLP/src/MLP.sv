@@ -17,11 +17,11 @@ module MLP #(
 );
 
     real hidden_predictions[hidden_layer_size-1:0];
-    //real hidden_error_gradients[hidden_layer_size-1:0];
-    //real hidden_weights[hidden_layer_size-1:0][inputs-1:0];
 
     real output_error_gradients[outputs-1:0];
     real output_weights[outputs-1:0][hidden_layer_size-1:0];
+
+    real activation_gradients[outputs-1:0];
 
     genvar h;
     generate
@@ -52,8 +52,6 @@ module MLP #(
         end
     endgenerate
 
-    //second layer onward (hidden) not implemented
-
     genvar o;
     generate
         for (o = 0; o < outputs; o++) begin : gen_output_layer
@@ -68,9 +66,9 @@ module MLP #(
                 .training(training),
                 .learning_rate(learning_rate),
                 .next_layer_weights('{1.0}),
-                .error_gradient_next_layer('{output_error_gradients[o]}),
+                .error_gradient_next_layer('{activation_gradients[o]}),
                 .prediction(prediction[o]),
-                .error_gradient(),
+                .error_gradient(output_error_gradients[o]),
                 .current_weights(output_weights[o])
             );
         end
@@ -78,7 +76,7 @@ module MLP #(
 
     always_comb begin
         for (int i = 0; i < outputs; i++) begin
-            output_error_gradients[i] = -((expected[i] / (prediction[i] + epsilon)) - (1 - expected[i]) / (1 - prediction[i] + epsilon));
+            activation_gradients[i] = -((expected[i] / (prediction[i] + epsilon)) - (1 - expected[i]) / (1 - prediction[i] + epsilon));
         end
     end
 
