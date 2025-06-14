@@ -24,8 +24,6 @@ module Perceptron #(
     sfp bias_gradient;
     sfp local_error_gradient;
 
-    assign error_gradient = local_error_gradient;
-
     always_comb begin
         for (int i = 0; i < input_units; i++) begin
             current_weights[i] = weights[i];
@@ -92,7 +90,8 @@ module Perceptron #(
             weight_gradient[i] = sfp_mul(local_error_gradient, values[i]);
         end
 
-        bias_gradient = local_error_gradient;
+        bias_gradient  = local_error_gradient;
+        error_gradient = local_error_gradient;
     end
 
     always_ff @(posedge clk) begin

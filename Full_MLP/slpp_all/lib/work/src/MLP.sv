@@ -18,12 +18,12 @@ module MLP #(
 );
 
     sfp hidden_predictions[hidden_layer_size-1:0];
-    //sfp hidden_error_gradients[hidden_layer_size-1:0];
-    //sfp hidden_weights[hidden_layer_size-1:0][inputs-1:0];
     sfp next_layer_weights[hidden_layer_size-1:0][outputs-1:0];
 
     sfp output_error_gradients[outputs-1:0];
     sfp output_weights[outputs-1:0][hidden_layer_size-1:0];
+
+    sfp cost_gradients[outputs-1:0];
 
     genvar h;
     generate
@@ -53,8 +53,6 @@ module MLP #(
         end
     endgenerate
 
-    //second layer onward (hidden) not implemented
-
     genvar o;
     generate
         for (o = 0; o < outputs; o++) begin : gen_output_layer
@@ -69,9 +67,9 @@ module MLP #(
                 .training(training),
                 .learning_rate(learning_rate),
                 .next_layer_weights('{ONE}),
-                .error_gradient_next_layer('{output_error_gradients[o]}),
+                .error_gradient_next_layer('{cost_gradients[o]}),
                 .prediction(prediction[o]),
-                .error_gradient(),
+                .error_gradient(output_error_gradients[o]),
                 .current_weights(output_weights[o])
             );
         end
@@ -79,7 +77,7 @@ module MLP #(
 
     always_comb begin
         for (int i = 0; i < outputs; i++) begin
-            output_error_gradients[i] = -(sfp_sub(
+            cost_gradients[i] = -(sfp_sub(
                 sfp_div(
                     expected[i], sfp_add(prediction[i], epsilon)
                 ),
