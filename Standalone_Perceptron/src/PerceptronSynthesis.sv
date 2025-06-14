@@ -65,8 +65,8 @@ module PerceptronSynthesis (
             endcase
             epoch++;
         end else begin
-            values[0] = int_to_sfp(32'(first_input));
-            values[1] = int_to_sfp(32'(second_input));
+            values[0] = (first_input) ? ONE : 0;
+            values[1] = (second_input) ? ONE : 0;
         end
     end
 

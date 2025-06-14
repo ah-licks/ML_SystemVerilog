@@ -49,9 +49,7 @@ module MLPSynthesis (
         rst = 1;
     end
 
-    always_comb begin
-        output_led = prediction > HALF;
-    end
+    assign output_led = prediction > HALF;
 
     always_ff @(posedge clk) begin
         if (rst) begin
@@ -82,8 +80,8 @@ module MLPSynthesis (
             endcase
             epoch++;
         end else begin
-            values[0] = int_to_sfp(32'(first_input));
-            values[1] = int_to_sfp(32'(second_input));
+            values[0] = (first_input) ? ONE : 0;
+            values[1] = (second_input) ? ONE : 0;
         end
     end
 
