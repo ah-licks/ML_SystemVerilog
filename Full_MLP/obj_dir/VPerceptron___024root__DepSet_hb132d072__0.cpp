@@ -334,60 +334,60 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__0(VPerceptron___024
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i = 1U;
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i = 1U;
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction)));
     } else if ((2U == vlSelfRef.BenchMLP__DOT__hidden_activation)) {
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction,2.0))));
     } else if ((3U == vlSelfRef.BenchMLP__DOT__hidden_activation)) {
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
@@ -457,14 +457,14 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    double BenchMLP__DOT__mlp__DOT____Vlvbound_h88070a8d__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h88070a8d__0 = 0;
-    double BenchMLP__DOT__mlp__DOT____Vlvbound_h9f34236c__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h9f34236c__0 = 0;
-    double BenchMLP__DOT__mlp__DOT____Vlvbound_h99200702__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h99200702__0 = 0;
-    double BenchMLP__DOT__mlp__DOT____Vlvbound_h6a8a73b0__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h6a8a73b0__0 = 0;
+    double BenchMLP__DOT__mlp__DOT____Vlvbound_hfe559b7f__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_hfe559b7f__0 = 0;
+    double BenchMLP__DOT__mlp__DOT____Vlvbound_h03fc07e8__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_h03fc07e8__0 = 0;
+    double BenchMLP__DOT__mlp__DOT____Vlvbound_h390c3694__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_h390c3694__0 = 0;
+    double BenchMLP__DOT__mlp__DOT____Vlvbound_hac73ed6b__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_hac73ed6b__0 = 0;
     double BenchMLP__DOT__mlp__DOT____Vlvbound_h362076de__0;
     BenchMLP__DOT__mlp__DOT____Vlvbound_h362076de__0 = 0;
     double __Vdly__BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias;
@@ -1019,26 +1019,26 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
         = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction;
     vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[3U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h88070a8d__0 
+    BenchMLP__DOT__mlp__DOT____Vlvbound_hfe559b7f__0 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
         [0U][0U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden[0U] 
-        = BenchMLP__DOT__mlp__DOT____Vlvbound_h88070a8d__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h9f34236c__0 
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights[0U][0U] 
+        = BenchMLP__DOT__mlp__DOT____Vlvbound_hfe559b7f__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_h03fc07e8__0 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
         [0U][1U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden[0U] 
-        = BenchMLP__DOT__mlp__DOT____Vlvbound_h9f34236c__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h99200702__0 
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights[1U][0U] 
+        = BenchMLP__DOT__mlp__DOT____Vlvbound_h03fc07e8__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_h390c3694__0 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
         [0U][2U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden[0U] 
-        = BenchMLP__DOT__mlp__DOT____Vlvbound_h99200702__0;
-    BenchMLP__DOT__mlp__DOT____Vlvbound_h6a8a73b0__0 
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights[2U][0U] 
+        = BenchMLP__DOT__mlp__DOT____Vlvbound_h390c3694__0;
+    BenchMLP__DOT__mlp__DOT____Vlvbound_hac73ed6b__0 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
         [0U][3U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden[0U] 
-        = BenchMLP__DOT__mlp__DOT____Vlvbound_h6a8a73b0__0;
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights[3U][0U] 
+        = BenchMLP__DOT__mlp__DOT____Vlvbound_hac73ed6b__0;
     vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias;
     vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum 
@@ -1061,6 +1061,18 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
            + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights
               [3U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions
               [3U]));
+    vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights[0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+        [0U][0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights[0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+        [1U][0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights[0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+        [2U][0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights[0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+        [3U][0U];
     vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction 
         = ((0U == vlSelfRef.BenchMLP__DOT__output_activation)
             ? VL_ITOR_D_I(1, (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum 
@@ -1157,60 +1169,60 @@ VL_INLINE_OPT void VPerceptron___024root___nba_sequent__TOP__0(VPerceptron___024
         = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient;
     if ((1U == vlSelfRef.BenchMLP__DOT__hidden_activation)) {
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                         [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                         [0U]) * vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction) 
                       * (1.0 - vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction)));
     } else if ((2U == vlSelfRef.BenchMLP__DOT__hidden_activation)) {
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__prediction,2.0))));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + ((vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                        [0U] * vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                        [0U]) * (1.0 - pow(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__prediction,2.0))));
     } else if ((3U == vlSelfRef.BenchMLP__DOT__hidden_activation)) {
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));
         vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__local_error_gradient 
-            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden
+            = (0.0 + (vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights
                       [0U] * ((vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__DOT__sum 
                                >= 0.0) ? vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients
                               [0U] : 0.0)));

@@ -94,13 +94,14 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
     VlUnpacked<double, 1> BenchMLP__DOT__expected;
     VlUnpacked<double, 1> BenchMLP__DOT__prediction;
     VlUnpacked<double, 4> BenchMLP__DOT__mlp__DOT__hidden_predictions;
+    VlUnpacked<VlUnpacked<double, 1>, 4> BenchMLP__DOT__mlp__DOT__next_layer_weights;
     VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__output_error_gradients;
     VlUnpacked<VlUnpacked<double, 4>, 1> BenchMLP__DOT__mlp__DOT__output_weights;
     VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__activation_gradients;
-    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__next_layer_weights_for_hidden;
-    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__next_layer_weights_for_hidden;
-    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__2__KET____DOT__next_layer_weights_for_hidden;
-    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__3__KET____DOT__next_layer_weights_for_hidden;
+    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights;
+    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights;
+    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__2__KET____DOT__hidden_perceptron__next_layer_weights;
+    VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__3__KET____DOT__hidden_perceptron__next_layer_weights;
     VlUnpacked<double, 4> BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights;
     VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer;
     VlUnpacked<double, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__next_layer_weights;

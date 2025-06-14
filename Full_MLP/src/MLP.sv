@@ -17,6 +17,7 @@ module MLP #(
 );
 
     real hidden_predictions[hidden_layer_size-1:0];
+    real next_layer_weights[hidden_layer_size-1:0][outputs-1:0];
 
     real output_error_gradients[outputs-1:0];
     real output_weights[outputs-1:0][hidden_layer_size-1:0];
@@ -26,10 +27,9 @@ module MLP #(
     genvar h;
     generate
         for (h = 0; h < hidden_layer_size; h++) begin : gen_hidden_layer
-            real next_layer_weights_for_hidden[outputs-1:0];
             always_comb begin
                 for (int i = 0; i < outputs; i++) begin
-                    next_layer_weights_for_hidden[i] = output_weights[i][h];
+                    next_layer_weights[h][i] = output_weights[i][h];
                 end
             end
 
@@ -43,7 +43,7 @@ module MLP #(
                 .activation(hidden_activation),
                 .training(training),
                 .learning_rate(learning_rate),
-                .next_layer_weights(next_layer_weights_for_hidden),
+                .next_layer_weights(next_layer_weights[h]),
                 .error_gradient_next_layer(output_error_gradients),
                 .prediction(hidden_predictions[h]),
                 .error_gradient(),
