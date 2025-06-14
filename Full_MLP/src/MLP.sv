@@ -22,7 +22,7 @@ module MLP #(
     real output_error_gradients[outputs-1:0];
     real output_weights[outputs-1:0][hidden_layer_size-1:0];
 
-    real activation_gradients[outputs-1:0];
+    real cost_gradients[outputs-1:0];
 
     genvar h;
     generate
@@ -66,7 +66,7 @@ module MLP #(
                 .training(training),
                 .learning_rate(learning_rate),
                 .next_layer_weights('{1.0}),
-                .error_gradient_next_layer('{activation_gradients[o]}),
+                .error_gradient_next_layer('{cost_gradients[o]}),
                 .prediction(prediction[o]),
                 .error_gradient(output_error_gradients[o]),
                 .current_weights(output_weights[o])
@@ -76,7 +76,7 @@ module MLP #(
 
     always_comb begin
         for (int i = 0; i < outputs; i++) begin
-            activation_gradients[i] = -((expected[i] / (prediction[i] + epsilon)) - (1 - expected[i]) / (1 - prediction[i] + epsilon));
+            cost_gradients[i] = -((expected[i] / (prediction[i] + epsilon)) - (1 - expected[i]) / (1 - prediction[i] + epsilon));
         end
     end
 
