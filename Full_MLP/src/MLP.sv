@@ -23,7 +23,7 @@ module MLP #(
     sfp output_error_gradients[outputs-1:0];
     sfp output_weights[outputs-1:0][hidden_layer_size-1:0];
 
-    sfp activation_gradients[outputs-1:0];
+    sfp cost_gradients[outputs-1:0];
 
     genvar h;
     generate
@@ -67,7 +67,7 @@ module MLP #(
                 .training(training),
                 .learning_rate(learning_rate),
                 .next_layer_weights('{ONE}),
-                .error_gradient_next_layer('{activation_gradients[o]}),
+                .error_gradient_next_layer('{cost_gradients[o]}),
                 .prediction(prediction[o]),
                 .error_gradient(output_error_gradients[o]),
                 .current_weights(output_weights[o])
@@ -77,7 +77,7 @@ module MLP #(
 
     always_comb begin
         for (int i = 0; i < outputs; i++) begin
-            activation_gradients[i] = -(sfp_sub(
+            cost_gradients[i] = -(sfp_sub(
                 sfp_div(
                     expected[i], sfp_add(prediction[i], epsilon)
                 ),
