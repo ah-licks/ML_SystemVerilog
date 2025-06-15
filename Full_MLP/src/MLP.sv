@@ -18,19 +18,6 @@ module MLP #(
     output sfp prediction[outputs-1:0]
 );
 
-    function automatic int maximum_layer_size();
-        int maximum = inputs;
-        for (int i = 0; i < hidden_layers; i++) begin
-            if (hidden_layer_sizes[i] > maximum) begin
-                maximum = hidden_layer_sizes[i];
-            end
-        end
-        if (outputs > maximum) begin
-            maximum = outputs;
-        end
-        return maximum;
-    endfunction
-
     localparam int max_layer_size = maximum_layer_size();
 
     sfp layer_weights[hidden_layers:0][max_layer_size-1:0][max_layer_size-1:0];
@@ -43,6 +30,19 @@ module MLP #(
     sfp next_layer_weights[hidden_layers-1:0][max_layer_size-1:0][max_layer_size-1:0];
 
     sfp cost_gradients[outputs-1:0];
+
+    function automatic int maximum_layer_size();
+        int maximum = inputs;
+        for (int i = 0; i < hidden_layers; i++) begin
+            if (hidden_layer_sizes[i] > maximum) begin
+                maximum = hidden_layer_sizes[i];
+            end
+        end
+        if (outputs > maximum) begin
+            maximum = outputs;
+        end
+        return maximum;
+    endfunction
 
     always_comb begin
         for (int i = 0; i < inputs; i++) begin
