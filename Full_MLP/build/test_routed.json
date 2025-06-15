@@ -46,7 +46,7 @@
       "attributes": {
         "step": "place",
         "top": "00000000000000000000000000000001",
-        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:4.1-88.10"
+        "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:4.1-90.10"
       },
       "ports": {
         "second_input": {
@@ -335,7 +335,7 @@
             "wiretype": "\\sfp",
             "unused_bits": "0 ",
             "src": "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:8.17-8.20",
-            "hdlname": "mlp gen_output_layer[0].output_perceptron clk"
+            "hdlname": "mlp gen_output_layer_neuron[0].output_perceptron clk"
           }
         },
         "clk": {

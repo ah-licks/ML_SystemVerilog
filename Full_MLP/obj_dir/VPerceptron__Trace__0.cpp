@@ -24,7 +24,7 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
     // Body
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[0U]))) {
-        bufp->chgQData(oldp+0,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__next_layer_weights[0]),64);
+        bufp->chgQData(oldp+0,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__next_layer_weights[0]),64);
         bufp->chgQData(oldp+2,(vlSymsp->TOP__FixedPoint.ONE),64);
     }
     if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[1U] 
@@ -42,85 +42,132 @@ void VPerceptron___024root__trace_chg_0_sub_0(VPerceptron___024root* vlSelf, Ver
         bufp->chgIData(oldp+18,(vlSelfRef.BenchMLP__DOT__correct),32);
         bufp->chgIData(oldp+19,(vlSelfRef.BenchMLP__DOT__unnamedblk1__DOT__epoch),32);
     }
+    if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[3U]))) {
+        bufp->chgQData(oldp+20,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__values[0]),64);
+        bufp->chgQData(oldp+22,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__values[1]),64);
+        bufp->chgQData(oldp+24,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__values[0]),64);
+        bufp->chgQData(oldp+26,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__values[1]),64);
+        bufp->chgQData(oldp+28,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__values[0]),64);
+        bufp->chgQData(oldp+30,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__values[1]),64);
+    }
     if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[3U] 
                       | vlSelfRef.__Vm_traceActivity
-                      [4U])))) {
-        bufp->chgQData(oldp+20,(vlSelfRef.BenchMLP__DOT__prediction[0]),64);
-        bufp->chgQData(oldp+22,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[0]),64);
-        bufp->chgQData(oldp+24,(vlSelfRef.BenchMLP__DOT__mlp__DOT__hidden_predictions[1]),64);
-        bufp->chgQData(oldp+26,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_error_gradients[0]),64);
-        bufp->chgQData(oldp+28,(vlSelfRef.BenchMLP__DOT__mlp__DOT__activation_gradients[0]),64);
-        bufp->chgQData(oldp+30,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction),64);
-        bufp->chgQData(oldp+32,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient),64);
-        bufp->chgQData(oldp+34,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum),64);
-        bufp->chgQData(oldp+36,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
-        bufp->chgQData(oldp+38,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
-        bufp->chgQData(oldp+40,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
-        bufp->chgQData(oldp+42,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
-        bufp->chgIData(oldp+44,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
-        bufp->chgIData(oldp+45,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
-        bufp->chgIData(oldp+46,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
-        bufp->chgIData(oldp+47,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
-        bufp->chgQData(oldp+48,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction),64);
-        bufp->chgQData(oldp+50,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient),64);
-        bufp->chgQData(oldp+52,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum),64);
-        bufp->chgQData(oldp+54,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
-        bufp->chgQData(oldp+56,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
-        bufp->chgQData(oldp+58,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
-        bufp->chgQData(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
-        bufp->chgIData(oldp+62,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
-        bufp->chgIData(oldp+63,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
-        bufp->chgIData(oldp+64,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
-        bufp->chgIData(oldp+65,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
-        bufp->chgQData(oldp+66,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer[0]),64);
-        bufp->chgQData(oldp+68,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction),64);
-        bufp->chgQData(oldp+70,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient),64);
-        bufp->chgQData(oldp+72,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum),64);
-        bufp->chgQData(oldp+74,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[0]),64);
-        bufp->chgQData(oldp+76,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[1]),64);
-        bufp->chgQData(oldp+78,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient),64);
-        bufp->chgQData(oldp+80,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient),64);
-        bufp->chgIData(oldp+82,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i),32);
-        bufp->chgIData(oldp+83,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i),32);
-        bufp->chgIData(oldp+84,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i),32);
-        bufp->chgIData(oldp+85,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk6__DOT__i),32);
-        bufp->chgIData(oldp+86,(vlSelfRef.BenchMLP__DOT__mlp__DOT__unnamedblk2__DOT__i),32);
+                      [5U])))) {
+        bufp->chgQData(oldp+32,(vlSelfRef.BenchMLP__DOT__prediction[0]),64);
+        bufp->chgQData(oldp+34,(vlSelfRef.BenchMLP__DOT__mlp__DOT__cost_gradients[0]),64);
+        bufp->chgQData(oldp+36,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction),64);
+        bufp->chgQData(oldp+38,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__sum),64);
+        bufp->chgQData(oldp+40,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction),64);
+        bufp->chgQData(oldp+42,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__sum),64);
+        bufp->chgQData(oldp+44,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer[0]),64);
+        bufp->chgQData(oldp+46,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__prediction),64);
+        bufp->chgQData(oldp+48,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__error_gradient),64);
+        bufp->chgQData(oldp+50,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__sum),64);
+        bufp->chgQData(oldp+52,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[0]),64);
+        bufp->chgQData(oldp+54,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient[1]),64);
+        bufp->chgQData(oldp+56,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient),64);
+        bufp->chgQData(oldp+58,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient),64);
+        bufp->chgIData(oldp+60,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i),32);
+        bufp->chgIData(oldp+61,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i),32);
+        bufp->chgIData(oldp+62,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i),32);
+        bufp->chgIData(oldp+63,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk6__DOT__i),32);
+        bufp->chgIData(oldp+64,(vlSelfRef.BenchMLP__DOT__mlp__DOT__unnamedblk5__DOT__i),32);
     }
-    if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[4U]))) {
-        bufp->chgQData(oldp+87,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
-                                [0U][0U]),64);
-        bufp->chgQData(oldp+89,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
-                                [1U][0U]),64);
-        bufp->chgQData(oldp+91,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
-                                [0U][0U]),64);
-        bufp->chgQData(oldp+93,(vlSelfRef.BenchMLP__DOT__mlp__DOT__output_weights
-                                [0U][1U]),64);
-        bufp->chgQData(oldp+95,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
-        bufp->chgQData(oldp+97,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights[0]),64);
-        bufp->chgQData(oldp+99,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights[1]),64);
-        bufp->chgQData(oldp+101,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
-        bufp->chgQData(oldp+103,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
-        bufp->chgQData(oldp+105,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias),64);
-        bufp->chgIData(oldp+107,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
-        bufp->chgIData(oldp+108,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
-        bufp->chgQData(oldp+109,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
-        bufp->chgQData(oldp+111,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights[0]),64);
-        bufp->chgQData(oldp+113,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights[1]),64);
-        bufp->chgQData(oldp+115,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
-        bufp->chgQData(oldp+117,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
-        bufp->chgQData(oldp+119,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias),64);
-        bufp->chgIData(oldp+121,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
-        bufp->chgIData(oldp+122,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
-        bufp->chgQData(oldp+123,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights[0]),64);
-        bufp->chgQData(oldp+125,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights[1]),64);
-        bufp->chgQData(oldp+127,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights[0]),64);
-        bufp->chgQData(oldp+129,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights[1]),64);
-        bufp->chgQData(oldp+131,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias),64);
-        bufp->chgIData(oldp+133,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk7__DOT__i),32);
-        bufp->chgIData(oldp+134,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk8__DOT__i),32);
-        bufp->chgIData(oldp+135,(vlSymsp->TOP__FixedPoint.lcg_next__Vstatic__current),32);
+    if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[4U] 
+                      | vlSelfRef.__Vm_traceActivity
+                      [6U])))) {
+        bufp->chgQData(oldp+65,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__error_gradient),64);
+        bufp->chgQData(oldp+67,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
+        bufp->chgQData(oldp+69,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
+        bufp->chgQData(oldp+71,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
+        bufp->chgQData(oldp+73,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+        bufp->chgIData(oldp+75,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
+        bufp->chgIData(oldp+76,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
+        bufp->chgIData(oldp+77,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
+        bufp->chgIData(oldp+78,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
     }
-    bufp->chgBit(oldp+136,(vlSelfRef.BenchMLP__DOT__clk));
+    if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[4U] 
+                      | vlSelfRef.__Vm_traceActivity
+                      [7U])))) {
+        bufp->chgQData(oldp+79,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__error_gradient),64);
+        bufp->chgQData(oldp+81,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[0]),64);
+        bufp->chgQData(oldp+83,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient[1]),64);
+        bufp->chgQData(oldp+85,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient),64);
+        bufp->chgQData(oldp+87,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient),64);
+        bufp->chgIData(oldp+89,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i),32);
+        bufp->chgIData(oldp+90,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i),32);
+        bufp->chgIData(oldp+91,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i),32);
+        bufp->chgIData(oldp+92,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i),32);
+    }
+    if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[5U]))) {
+        bufp->chgQData(oldp+93,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                [0U][0U][0U]),64);
+        bufp->chgQData(oldp+95,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                [0U][0U][1U]),64);
+        bufp->chgQData(oldp+97,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                [0U][1U][0U]),64);
+        bufp->chgQData(oldp+99,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                [0U][1U][1U]),64);
+        bufp->chgQData(oldp+101,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                 [1U][0U][0U]),64);
+        bufp->chgQData(oldp+103,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                 [1U][0U][1U]),64);
+        bufp->chgQData(oldp+105,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                 [1U][1U][0U]),64);
+        bufp->chgQData(oldp+107,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
+                                 [1U][1U][1U]),64);
+        bufp->chgQData(oldp+109,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                                 [0U][0U][0U]),64);
+        bufp->chgQData(oldp+111,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                                 [0U][0U][1U]),64);
+        bufp->chgQData(oldp+113,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                                 [0U][1U][0U]),64);
+        bufp->chgQData(oldp+115,(vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights
+                                 [0U][1U][1U]),64);
+        bufp->chgQData(oldp+117,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
+        bufp->chgQData(oldp+119,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__current_weights[0]),64);
+        bufp->chgQData(oldp+121,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__current_weights[1]),64);
+        bufp->chgQData(oldp+123,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
+        bufp->chgQData(oldp+125,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
+        bufp->chgQData(oldp+127,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__bias),64);
+        bufp->chgIData(oldp+129,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
+        bufp->chgIData(oldp+130,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
+        bufp->chgQData(oldp+131,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights[0]),64);
+        bufp->chgQData(oldp+133,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__current_weights[0]),64);
+        bufp->chgQData(oldp+135,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__current_weights[1]),64);
+        bufp->chgQData(oldp+137,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[0]),64);
+        bufp->chgQData(oldp+139,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weights[1]),64);
+        bufp->chgQData(oldp+141,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__bias),64);
+        bufp->chgIData(oldp+143,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i),32);
+        bufp->chgIData(oldp+144,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i),32);
+        bufp->chgQData(oldp+145,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__current_weights[0]),64);
+        bufp->chgQData(oldp+147,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__current_weights[1]),64);
+        bufp->chgQData(oldp+149,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weights[0]),64);
+        bufp->chgQData(oldp+151,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weights[1]),64);
+        bufp->chgQData(oldp+153,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__bias),64);
+        bufp->chgIData(oldp+155,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk7__DOT__i),32);
+        bufp->chgIData(oldp+156,(vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk8__DOT__i),32);
+        bufp->chgIData(oldp+157,(vlSymsp->TOP__FixedPoint.lcg_next__Vstatic__current),32);
+    }
+    bufp->chgBit(oldp+158,(vlSelfRef.BenchMLP__DOT__clk));
+    bufp->chgQData(oldp+159,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs
+                             [0U][0U]),64);
+    bufp->chgQData(oldp+161,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs
+                             [0U][1U]),64);
+    bufp->chgQData(oldp+163,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs
+                             [1U][0U]),64);
+    bufp->chgQData(oldp+165,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs
+                             [1U][1U]),64);
+    bufp->chgQData(oldp+167,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_error_gradients
+                             [0U][0U]),64);
+    bufp->chgQData(oldp+169,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_error_gradients
+                             [0U][1U]),64);
+    bufp->chgQData(oldp+171,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_error_gradients
+                             [1U][0U]),64);
+    bufp->chgQData(oldp+173,(vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_error_gradients
+                             [1U][1U]),64);
+    bufp->chgQData(oldp+175,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__error_gradient_next_layer[0]),64);
+    bufp->chgQData(oldp+177,(vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__error_gradient_next_layer[0]),64);
 }
 
 void VPerceptron___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
@@ -135,4 +182,7 @@ void VPerceptron___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused
     vlSymsp->TOP.__Vm_traceActivity[2U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[3U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[4U] = 0U;
+    vlSymsp->TOP.__Vm_traceActivity[5U] = 0U;
+    vlSymsp->TOP.__Vm_traceActivity[6U] = 0U;
+    vlSymsp->TOP.__Vm_traceActivity[7U] = 0U;
 }

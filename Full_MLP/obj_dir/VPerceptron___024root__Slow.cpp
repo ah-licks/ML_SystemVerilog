@@ -6,6 +6,11 @@
 #include "VPerceptron__Syms.h"
 #include "VPerceptron___024root.h"
 
+// Parameter definitions for VPerceptron___024root
+constexpr VlUnpacked<IData/*31:0*/, 1> VPerceptron___024root::BenchMLP__DOT__hidden_layer_sizes;
+constexpr VlUnpacked<IData/*31:0*/, 1> VPerceptron___024root::BenchMLP__DOT__mlp__DOT__hidden_layer_sizes;
+
+
 void VPerceptron___024root___ctor_var_reset(VPerceptron___024root* vlSelf);
 
 VPerceptron___024root::VPerceptron___024root(VPerceptron__Syms* symsp, const char* v__name)

@@ -3,7 +3,8 @@ import FixedPoint::*;
 
 module MLP #(
     parameter int inputs = 2,
-    parameter int hidden_layer_size = 4,
+    parameter int hidden_layers = 1,
+    parameter int hidden_layer_sizes[hidden_layers-1:0] = '{2},
     parameter int outputs = 1
 ) (
     input logic clk,
@@ -17,60 +18,92 @@ module MLP #(
     output sfp prediction[outputs-1:0]
 );
 
-    sfp hidden_predictions[hidden_layer_size-1:0];
-    sfp next_layer_weights[hidden_layer_size-1:0][outputs-1:0];
+    function automatic int maximum_layer_size();
+        int maximum = inputs;
+        for (int i = 0; i < hidden_layers; i++) begin
+            if (hidden_layer_sizes[i] > maximum) begin
+                maximum = hidden_layer_sizes[i];
+            end
+        end
+        if (outputs > maximum) begin
+            maximum = outputs;
+        end
+        return maximum;
+    endfunction
 
-    sfp output_error_gradients[outputs-1:0];
-    sfp output_weights[outputs-1:0][hidden_layer_size-1:0];
+    localparam int max_layer_size = maximum_layer_size();
+
+    sfp layer_weights[hidden_layers:0][max_layer_size-1:0][max_layer_size-1:0];
+
+    /* verilator lint_off UNOPTFLAT */
+    sfp layer_outputs[hidden_layers:0][max_layer_size-1:0];
+    sfp layer_error_gradients[hidden_layers:0][max_layer_size-1:0];
+    /* verilator lint_off UNOPTFLAT */
+
+    sfp next_layer_weights[hidden_layers-1:0][max_layer_size-1:0][max_layer_size-1:0];
 
     sfp cost_gradients[outputs-1:0];
 
-    genvar h;
+    always_comb begin
+        for (int i = 0; i < inputs; i++) begin
+            layer_outputs[0][i] = values[i];
+        end
+    end
+
+    genvar layer;
+    genvar neuron;
     generate
-        for (h = 0; h < hidden_layer_size; h++) begin : gen_hidden_layer
+        for (layer = 0; layer < hidden_layers; layer++) begin : gen_hidden_layer
+            localparam int current_layer_size = hidden_layer_sizes[layer];
+            localparam int current_input_size = (layer == 0) ? inputs : hidden_layer_sizes[layer-1];
+            localparam int current_output_size = (layer == hidden_layers-1) ? outputs : hidden_layer_sizes[layer+1];
+
             always_comb begin
-                for (int i = 0; i < outputs; i++) begin
-                    next_layer_weights[h][i] = output_weights[i][h];
+                for (int i = 0; i < current_layer_size; i++) begin
+                    for (int j = 0; j < current_output_size; j++) begin
+                        next_layer_weights[layer][i][j] = layer_weights[layer+1][j][i];
+                    end
                 end
             end
 
-            Perceptron #(
-                .input_units (inputs),
-                .output_units(outputs)
-            ) hidden_perceptron (
-                .clk(clk),
-                .rst(rst),
-                .values(values),
-                .activation(hidden_activation),
-                .training(training),
-                .learning_rate(learning_rate),
-                .next_layer_weights(next_layer_weights[h]),
-                .error_gradient_next_layer(output_error_gradients),
-                .prediction(hidden_predictions[h]),
-                .error_gradient(),
-                .current_weights()
-            );
+            for (neuron = 0; neuron < current_layer_size; neuron++) begin : gen_hidden_neuron
+                Perceptron #(
+                    .input_units (current_input_size),
+                    .output_units(current_output_size)
+                ) hidden_perceptron (
+                    .clk(clk),
+                    .rst(rst),
+                    .values(layer_outputs[layer][current_input_size-1:0]),
+                    .activation(hidden_activation),
+                    .training(training),
+                    .learning_rate(learning_rate),
+                    .next_layer_weights(next_layer_weights[layer][neuron][current_output_size-1:0]),
+                    .error_gradient_next_layer(layer_error_gradients[layer+1][current_output_size-1:0]),
+                    .prediction(layer_outputs[layer+1][neuron]),
+                    .error_gradient(layer_error_gradients[layer][neuron]),
+                    .current_weights(layer_weights[layer][neuron][current_input_size-1:0])
+                );
+            end
         end
     endgenerate
 
-    genvar o;
     generate
-        for (o = 0; o < outputs; o++) begin : gen_output_layer
+        for (neuron = 0; neuron < outputs; neuron++) begin : gen_output_layer_neuron
             Perceptron #(
-                .input_units (hidden_layer_size),
+                .input_units (hidden_layer_sizes[hidden_layers-1]),
                 .output_units(1)
             ) output_perceptron (
                 .clk(clk),
                 .rst(rst),
-                .values(hidden_predictions),
+                .values(layer_outputs[hidden_layers][hidden_layer_sizes[hidden_layers-1]-1:0]),
                 .activation(output_activation),
                 .training(training),
                 .learning_rate(learning_rate),
                 .next_layer_weights('{ONE}),
-                .error_gradient_next_layer('{cost_gradients[o]}),
-                .prediction(prediction[o]),
-                .error_gradient(output_error_gradients[o]),
-                .current_weights(output_weights[o])
+                .error_gradient_next_layer('{cost_gradients[neuron]}),
+                .prediction(prediction[neuron]),
+                .error_gradient(layer_error_gradients[hidden_layers][neuron]),
+                .current_weights(layer_weights[hidden_layers][neuron][hidden_layer_sizes[hidden_layers-1]-1:0])
             );
         end
     endgenerate

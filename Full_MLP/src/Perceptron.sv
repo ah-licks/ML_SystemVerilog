@@ -13,7 +13,9 @@ module Perceptron #(
     input sfp learning_rate,
     input sfp next_layer_weights[output_units-1:0],
     input sfp error_gradient_next_layer[output_units-1:0],
+    /* verilator lint_off UNOPTFLAT */
     output sfp prediction,
+    /* verilator lint_off UNOPTFLAT */
     output sfp error_gradient,
     output sfp current_weights[input_units-1:0]
 );

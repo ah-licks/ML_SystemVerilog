@@ -6,7 +6,7 @@ VPerceptron__ALL.o: VPerceptron__ALL.cpp VPerceptron.cpp \
   /Users/alexbackues/Documents/RISCV-CPU/oss-cad-suite/share/verilator/include/verilated_types.h \
   /Users/alexbackues/Documents/RISCV-CPU/oss-cad-suite/share/verilator/include/verilated_funcs.h \
   VPerceptron__Syms.h VPerceptron.h VPerceptron___024root.h \
-  VPerceptron___024unit.h VPerceptron_FixedPoint.h \
+  VPerceptron_FixedPoint.h \
   /Users/alexbackues/Documents/RISCV-CPU/oss-cad-suite/share/verilator/include/verilated_vcd_c.h \
   /Users/alexbackues/Documents/RISCV-CPU/oss-cad-suite/share/verilator/include/verilated_trace.h \
   VPerceptron___024root__DepSet_h25a9a063__0.cpp \
@@ -14,8 +14,6 @@ VPerceptron__ALL.o: VPerceptron__ALL.cpp VPerceptron.cpp \
   VPerceptron__Trace__0.cpp VPerceptron___024root__Slow.cpp \
   VPerceptron___024root__DepSet_h25a9a063__0__Slow.cpp \
   VPerceptron___024root__DepSet_hb132d072__0__Slow.cpp \
-  VPerceptron___024unit__Slow.cpp \
-  VPerceptron___024unit__DepSet_ha86c78a2__0__Slow.cpp \
   VPerceptron_FixedPoint__Slow.cpp \
   VPerceptron_FixedPoint__DepSet_h9c470a15__0__Slow.cpp \
   VPerceptron__Syms.cpp VPerceptron__Trace__0__Slow.cpp \

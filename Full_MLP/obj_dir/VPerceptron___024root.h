@@ -43,32 +43,34 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         CData/*0:0*/ __Vfunc_sfp_div__165__sign_bit;
         CData/*0:0*/ __Vfunc_sfp_div__173__sign_bit;
         CData/*0:0*/ __Vfunc_sfp_div__176__sign_bit;
+        CData/*0:0*/ __VstlDidInit;
         CData/*0:0*/ __VstlFirstIteration;
         CData/*0:0*/ __Vtrigprevexpr___TOP__BenchMLP__DOT__clk__0;
+        CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
         IData/*31:0*/ BenchMLP__DOT__hidden_activation;
         IData/*31:0*/ BenchMLP__DOT__output_activation;
         IData/*31:0*/ BenchMLP__DOT__correct;
         IData/*31:0*/ BenchMLP__DOT__unnamedblk1__DOT__epoch;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__unnamedblk2__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk6__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk7__DOT__i;
-        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk8__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__unnamedblk5__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk3__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk4__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk5__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk6__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk7__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__unnamedblk8__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk3__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk4__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk5__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk6__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk7__DOT__i;
+        IData/*31:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__unnamedblk8__DOT__i;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__1__remainder;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__1__b_ext;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__5__remainder;
@@ -82,10 +84,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         IData/*31:0*/ __Vfunc_sfp_pow__18__unnamedblk2__DOT__i;
         IData/*31:0*/ __Vfunc_int_to_sfp__20__n;
         IData/*31:0*/ __Vfunc_int_to_sfp__21__n;
-        VlWide<4>/*127:0*/ __Vfunc_sfp_div__23__remainder;
-        VlWide<4>/*127:0*/ __Vfunc_sfp_div__23__b_ext;
     };
     struct {
+        VlWide<4>/*127:0*/ __Vfunc_sfp_div__23__remainder;
+        VlWide<4>/*127:0*/ __Vfunc_sfp_div__23__b_ext;
         IData/*31:0*/ __Vfunc_sfp_exp__25__unnamedblk3__DOT__i;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__26__remainder;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__26__b_ext;
@@ -148,10 +150,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         IData/*31:0*/ __Vfunc_sfp_exp__117__unnamedblk3__DOT__i;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__118__remainder;
         VlWide<4>/*127:0*/ __Vfunc_sfp_div__118__b_ext;
-        IData/*31:0*/ __Vfunc_int_to_sfp__119__n;
-        VlWide<4>/*127:0*/ __Vfunc_sfp_mul__120__tmp;
     };
     struct {
+        IData/*31:0*/ __Vfunc_int_to_sfp__119__n;
+        VlWide<4>/*127:0*/ __Vfunc_sfp_mul__120__tmp;
         IData/*31:0*/ __Vfunc_int_to_sfp__122__n;
         VlWide<4>/*127:0*/ __Vfunc_sfp_mul__126__tmp;
         VlWide<4>/*127:0*/ __Vfunc_sfp_mul__127__tmp;
@@ -194,30 +196,30 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         IData/*31:0*/ __VactIterCount;
         QData/*63:0*/ BenchMLP__DOT__learning_rate;
         QData/*63:0*/ BenchMLP__DOT__threshold;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__prediction;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__prediction;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__prediction;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__error_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__sum;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__error_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__sum;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__sum;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient;
-        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__prediction;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__bias;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__sum;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__bias_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__bias;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__sum;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__bias_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__local_error_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__bias;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__sum;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__bias_gradient;
+        QData/*63:0*/ BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__local_error_gradient;
         QData/*63:0*/ __Vfunc_sfp_sub__0__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__0__a;
-        QData/*63:0*/ __Vfunc_sfp_sub__0__b;
-        QData/*63:0*/ __Vfunc_sfp_div__1__Vfuncout;
     };
     struct {
+        QData/*63:0*/ __Vfunc_sfp_sub__0__b;
+        QData/*63:0*/ __Vfunc_sfp_div__1__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_div__1__a;
         QData/*63:0*/ __Vfunc_sfp_div__1__b;
         QData/*63:0*/ __Vfunc_sfp_div__1__result;
@@ -280,10 +282,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_div__23__a;
         QData/*63:0*/ __Vfunc_sfp_div__23__b;
         QData/*63:0*/ __Vfunc_sfp_div__23__result;
-        QData/*63:0*/ __Vfunc_sfp_div__23__abs_a;
-        QData/*63:0*/ __Vfunc_sfp_div__23__abs_b;
     };
     struct {
+        QData/*63:0*/ __Vfunc_sfp_div__23__abs_a;
+        QData/*63:0*/ __Vfunc_sfp_div__23__abs_b;
         QData/*63:0*/ __Vfunc_sfp_add__24__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_add__24__a;
         QData/*63:0*/ __Vfunc_sfp_add__24__b;
@@ -346,10 +348,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_add__52__b;
         QData/*63:0*/ __Vfunc_sfp_tanh__53__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_tanh__53__a;
-        QData/*63:0*/ __Vfunc_int_to_sfp__54__Vfuncout;
-        QData/*63:0*/ __Vfunc_int_to_sfp__55__Vfuncout;
     };
     struct {
+        QData/*63:0*/ __Vfunc_int_to_sfp__54__Vfuncout;
+        QData/*63:0*/ __Vfunc_int_to_sfp__55__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__56__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__56__a;
         QData/*63:0*/ __Vfunc_sfp_sub__56__b;
@@ -412,10 +414,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_pow__76__result;
         QData/*63:0*/ __Vfunc_sfp_tanh__77__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_tanh__77__a;
-        QData/*63:0*/ __Vfunc_int_to_sfp__78__Vfuncout;
-        QData/*63:0*/ __Vfunc_int_to_sfp__79__Vfuncout;
     };
     struct {
+        QData/*63:0*/ __Vfunc_int_to_sfp__78__Vfuncout;
+        QData/*63:0*/ __Vfunc_int_to_sfp__79__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__80__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__80__a;
         QData/*63:0*/ __Vfunc_sfp_sub__80__b;
@@ -478,10 +480,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_div__107__result;
         QData/*63:0*/ __Vfunc_sfp_div__107__abs_a;
         QData/*63:0*/ __Vfunc_sfp_div__107__abs_b;
-        QData/*63:0*/ __Vfunc_int_to_sfp__108__Vfuncout;
-        QData/*63:0*/ __Vfunc_sfp_mul__109__Vfuncout;
     };
     struct {
+        QData/*63:0*/ __Vfunc_int_to_sfp__108__Vfuncout;
+        QData/*63:0*/ __Vfunc_sfp_mul__109__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_mul__109__a;
         QData/*63:0*/ __Vfunc_sfp_mul__109__b;
         QData/*63:0*/ __Vfunc_sfp_add__110__Vfuncout;
@@ -544,10 +546,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_mul__131__b;
         QData/*63:0*/ __Vfunc_sfp_mul__132__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_mul__132__a;
-        QData/*63:0*/ __Vfunc_sfp_mul__132__b;
-        QData/*63:0*/ __Vfunc_sfp_sub__133__Vfuncout;
     };
     struct {
+        QData/*63:0*/ __Vfunc_sfp_mul__132__b;
+        QData/*63:0*/ __Vfunc_sfp_sub__133__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_sub__133__a;
         QData/*63:0*/ __Vfunc_sfp_sub__133__b;
         QData/*63:0*/ __Vfunc_sfp_pow__134__Vfuncout;
@@ -610,10 +612,10 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_add__163__a;
         QData/*63:0*/ __Vfunc_sfp_add__163__b;
         QData/*63:0*/ __Vfunc_sfp_exp__164__Vfuncout;
-        QData/*63:0*/ __Vfunc_sfp_exp__164__a;
-        QData/*63:0*/ __Vfunc_sfp_exp__164__result;
     };
     struct {
+        QData/*63:0*/ __Vfunc_sfp_exp__164__a;
+        QData/*63:0*/ __Vfunc_sfp_exp__164__result;
         QData/*63:0*/ __Vfunc_sfp_exp__164__term;
         QData/*63:0*/ __Vfunc_sfp_div__165__Vfuncout;
         QData/*63:0*/ __Vfunc_sfp_div__165__a;
@@ -662,39 +664,58 @@ class alignas(VL_CACHE_LINE_BYTES) VPerceptron___024root final : public Verilate
         QData/*63:0*/ __Vfunc_sfp_add__179__a;
         QData/*63:0*/ __Vfunc_sfp_add__179__b;
         QData/*63:0*/ __Vfunc_int_to_sfp__180__Vfuncout;
+        QData/*63:0*/ __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction__0;
+        QData/*63:0*/ __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction__0;
+        QData/*63:0*/ __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction__1;
+        QData/*63:0*/ __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction__1;
         VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__values;
         VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__expected;
         VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__prediction;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__hidden_predictions;
-        VlUnpacked<VlUnpacked<QData/*63:0*/, 1>, 2> BenchMLP__DOT__mlp__DOT__next_layer_weights;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT__output_error_gradients;
-        VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 1> BenchMLP__DOT__mlp__DOT__output_weights;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT__activation_gradients;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer__BRA__0__KET____DOT__output_perceptron__current_weights;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer;
-        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer__BRA__0__KET____DOT__output_perceptron__next_layer_weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__current_weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient;
+        VlUnpacked<VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2>, 2> BenchMLP__DOT__mlp__DOT__layer_weights;
+        VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2> BenchMLP__DOT__mlp__DOT__layer_outputs;
+        VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2> BenchMLP__DOT__mlp__DOT__layer_error_gradients;
+        VlUnpacked<VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2>, 1> BenchMLP__DOT__mlp__DOT__next_layer_weights;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT__cost_gradients;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__current_weights;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__error_gradient_next_layer;
     };
     struct {
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__current_weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weights;
-        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient;
-        VlUnpacked<CData/*0:0*/, 5> __Vm_traceActivity;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__next_layer_weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__values;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__current_weights;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__error_gradient_next_layer;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__next_layer_weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__values;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__current_weights;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__error_gradient_next_layer;
+        VlUnpacked<QData/*63:0*/, 1> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__next_layer_weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__values;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weight_gradient;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__DOT__weight_gradient;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weights;
+        VlUnpacked<QData/*63:0*/, 2> BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weight_gradient;
+        VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2> __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT__layer_error_gradients__0;
+        VlUnpacked<VlUnpacked<QData/*63:0*/, 2>, 2> __Vtrigprevexpr___TOP__BenchMLP__DOT__mlp__DOT__layer_error_gradients__1;
+        VlUnpacked<CData/*0:0*/, 8> __Vm_traceActivity;
     };
     VlDelayScheduler __VdlySched;
     VlTriggerScheduler __VtrigSched_hd88d814d__0;
-    VlTriggerVec<1> __VstlTriggered;
-    VlTriggerVec<2> __VactTriggered;
-    VlTriggerVec<2> __VnbaTriggered;
+    VlTriggerVec<4> __VstlTriggered;
+    VlTriggerVec<5> __VactTriggered;
+    VlTriggerVec<5> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     VPerceptron__Syms* const vlSymsp;
+
+    // PARAMETERS
+    static constexpr VlUnpacked<IData/*31:0*/, 1> BenchMLP__DOT__hidden_layer_sizes = {{
+        0x00000002U
+    }};
+    static constexpr VlUnpacked<IData/*31:0*/, 1> BenchMLP__DOT__mlp__DOT__hidden_layer_sizes = {{
+        0x00000002U
+    }};
 
     // CONSTRUCTORS
     VPerceptron___024root(VPerceptron__Syms* symsp, const char* v__name);

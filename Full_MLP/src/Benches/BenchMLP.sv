@@ -4,7 +4,8 @@ import FixedPoint::*;
 module BenchMLP ();
 
     parameter int inputs = 2;
-    parameter int hidden_layer_size = 2;
+    parameter int hidden_layers = 1;
+    parameter int hidden_layer_sizes[hidden_layers-1:0] = '{2};
     parameter int outputs = 1;
 
     bit clk;
@@ -22,7 +23,8 @@ module BenchMLP ();
 
     MLP #(
         .inputs(inputs),
-        .hidden_layer_size(hidden_layer_size),
+        .hidden_layers(hidden_layers),
+        .hidden_layer_sizes(hidden_layer_sizes),
         .outputs(outputs)
     ) mlp (
         .clk(clk),

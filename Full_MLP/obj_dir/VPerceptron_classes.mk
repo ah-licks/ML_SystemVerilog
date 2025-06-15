@@ -30,6 +30,7 @@ VM_CLASSES_FAST += \
 	VPerceptron___024root__DepSet_h25a9a063__1 \
 	VPerceptron___024root__DepSet_h25a9a063__2 \
 	VPerceptron___024root__DepSet_h25a9a063__3 \
+	VPerceptron___024root__DepSet_h25a9a063__4 \
 	VPerceptron___024root__DepSet_hb132d072__0 \
 	VPerceptron__main \
 

@@ -46,7 +46,7 @@ VPerceptron__Syms::VPerceptron__Syms(VerilatedContext* contextp, const char* nam
     , TOP__FixedPoint{this, Verilated::catName(namep, "FixedPoint")}
 {
         // Check resources
-        Verilated::stackCheck(383338);
+        Verilated::stackCheck(383274);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

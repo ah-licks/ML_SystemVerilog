@@ -7,7 +7,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 VERSION: 1.84
 BUILT  : Apr 25 2025
-DATE   : 2025-06-14.15:08:47
+DATE   : 2025-06-15.00:09:25
 COMMAND: ./src/MLP.sv ./src/MLPSynthesis.sv ./src/Perceptron.h.sv ./src/Perceptron.sv ./src/PerceptronSynthesis.sv ./src/Predict.sv -DYOSYS=1 -DSYNTHESIS=1
 
 [INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/slpp_all/surelog.log".
@@ -23,14 +23,15 @@ COMMAND: ./src/MLP.sv ./src/MLPSynthesis.sv ./src/Perceptron.h.sv ./src/Perceptr
 [INF:CP0302] Compile class "work@process".
 [INF:CP0302] Compile class "work@semaphore".
 [INF:EL0526] Design Elaboration...
-[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:30:49: Compile generate block "work@MLPSynthesis.mlp.gen_hidden_layer[0]".
-[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:30:49: Compile generate block "work@MLPSynthesis.mlp.gen_hidden_layer[1]".
-[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:58:39: Compile generate block "work@MLPSynthesis.mlp.gen_output_layer[0]".
+[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:56:57: Compile generate block "work@MLPSynthesis.mlp.gen_hidden_layer[0]".
+[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:69:69: Compile generate block "work@MLPSynthesis.mlp.gen_hidden_layer[0].gen_hidden_neuron[0]".
+[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:69:69: Compile generate block "work@MLPSynthesis.mlp.gen_hidden_layer[0].gen_hidden_neuron[1]".
+[INF:CP0335] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:91:54: Compile generate block "work@MLPSynthesis.mlp.gen_output_layer_neuron[0]".
 [NTE:EL0503] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:4:1: Top level module "work@MLPSynthesis".
 [NTE:EL0503] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/PerceptronSynthesis.sv:4:1: Top level module "work@PerceptronSynthesis".
 [NTE:EL0504] Multiple top level modules in design.
 [NTE:EL0508] Nb Top level modules: 2.
-[NTE:EL0509] Max instance depth: 5.
+[NTE:EL0509] Max instance depth: 6.
 [NTE:EL0510] Nb instances: 11.
 [NTE:EL0511] Nb leaf instances: 0.
 [INF:UH0706] Creating UHDM Model...
