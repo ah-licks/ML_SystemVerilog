@@ -25,19 +25,10 @@ VM_TRACE_VCD = 1
 ### Object file lists...
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
-	VPerceptron \
-	VPerceptron___024root__DepSet_h25a9a063__0 \
-	VPerceptron___024root__DepSet_h25a9a063__1 \
-	VPerceptron___024root__DepSet_h25a9a063__2 \
-	VPerceptron___024root__DepSet_h25a9a063__3 \
-	VPerceptron___024root__DepSet_h25a9a063__4 \
-	VPerceptron___024root__DepSet_h25a9a063__5 \
-	VPerceptron___024root__DepSet_h25a9a063__6 \
-	VPerceptron___024root__DepSet_h25a9a063__7 \
-	VPerceptron___024root__DepSet_h25a9a063__8 \
-	VPerceptron___024root__DepSet_h25a9a063__9 \
-	VPerceptron___024root__DepSet_hb132d072__0 \
-	VPerceptron__main \
+	VPerceptron_vm_classes_0 \
+	VPerceptron_vm_classes_1 \
+	VPerceptron_vm_classes_2 \
+	VPerceptron_vm_classes_3 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \

@@ -105,6 +105,27 @@ package FixedPoint;
         return result;
     endfunction
 
+    function automatic sfp sfp_ln(input sfp a);
+        sfp result = 0;
+        sfp power_term = ONE;
+        parameter int max_terms = 10;
+
+        for (int i = 1; i < max_terms; i++) begin
+            power_term = sfp_mul(power_term, sfp_sub(1, a));
+            result = sfp_add(result, sfp_div(power_term, int_to_sfp(i)));
+        end
+
+        return -result;
+    endfunction
+
+    function automatic sfp sfp_sqrt(input sfp a);
+        return sfp_exp(sfp_ln(a) >>> 1);
+    endfunction
+
+    function automatic sfp sfp_he_initial(input int a);
+        return sfp_mul(sfp_normal_random(), sfp_sqrt(sfp_div(int_to_sfp(2), int_to_sfp(a))));
+    endfunction
+
 endpackage
 
 package Common;

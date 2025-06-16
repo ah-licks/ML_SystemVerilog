@@ -96,10 +96,11 @@ module Perceptron #(
         error_gradient = local_error_gradient;
     end
 
+    int tmp_inputs = input_units;
     always_ff @(posedge clk) begin
         if (rst) begin
             for (int i = 0; i < input_units; i++) begin
-                weights[i] <= sfp_normal_random();
+                weights[i] <= sfp_he_initial(tmp_inputs);
             end
             bias <= 'h1999999a;
         end else if (training) begin
