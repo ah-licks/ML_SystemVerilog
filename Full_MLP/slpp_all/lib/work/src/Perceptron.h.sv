@@ -61,14 +61,6 @@ package FixedPoint;
         return sign_bit ? -result : result;
     endfunction
 
-    function automatic sfp sfp_pow(input sfp a, input int b);
-        sfp result = 1;
-        for (int i = 1; i <= b; i++) begin
-            result = sfp_mul(result, a);
-        end
-        return result;
-    endfunction
-
     function automatic sfp sfp_exp(input sfp a);
         sfp result = ONE;
         sfp term = ONE;
@@ -100,8 +92,17 @@ package FixedPoint;
         return current;
     endfunction
 
-    function automatic sfp sfp_random();
-        return {32'h0, lcg_next()} - HALF;
+    function automatic sfp sfp_uniform_random();
+        return {32'h0, lcg_next()};
+    endfunction
+
+    function automatic sfp sfp_normal_random();
+        sfp result = 0;
+        for (int i = 0; i < 12; i++) begin
+            result = sfp_add(result, sfp_uniform_random());
+        end
+        result = sfp_sub(result, int_to_sfp(6));
+        return result;
     endfunction
 
 endpackage

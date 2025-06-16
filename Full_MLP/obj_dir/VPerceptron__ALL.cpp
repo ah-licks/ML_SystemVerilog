@@ -8,6 +8,8 @@
 #include "VPerceptron___024root__Slow.cpp"
 #include "VPerceptron___024root__DepSet_h25a9a063__0__Slow.cpp"
 #include "VPerceptron___024root__DepSet_hb132d072__0__Slow.cpp"
+#include "VPerceptron___024unit__Slow.cpp"
+#include "VPerceptron___024unit__DepSet_ha86c78a2__0__Slow.cpp"
 #include "VPerceptron_FixedPoint__Slow.cpp"
 #include "VPerceptron_FixedPoint__DepSet_h9c470a15__0__Slow.cpp"
 #include "VPerceptron__Syms.cpp"

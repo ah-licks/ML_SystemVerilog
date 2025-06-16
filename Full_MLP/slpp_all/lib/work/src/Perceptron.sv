@@ -70,7 +70,7 @@ module Perceptron #(
                             sfp_mul(
                                 error_gradient_next_layer[i],
                                 sfp_sub(
-                                    ONE, sfp_pow(sfp_tanh(prediction), 2))))
+                                    ONE, sfp_mul(sfp_tanh(prediction), sfp_tanh(prediction)))))
                     );
                 end
             end
@@ -99,9 +99,9 @@ module Perceptron #(
     always_ff @(posedge clk) begin
         if (rst) begin
             for (int i = 0; i < input_units; i++) begin
-                weights[i] <= sfp_random();
+                weights[i] <= sfp_normal_random();
             end
-            bias <= sfp_random();
+            bias <= 'h1999999a;
         end else if (training) begin
             for (int i = 0; i < input_units; i++) begin
                 weights[i] <= sfp_sub(weights[i], sfp_mul(learning_rate, weight_gradient[i]));

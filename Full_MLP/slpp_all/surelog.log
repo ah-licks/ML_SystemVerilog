@@ -7,13 +7,13 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 VERSION: 1.84
 BUILT  : Apr 25 2025
-DATE   : 2025-06-15.00:15:22
+DATE   : 2025-06-15.18:13:32
 COMMAND: ./src/MLP.sv ./src/MLPSynthesis.sv ./src/Perceptron.h.sv ./src/Perceptron.sv ./src/PerceptronSynthesis.sv ./src/Predict.sv -DYOSYS=1 -DSYNTHESIS=1
 
 [INF:CM0023] Creating log file "/Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/slpp_all/surelog.log".
 [INF:CP0300] Compilation...
 [INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:1:1: Compile package "FixedPoint".
-[INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:109:1: Compile package "Common".
+[INF:CP0301] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.h.sv:110:1: Compile package "Common".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLP.sv:4:1: Compile module "work@MLP".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/MLPSynthesis.sv:4:1: Compile module "work@MLPSynthesis".
 [INF:CP0303] /Users/alexbackues/Documents/RISCV-CPU/Machine_Learning/Full_MLP/src/Perceptron.sv:4:1: Compile module "work@Perceptron".

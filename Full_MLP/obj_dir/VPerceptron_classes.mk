@@ -31,6 +31,11 @@ VM_CLASSES_FAST += \
 	VPerceptron___024root__DepSet_h25a9a063__2 \
 	VPerceptron___024root__DepSet_h25a9a063__3 \
 	VPerceptron___024root__DepSet_h25a9a063__4 \
+	VPerceptron___024root__DepSet_h25a9a063__5 \
+	VPerceptron___024root__DepSet_h25a9a063__6 \
+	VPerceptron___024root__DepSet_h25a9a063__7 \
+	VPerceptron___024root__DepSet_h25a9a063__8 \
+	VPerceptron___024root__DepSet_h25a9a063__9 \
 	VPerceptron___024root__DepSet_hb132d072__0 \
 	VPerceptron__main \
 
@@ -39,6 +44,8 @@ VM_CLASSES_SLOW += \
 	VPerceptron___024root__Slow \
 	VPerceptron___024root__DepSet_h25a9a063__0__Slow \
 	VPerceptron___024root__DepSet_h25a9a063__1__Slow \
+	VPerceptron___024root__DepSet_h25a9a063__2__Slow \
+	VPerceptron___024root__DepSet_h25a9a063__3__Slow \
 	VPerceptron___024root__DepSet_hb132d072__0__Slow \
 	VPerceptron___024unit__Slow \
 	VPerceptron___024unit__DepSet_ha86c78a2__0__Slow \
