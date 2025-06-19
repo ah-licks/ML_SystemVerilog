@@ -4,9 +4,11 @@ import FixedPoint::*;
 module BenchMLP ();
 
     parameter int inputs = 2;
-    parameter int hidden_layers = 1;
-    parameter int hidden_layer_sizes[hidden_layers-1:0] = '{2};
+    parameter int hidden_layers = 2;
+    parameter int hidden_layer_sizes[hidden_layers-1:0] = '{2, 2};
     parameter int outputs = 1;
+    parameter int num_train_examples = 70;
+    parameter int num_test_examples = 30;
 
     bit clk;
     bit rst;
@@ -18,8 +20,10 @@ module BenchMLP ();
     sfp learning_rate;
     sfp prediction[outputs-1:0];
 
+    int example;
     sfp threshold;
     int correct;
+    bit tmp_correct;
 
     MLP #(
         .inputs(inputs),
@@ -38,6 +42,16 @@ module BenchMLP ();
         .prediction(prediction)
     );
 
+    Data #(
+        .inputs(inputs),
+        .outputs(outputs),
+        .total_examples(num_train_examples + num_test_examples)
+    ) data (
+        .example (example),
+        .values  (values),
+        .expected(expected)
+    );
+
     initial begin
         clk = 0;
         forever begin
@@ -51,7 +65,7 @@ module BenchMLP ();
 
         hidden_activation = ReLU;
         output_activation = Sigmoid;
-        learning_rate = 'h1999999A;
+        learning_rate = 'h28f5c29;
         training = 1;
 
         rst = 1;
@@ -59,95 +73,52 @@ module BenchMLP ();
         rst = 0;
 
         $display("Starting XOR gate training...");
-        $display("Time\tInputs\tExpected\tPrediction\tCost");
-        $display("----\t------\t--------\t----------\t----");
+        $display("Time\tInputs\tExpected\tPrediction");
+        $display("----\t------\t--------\t----------");
 
         for (int epoch = 0; epoch < 100; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
             training = 1;
+            example  = 0;
 
-            values[0] = 0;
-            values[1] = 0;
-            expected[0] = 0;
-            @(posedge clk);
-
-            values[0]   = 0;
-            values[1]   = ONE;
-            expected[0] = ONE;
-            @(posedge clk);
-
-            values[0]   = ONE;
-            values[1]   = 0;
-            expected[0] = ONE;
-            @(posedge clk);
-
-            values[0]   = ONE;
-            values[1]   = ONE;
-            expected[0] = 0;
-            @(posedge clk);
+            for (int i = 0; i < num_train_examples; i++) begin
+                @(posedge clk);
+                example++;
+            end
 
             training = 0;
+            example  = 0;
 
-            values[0] = 0;
-            values[1] = 0;
-            expected[0] = 0;
-            @(posedge clk);
-            $display("%0t\t[0,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
-
-            values[0]   = 0;
-            values[1]   = ONE;
-            expected[0] = ONE;
-            @(posedge clk);
-            $display("%0t\t[0,1]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
-
-            values[0]   = ONE;
-            values[1]   = 0;
-            expected[0] = ONE;
-            @(posedge clk);
-            $display("%0t\t[1,0]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
-
-            values[0]   = ONE;
-            values[1]   = ONE;
-            expected[0] = 0;
-            @(posedge clk);
-            $display("%0t\t[1,1]\t%0.3f\t\t%d", $time, expected[0], prediction[0]);
+            for (int i = 0; i < num_train_examples; i++) begin
+                @(posedge clk);
+                $display("%0t\t[%d,%d]\t%d\t\t%d", $time, values[0], values[1], expected[0],
+                         prediction[0]);
+                example++;
+            end
         end
 
         $display("\n=== Final Testing Phase ===");
-        training = 0;
+        training  = 0;
         threshold = HALF;
-        correct = 0;
+        correct   = 0;
 
-        values[0] = 0;
-        values[1] = 0;
-        expected[0] = 0;
-        @(posedge clk);
-        if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
-        $display("Test [0,0] -> %d (expected 0)", prediction[0]);
+        example   = num_train_examples;
 
-        values[0]   = 0;
-        values[1]   = ONE;
-        expected[0] = ONE;
-        @(posedge clk);
-        if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
-        $display("Test [0,1] -> %d (expected 2^32)", prediction[0]);
+        for (int i = 0; i < num_test_examples; i++) begin
+            @(posedge clk);
+            tmp_correct = 1;
+            for (int j = 0; j < 10; j++) begin
+                if ((prediction[j] < threshold) != (expected[j] < threshold)) tmp_correct = 0;
+            end
+            if (tmp_correct) correct++;
+            $display("Test [%d,%d] -> %d (expected %d)", values[0], values[1], prediction[0],
+                     expected[0]);
+            example++;
+        end
 
-        values[0]   = ONE;
-        values[1]   = 0;
-        expected[0] = ONE;
-        @(posedge clk);
-        if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
-        $display("Test [1,0] -> %d (expected 2^32)", prediction[0]);
-
-        values[0]   = ONE;
-        values[1]   = ONE;
-        expected[0] = 0;
-        @(posedge clk);
-        if ((prediction[0] < threshold) == (expected[0] < threshold)) correct++;
-        $display("Test [1,1] -> %d (expected 0)", prediction[0]);
-
-        $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
+        $display("\nClassification Accuracy: %d/%d (%0.1f%%)", correct, num_test_examples,
+                 (correct * 100.0) / num_test_examples);
 
         repeat (5) @(posedge clk);
         $finish;

@@ -90,6 +90,10 @@ VL_ATTR_COLD void VPerceptron___024root___stl_sequent__TOP__1(VPerceptron___024r
     // Body
     vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellinp__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__next_layer_weights[0U] 
         = vlSymsp->TOP__FixedPoint.ONE;
+    vlSelfRef.BenchMLP__DOT__expected[0U] = vlSelfRef.BenchMLP__DOT__data__DOT__output_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][0U];
     vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__current_weights[0U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__DOT__weights
         [0U];
@@ -120,10 +124,14 @@ VL_ATTR_COLD void VPerceptron___024root___stl_sequent__TOP__1(VPerceptron___024r
     vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__current_weights[1U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__DOT__weights
         [1U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][0U] 
-        = vlSelfRef.BenchMLP__DOT__values[0U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][1U] 
-        = vlSelfRef.BenchMLP__DOT__values[1U];
+    vlSelfRef.BenchMLP__DOT__values[1U] = vlSelfRef.BenchMLP__DOT__data__DOT__input_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][1U];
+    vlSelfRef.BenchMLP__DOT__values[0U] = vlSelfRef.BenchMLP__DOT__data__DOT__input_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][0U];
     vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights[0U][0U][1U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__current_weights
         [1U];
@@ -154,6 +162,10 @@ VL_ATTR_COLD void VPerceptron___024root___stl_sequent__TOP__1(VPerceptron___024r
     vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights[2U][0U][0U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_output_layer_neuron__BRA__0__KET____DOT__output_perceptron__current_weights
         [0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][0U] 
+        = vlSelfRef.BenchMLP__DOT__values[0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][1U] 
+        = vlSelfRef.BenchMLP__DOT__values[1U];
     vlSelfRef.BenchMLP__DOT__mlp__DOT__next_layer_weights[0U][0U][0U] 
         = vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_weights
         [1U][0U][0U];

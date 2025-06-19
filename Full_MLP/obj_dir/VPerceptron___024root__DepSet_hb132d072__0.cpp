@@ -5,6 +5,7 @@
 #include "VPerceptron__pch.h"
 #include "VPerceptron___024root.h"
 
+VL_ATTR_COLD void VPerceptron___024root___eval_initial__TOP(VPerceptron___024root* vlSelf);
 VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__0(VPerceptron___024root* vlSelf);
 VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__1(VPerceptron___024root* vlSelf);
 
@@ -13,6 +14,7 @@ void VPerceptron___024root___eval_initial(VPerceptron___024root* vlSelf) {
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    VPerceptron___024root___eval_initial__TOP(vlSelf);
     vlSelfRef.__Vm_traceActivity[1U] = 1U;
     VPerceptron___024root___eval_initial__TOP__Vtiming__0(vlSelf);
     VPerceptron___024root___eval_initial__TOP__Vtiming__1(vlSelf);
@@ -28,7 +30,7 @@ VL_INLINE_OPT VlCoroutine VPerceptron___024root___eval_initial__TOP__Vtiming__0(
         co_await vlSelfRef.__VdlySched.delay(5ULL, 
                                              nullptr, 
                                              "src/Benches/BenchMLP.sv", 
-                                             44);
+                                             58);
         vlSelfRef.BenchMLP__DOT__clk = (1U & (~ (IData)(vlSelfRef.BenchMLP__DOT__clk)));
     }
 }
@@ -54,30 +56,31 @@ void VPerceptron___024root___eval_act(VPerceptron___024root* vlSelf) {
         VPerceptron___024root___act_sequent__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
     }
-    if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((0x20ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_sequent__TOP__1(vlSelf);
+        vlSelfRef.__Vm_traceActivity[4U] = 1U;
     }
-    if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_sequent__TOP__2(vlSelf);
     }
-    if ((8ULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_sequent__TOP__3(vlSelf);
     }
-    if ((0x10ULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((8ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_sequent__TOP__4(vlSelf);
     }
-    if ((0x20ULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((0x10ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_sequent__TOP__5(vlSelf);
     }
     if ((0x3eULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_comb__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[4U] = 1U;
+        vlSelfRef.__Vm_traceActivity[5U] = 1U;
         VPerceptron___024root___act_comb__TOP__1(vlSelf);
         VPerceptron___024root___act_comb__TOP__2(vlSelf);
     }
     if ((0x3fULL & vlSelfRef.__VactTriggered.word(0U))) {
         VPerceptron___024root___act_comb__TOP__3(vlSelf);
-        vlSelfRef.__Vm_traceActivity[5U] = 1U;
+        vlSelfRef.__Vm_traceActivity[6U] = 1U;
         VPerceptron___024root___act_comb__TOP__4(vlSelf);
     }
 }
@@ -112,8 +115,22 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__1(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[1U][0U] 
-        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction;
+    vlSelfRef.BenchMLP__DOT__expected[0U] = vlSelfRef.BenchMLP__DOT__data__DOT__output_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][0U];
+    vlSelfRef.BenchMLP__DOT__values[1U] = vlSelfRef.BenchMLP__DOT__data__DOT__input_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][1U];
+    vlSelfRef.BenchMLP__DOT__values[0U] = vlSelfRef.BenchMLP__DOT__data__DOT__input_data
+        [((0x63U >= (0x7fU & vlSelfRef.BenchMLP__DOT__example))
+           ? (0x7fU & vlSelfRef.BenchMLP__DOT__example)
+           : 0U)][0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][0U] 
+        = vlSelfRef.BenchMLP__DOT__values[0U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][1U] 
+        = vlSelfRef.BenchMLP__DOT__values[1U];
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__2(VPerceptron___024root* vlSelf) {
@@ -121,8 +138,8 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__2(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[1U][1U] 
-        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction;
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[1U][0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction;
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__3(VPerceptron___024root* vlSelf) {
@@ -130,8 +147,8 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__3(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[2U][0U] 
-        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction;
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[1U][1U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__0__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction;
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__4(VPerceptron___024root* vlSelf) {
@@ -139,8 +156,8 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__4(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[2U][1U] 
-        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction;
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[2U][0U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__gen_hidden_neuron__BRA__0__KET____DOT__hidden_perceptron__prediction;
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__5(VPerceptron___024root* vlSelf) {
@@ -148,10 +165,8 @@ VL_INLINE_OPT void VPerceptron___024root___act_sequent__TOP__5(VPerceptron___024
     VPerceptron__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][0U] 
-        = vlSelfRef.BenchMLP__DOT__values[0U];
-    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[0U][1U] 
-        = vlSelfRef.BenchMLP__DOT__values[1U];
+    vlSelfRef.BenchMLP__DOT__mlp__DOT__layer_outputs[2U][1U] 
+        = vlSelfRef.BenchMLP__DOT__mlp__DOT____Vcellout__gen_hidden_layer__BRA__1__KET____DOT__gen_hidden_neuron__BRA__1__KET____DOT__hidden_perceptron__prediction;
 }
 
 VL_INLINE_OPT void VPerceptron___024root___act_comb__TOP__2(VPerceptron___024root* vlSelf) {
@@ -228,7 +243,7 @@ void VPerceptron___024root___eval_nba(VPerceptron___024root* vlSelf) {
     // Body
     if ((0x20ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[6U] = 1U;
+        vlSelfRef.__Vm_traceActivity[7U] = 1U;
         VPerceptron___024root___nba_sequent__TOP__1(vlSelf);
         VPerceptron___024root___nba_sequent__TOP__2(vlSelf);
         VPerceptron___024root___nba_sequent__TOP__3(vlSelf);
@@ -239,19 +254,19 @@ void VPerceptron___024root___eval_nba(VPerceptron___024root* vlSelf) {
     }
     if ((0x28ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_comb__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[7U] = 1U;
+        vlSelfRef.__Vm_traceActivity[8U] = 1U;
     }
     if ((0x30ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_comb__TOP__1(vlSelf);
-        vlSelfRef.__Vm_traceActivity[8U] = 1U;
+        vlSelfRef.__Vm_traceActivity[9U] = 1U;
     }
     if ((0x22ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_comb__TOP__2(vlSelf);
-        vlSelfRef.__Vm_traceActivity[9U] = 1U;
+        vlSelfRef.__Vm_traceActivity[0xaU] = 1U;
     }
     if ((0x24ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VPerceptron___024root___nba_comb__TOP__3(vlSelf);
-        vlSelfRef.__Vm_traceActivity[0xaU] = 1U;
+        vlSelfRef.__Vm_traceActivity[0xbU] = 1U;
     }
 }
 

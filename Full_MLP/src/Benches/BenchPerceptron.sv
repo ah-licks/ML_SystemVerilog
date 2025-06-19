@@ -5,6 +5,9 @@ module BenchPerceptron ();
 
     parameter int input_units = 2;
     parameter int output_units = 1;
+    parameter int num_train_examples = 600;
+    parameter int num_test_examples = 400;
+
     bit clk;
     bit rst;
     sfp values[input_units-1:0];
@@ -17,8 +20,9 @@ module BenchPerceptron ();
     sfp error_gradient;
     sfp current_weights[input_units-1:0];
 
-    sfp expected;
+    sfp expected[output_units-1:0];
 
+    int example;
     sfp threshold;
     int correct;
 
@@ -39,14 +43,24 @@ module BenchPerceptron ();
         .current_weights(current_weights)
     );
 
+    Data #(
+        .inputs(input_units),
+        .outputs(output_units),
+        .total_examples(num_train_examples + num_test_examples)
+    ) data (
+        .example (example),
+        .values  (values),
+        .expected(expected)
+    );
+
     always_comb begin
         for (int i = 0; i < output_units; i++) begin
             error_gradient_next_layer[i] = -(sfp_sub(
                 sfp_div(
-                    expected, sfp_add(prediction, epsilon)
+                    expected[0], sfp_add(prediction, epsilon)
                 ),
                 sfp_div(
-                    sfp_sub(ONE, expected), sfp_sub(ONE, sfp_add(prediction, epsilon)))
+                    sfp_sub(ONE, expected[0]), sfp_sub(ONE, sfp_add(prediction, epsilon)))
             ));
         end
     end
@@ -65,6 +79,7 @@ module BenchPerceptron ();
         activation = Sigmoid;
         training = 1;
         learning_rate = ONE;
+        example = 0;
 
         next_layer_weights = '{ONE};
 
@@ -79,53 +94,23 @@ module BenchPerceptron ();
         for (int epoch = 0; epoch < 10; epoch++) begin
             $display("\n=== Epoch %0d ===", epoch);
 
-            training  = 1;
+            training = 1;
+            example  = 0;
 
-            values[0] = 0;
-            values[1] = 0;
-            expected  = 0;
-            @(posedge clk);
+            for (int i = 0; i < num_train_examples; i++) begin
+                @(posedge clk);
+                example++;
+            end
 
-            values[0] = 0;
-            values[1] = ONE;
-            expected  = 0;
-            @(posedge clk);
+            training = 0;
+            example  = 0;
 
-            values[0] = ONE;
-            values[1] = 0;
-            expected  = 0;
-            @(posedge clk);
-
-            values[0] = ONE;
-            values[1] = ONE;
-            expected  = ONE;
-            @(posedge clk);
-
-            training  = 0;
-
-            values[0] = 0;
-            values[1] = 0;
-            expected  = 0;
-            @(posedge clk);
-            $display("%0t\t[0,0]\t%d\t\t%0d", $time, expected, prediction);
-
-            values[0] = 0;
-            values[1] = ONE;
-            expected  = 0;
-            @(posedge clk);
-            $display("%0t\t[0,1]\t%d\t\t%0d", $time, expected, prediction);
-
-            values[0] = ONE;
-            values[1] = 0;
-            expected  = 0;
-            @(posedge clk);
-            $display("%0t\t[1,0]\t%d\t\t%0d", $time, expected, prediction);
-
-            values[0] = ONE;
-            values[1] = ONE;
-            expected  = ONE;
-            @(posedge clk);
-            $display("%0t\t[1,1]\t%d\t\t%0d", $time, expected, prediction);
+            for (int i = 0; i < num_train_examples; i++) begin
+                @(posedge clk);
+                $display("%0t\t[%d,%d]\t%d\t\t%d", $time, values[0], values[1], expected[0],
+                         prediction);
+                example++;
+            end
         end
 
         $display("\n=== Final Testing Phase ===");
@@ -133,35 +118,18 @@ module BenchPerceptron ();
         threshold = HALF;
         correct   = 0;
 
-        values[0] = 0;
-        values[1] = 0;
-        expected  = 0;
-        @(posedge clk);
-        if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [0,0] -> %d (expected 0)", prediction);
+        example   = num_train_examples;
 
-        values[0] = 0;
-        values[1] = ONE;
-        expected  = 0;
-        @(posedge clk);
-        if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [0,1] -> %d (expected 0)", prediction);
+        for (int i = 0; i < num_test_examples; i++) begin
+            @(posedge clk);
+            if ((prediction < threshold) == (expected[0] < threshold)) correct++;
+            $display("Test [%d,%d] -> %d (expected %d)", values[0], values[1], prediction,
+                     expected[0]);
+            example++;
+        end
 
-        values[0] = ONE;
-        values[1] = 0;
-        expected  = 0;
-        @(posedge clk);
-        if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [1,0] -> %d (expected 0)", prediction);
-
-        values[0] = ONE;
-        values[1] = ONE;
-        expected  = ONE;
-        @(posedge clk);
-        if ((prediction < threshold) == (expected < threshold)) correct++;
-        $display("Test [1,1] -> %d (expected 2^32)", prediction);
-
-        $display("\nClassification Accuracy: %0d/4 (%0.1f%%)", correct, (correct * 100.0) / 4.0);
+        $display("\nClassification Accuracy: %d/%d (%0.1f%%)", correct, num_test_examples,
+                 (correct * 100.0) / num_test_examples);
 
         repeat (5) @(posedge clk);
         $finish;
