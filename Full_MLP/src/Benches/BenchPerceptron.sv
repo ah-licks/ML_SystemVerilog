@@ -102,15 +102,15 @@ module BenchPerceptron ();
                 example++;
             end
 
-            training = 0;
-            example  = 0;
+            // training = 0;
+            // example  = 0;
 
-            for (int i = 0; i < num_train_examples; i++) begin
-                @(posedge clk);
-                $display("%0t\t[%d,%d]\t%d\t\t%d", $time, values[0], values[1], expected[0],
-                         prediction);
-                example++;
-            end
+            // for (int i = 0; i < num_train_examples; i++) begin
+            //     @(posedge clk);
+            //     $display("%0t\t[%d,%d]\t%d\t\t%d", $time, values[0], values[1], expected[0],
+            //              prediction);
+            //     example++;
+            // end
         end
 
         $display("\n=== Final Testing Phase ===");
